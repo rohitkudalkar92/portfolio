@@ -50,12 +50,12 @@ export class ProjectsComponent {
       githubUrl: 'https://github.com/rohit'
     },
     {
-      id: 'ecommerce-platform',
-      title: 'E-Commerce Platform',
-      description: 'Full-stack e-commerce solution with Angular frontend, Node.js backend, and MongoDB database. Features include user authentication, product catalog, shopping cart, and payment integration.',
-      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=300&fit=crop',
-      technologies: ['Angular', 'TypeScript', 'Node.js', 'MongoDB', 'Express'],
-      liveUrl: 'https://example.com',
+      id: 'miso3-platform',
+      title: 'MiSO3',
+      description: 'MiSO3 is an evolutionary shift in how organizations manage vendor commitments. More than just software, MiSO3 is your automated team with unlimited capacity and relentless focus.',
+      image: 'assets/miso3/miso1.png',
+      technologies: ['React', 'Angular', 'Redux', 'TypeScript', 'Node.js', 'MongoDB', 'Express'],
+      liveUrl: 'https://miso3.com/',
       githubUrl: 'https://github.com/rohit'
     },
     {

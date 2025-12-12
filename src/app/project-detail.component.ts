@@ -106,12 +106,20 @@ export class ProjectDetailComponent implements OnInit {
       githubUrl: 'https://github.com/rohit'
     },
     {
-      id: 'ecommerce-platform',
-      title: 'E-Commerce Platform',
-      description: 'Full-stack e-commerce solution with Angular frontend, Node.js backend, and MongoDB database.',
-      longDescription: 'A modern e-commerce platform built from the ground up with scalability and performance in mind. Features include comprehensive product catalog management, secure user authentication, shopping cart functionality, and integrated payment processing. The platform is designed to handle high traffic loads and provides an intuitive admin dashboard for managing products, orders, and customer data.',
-      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop',
-      technologies: ['Angular', 'TypeScript', 'Node.js', 'MongoDB', 'Express'],
+      id: 'miso3-platform',
+      title: 'MiSO3',
+      description: 'MiSO3 is an evolutionary shift in how organizations manage vendor commitments. More than just software, MiSO3 is your automated team with unlimited capacity and relentless focus.',
+      longDescription: 'MiSO3 is an evolutionary shift in how organizations manage vendor commitments. More than just software, MiSO3 is your automated team with unlimited capacity and relentless focus. MiSO3 works quietly in the background, handling the time-consuming tasks you can\'t — and the costly ones you shouldn\'t ignore. Built with modern web technologies for enterprise-grade performance and reliability.',
+      image: 'assets/miso3/miso1.png',
+      gallery: [
+        'assets/miso3/miso2.png',
+        'assets/miso3/miso3.png',
+        'assets/miso3/miso4.png',
+        'assets/miso3/miso5.png',
+        'assets/miso3/miso6.png',
+        'assets/miso3/miso7.png'
+      ],
+      technologies: ['React', 'Angular', 'Redux', 'TypeScript', 'Node.js', 'MongoDB', 'Express'],
       features: [
         'Product catalog management',
         'User authentication & authorization',
@@ -121,7 +129,7 @@ export class ProjectDetailComponent implements OnInit {
         'Admin dashboard',
         'Responsive design'
       ],
-      liveUrl: 'https://example.com',
+      liveUrl: 'https://miso3.com/',
       githubUrl: 'https://github.com/rohit'
     }
   ];
