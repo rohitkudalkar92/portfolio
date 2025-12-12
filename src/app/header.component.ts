@@ -6,7 +6,7 @@ import { RouterLink } from '@angular/router';
   standalone: true,
   imports: [RouterLink],
   template: `
-    <header class="flex items-center justify-between py-4">
+    <header class="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-glass-border flex items-center justify-between py-4">
       <div class="flex items-center gap-3">
         <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-indigo-400 to-purple-600 flex items-center justify-center font-bold text-black">
           R
