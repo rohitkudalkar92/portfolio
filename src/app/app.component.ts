@@ -112,7 +112,7 @@ import { HeaderComponent } from './header.component';
               <div class="flex-1 glass p-6 rounded-xl">
                 <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                   <h3 class="font-semibold text-lg">{{ job.title }}</h3>
-                  <span class="text-sm text-dark bg-accent/20 px-3 py-1 rounded-full mt-2 md:mt-0">{{ job.period }}</span>
+                  <span class="text-sm text-black px-3 py-1 rounded-full mt-2 md:mt-0" style="background-color: var(--accent)">{{ job.period }}</span>
                 </div>
                 <h4 class="font-medium text-indigo-400 mb-2">{{ job.company }}</h4>
                 <p class="text-dark text-sm mb-3">{{ job.description }}</p>
@@ -197,31 +197,24 @@ export class AppComponent {
   timeline = [
     {
       title: 'Frontend Module Lead',
-      company: 'Tech Solutions Inc.',
-      period: '2022 - Present',
-      description: 'Leading frontend architecture and mentoring junior developers. Built scalable Angular applications serving 100K+ users.',
-      technologies: ['Angular 17', 'TypeScript', 'RxJS', 'NgRx', 'Tailwind CSS']
-    },
-    {
-      title: 'Frontend Developer',
-      company: 'Digital Innovations Ltd.',
-      period: '2020 - 2022',
-      description: 'Developed responsive web applications and improved performance by 40%. Collaborated with UX team on design systems.',
-      technologies: ['React', 'JavaScript', 'Redux', 'Material-UI', 'Jest']
+      company: 'Fluid.live',
+      period: 'Nov 2021 - Present',
+      description: 'Leading frontend architecture and mentoring junior developers. Built scalable Angular applications serving 100K+ users. Implemented micro-frontend architecture reducing deployment time by 60%. Established coding standards and best practices across multiple development teams. Spearheaded migration from legacy systems to modern Angular 17 with improved performance metrics.',
+      technologies: ['Angular 17', 'TypeScript', 'RxJS', 'NgRx', 'Tailwind CSS', 'Material-UI', 'React', 'Node.js', 'MySQL', 'WordPress', 'HTML5', 'SCSS', 'ES6']
     },
     {
       title: 'Full Stack Developer',
-      company: 'StartupXYZ',
-      period: '2018 - 2020',
-      description: 'Built complete web applications from scratch. Worked on both frontend and backend development in an agile environment.',
-      technologies: ['Angular', 'Node.js', 'MongoDB', 'Express', 'Bootstrap']
+      company: 'procedure.tech',
+      period: 'June 2019 - Nov 2021',
+      description: 'Developed responsive web applications and improved performance by 40%. Built complete applications from scratch with both frontend and backend development in an agile environment. Collaborated with cross-functional teams to deliver 15+ client projects on time and within budget. Implemented automated testing strategies resulting in 90% bug reduction in production. Optimized database queries and API endpoints improving overall system efficiency by 35%.',
+      technologies: ['React', 'JavaScript', 'ES6', 'Redux', 'Material-UI', 'Jest', 'Angular', 'Node.js', 'MongoDB', 'Express', 'Bootstrap']
     },
     {
       title: 'Junior Developer',
-      company: 'WebCorp Solutions',
-      period: '2016 - 2018',
-      description: 'Started career developing websites and learning modern web technologies. Gained experience in responsive design and API integration.',
-      technologies: ['HTML5', 'CSS3', 'JavaScript', 'jQuery', 'PHP', 'MySQL']
+      company: 'Coense Solutions Pvt. Ltd.',
+      period: 'Dec 2016 - June 2019',
+      description: 'Started career developing websites and learning modern web technologies. Gained experience in responsive design, API integration, and database management. Built custom WordPress themes and worked on e-commerce solutions using CodeIgniter framework. Developed 20+ responsive websites with cross-browser compatibility and mobile-first approach. Created RESTful APIs for client-server communication and integrated third-party payment gateways. Maintained and optimized MySQL databases ensuring data integrity and improved query performance.',
+      technologies: ['HTML5', 'CSS3', 'JavaScript', 'ES6', 'jQuery', 'PHP', 'MySQL', 'WordPress', 'React', 'Node.js', 'CodeIgniter', 'Bootstrap']
     }
   ];
 
@@ -253,7 +246,11 @@ export class AppComponent {
     'CSS3': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
     'jQuery': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg',
     'PHP': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg',
-    'MySQL': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg'
+    'MySQL': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg',
+    'WordPress': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg',
+    'CodeIgniter': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/codeigniter/codeigniter-plain.svg',
+    'SCSS': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg',
+    'ES6': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg'
   };
 
   getTechIcon(tech: string): string {
