@@ -47,9 +47,21 @@ export class HeaderComponent implements OnInit {
   }
 
   toggleTheme() {
-    this.isDark = !this.isDark;
-    this.applyTheme();
-    sessionStorage.setItem(CONSTANTS.THEME_STORAGE_KEY, this.isDark ? 'dark' : 'light');
+    // Create smooth fade effect
+    document.body.style.opacity = '0.8';
+    document.body.style.transform = 'scale(0.98)';
+    
+    setTimeout(() => {
+      this.isDark = !this.isDark;
+      this.applyTheme();
+      sessionStorage.setItem(CONSTANTS.THEME_STORAGE_KEY, this.isDark ? 'dark' : 'light');
+      
+      // Fade back in
+      setTimeout(() => {
+        document.body.style.opacity = '1';
+        document.body.style.transform = 'scale(1)';
+      }, 100);
+    }, 150);
   }
 
   private applyTheme() {
