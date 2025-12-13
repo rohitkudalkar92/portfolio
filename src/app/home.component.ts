@@ -85,7 +85,7 @@ import { TitleService } from './title.service';
                 <span>10+ Years Experience</span>
               </div>
               <div class="flex items-center gap-2">
-                <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+                <span>🚀</span>
                 <span>Available for Projects</span>
               </div>
               <div class="flex items-center gap-2">
@@ -178,7 +178,5 @@ export class HomeComponent implements OnInit {
     { label: 'Email', url: 'mailto:rohitkudalkar92@gmail.com', display: 'rohitkudalkar92@gmail.com' },
     { label: 'GitHub', url: 'https://github.com/rohitkudalkar92', display: 'https://github.com/rohitkudalkar92' },
     { label: 'LinkedIn', url: 'https://www.linkedin.com/in/rohit-kudalkar-225841129', display: 'https://www.linkedin.com/in/rohit-kudalkar-225841129/' },
-    { label: 'Instagram', url: 'https://instagram.com/rohitkudalkar23', display: 'https://instagram.com/rohitkudalkar23' },
-    { label: 'WhatsApp', url: 'https://wa.me/919082769370', display: 'Chat on WhatsApp' }
   ];
 }
