@@ -173,6 +173,6 @@ export class HomeComponent {
     { label: 'GitHub', url: 'https://github.com/rohitkudalkar92', display: 'https://github.com/rohitkudalkar92' },
     { label: 'LinkedIn', url: 'https://www.linkedin.com/in/rohit-kudalkar-225841129', display: 'https://www.linkedin.com/in/rohit-kudalkar-225841129/' },
     { label: 'Instagram', url: 'https://instagram.com/rohitkudalkar23', display: 'https://instagram.com/rohitkudalkar23' },
-    { label: 'WhatsApp', url: 'https://wa.me/919999999999', display: 'Chat on WhatsApp' }
+    { label: 'WhatsApp', url: 'https://wa.me/919082769370', display: 'Chat on WhatsApp' }
   ];
 }
