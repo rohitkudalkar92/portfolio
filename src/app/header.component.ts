@@ -42,8 +42,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     const savedTheme = sessionStorage.getItem(CONSTANTS.THEME_STORAGE_KEY);
-    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    this.isDark = savedTheme ? savedTheme === 'dark' : systemPrefersDark;
+    this.isDark = savedTheme ? savedTheme === 'dark' : true;
     this.applyTheme();
   }
 
