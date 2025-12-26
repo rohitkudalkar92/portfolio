@@ -24,7 +24,7 @@
           },
           "configurations": {
             "production": {
-              "baseHref": "/rohit-portfolio-angular/",
+              "baseHref": "/portfolio/",
               "budgets": [
                 {
                   "type": "initial",
