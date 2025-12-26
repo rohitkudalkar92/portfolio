@@ -1,9 +1,9 @@
 export const CONSTANTS = {
   // Brand & Identity
   BRAND_NAME: 'RohitKudalkar.dev',
-  BRAND_TAGLINE: 'Frontend Engineer',
-  BRAND_FULL_TITLE: 'RohitKudalkar.dev - Frontend Engineer',
-  BRAND_SUBTITLE: 'Frontend Engineer • Creator',
+  BRAND_TAGLINE: 'Frontend Architect',
+  BRAND_FULL_TITLE: 'RohitKudalkar.dev - Frontend Architect',
+  BRAND_SUBTITLE: 'Frontend Architect • Creator',
   THEME_STORAGE_KEY: 'rohitkudalkar-dev-theme',
   PORTFOLIO_URL: 'https://rohitkudalkar.dev',
   COPYRIGHT_YEAR: '2025',
@@ -35,23 +35,23 @@ export const CONSTANTS = {
     HERO_TITLE_AND: '&',
     HERO_TITLE_IMPACTFUL: 'Impactful',
     HERO_TITLE_PART2: 'Interfaces',
-    HERO_DESCRIPTION: "I'm Rohit — a Senior Software Engineer from Mumbai specializing in front-end development with Angular and React. I love building fast, scalable, and user-friendly experiences that blend design and logic.",
+    HERO_DESCRIPTION: "I'm Rohit — a Senior Frontend Architect from Mumbai specializing in scalable frontend systems with Angular and React. I design and build robust, maintainable architectures that power user experiences for thousands of users.",
     EXPLORE_SKILLS_BTN: 'Explore Skills →',
     
     EXPERTISE_TITLE: 'Expertise',
-    EXPERTISE_DESCRIPTION: "I love translating ideas into functional, maintainable code. Here's what I work with most:",
+    EXPERTISE_DESCRIPTION: "I architect scalable frontend systems that balance performance, maintainability, and developer experience. Here's my technical foundation:",
     
     ABOUT_TITLE: 'About Me',
-    ABOUT_DESCRIPTION: "I'm a curious engineer passionate about crafting intuitive interfaces and scalable systems. When I'm not coding, I explore new frameworks, travel, and brainstorm product ideas like Mano Smṛti — a cognitive training app I'm building.",
+    ABOUT_DESCRIPTION: "I'm a frontend architect passionate about designing scalable systems and leading technical excellence. I specialize in creating robust architectures that enable teams to build maintainable, high-performance applications. When I'm not architecting solutions, I mentor developers and explore emerging technologies like the cognitive training app Mano Smṛti I'm building.",
     
     QUICK_INFO_TITLE: 'Quick Info',
     QUICK_INFO: {
       LOCATION: 'Mumbai, India (GMT+5:30)',
-      ROLE: 'Frontend Module Lead',
+      ROLE: 'Frontend Architect & Tech Lead',
       TECH_STACK: 'Angular • React • TypeScript',
       EXPERIENCE: '10+ Years Experience',
       AVAILABILITY: 'Available for Projects',
-      SPECIALTY: 'Frontend Architecture',
+      SPECIALTY: 'System Architecture & Design',
       LEARNING: 'Continuous Learner'
     },
     
@@ -158,40 +158,40 @@ export const CONSTANTS = {
   // Home Page Skills
   HOME_SKILLS: [
     {
-      title: 'Angular & React',
-      description: 'Scalable architecture, modular code, and reusable components.'
+      title: 'System Architecture',
+      description: 'Designing scalable, maintainable frontend architectures and micro-frontend systems.'
     },
     {
-      title: 'TypeScript & Clean Code',
-      description: 'Strong typing, readability, and consistent structure.'
+      title: 'Technical Leadership',
+      description: 'Leading development teams, establishing standards, and mentoring engineers.'
     },
     {
-      title: 'UI / UX Focus',
-      description: 'Bridging design with logic for seamless user experience.'
+      title: 'Performance Engineering',
+      description: 'Optimizing applications for speed, scalability, and exceptional user experience.'
     },
     {
-      title: 'Performance & Optimization',
-      description: 'Lazy loading, code splitting, and data-driven performance tweaks.'
+      title: 'Modern Frameworks',
+      description: 'Expert in Angular, React, and TypeScript for building enterprise applications.'
     }
   ],
   
   // Home Page Traits
   HOME_TRAITS: [
     {
-      title: 'Curiosity-Driven',
-      description: 'Always exploring tech that simplifies human experience.'
+      title: 'Architecture-First',
+      description: 'Designing systems that scale with business needs and team growth.'
     },
     {
-      title: 'Frontend Architect',
-      description: 'Balancing beauty and maintainability in every component.'
+      title: 'Technical Leader',
+      description: 'Empowering teams through mentorship, standards, and architectural guidance.'
     },
     {
-      title: 'Team Leader',
-      description: 'Empowering teams with clarity, empathy, and code discipline.'
+      title: 'Performance Advocate',
+      description: 'Obsessed with creating fast, efficient, and delightful user experiences.'
     },
     {
-      title: 'Builder at Heart',
-      description: 'I love bringing side projects to life from scratch.'
+      title: 'Innovation Driver',
+      description: 'Exploring cutting-edge technologies and building the future of web applications.'
     }
   ],
   

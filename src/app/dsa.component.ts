@@ -7,7 +7,7 @@ import { HeaderComponent } from './header.component';
   standalone: true,
   imports: [CommonModule, HeaderComponent],
   template: `
-    <div class="w-[80%] mx-auto px-6 py-8">
+    <div class="max-w-6xl mx-auto px-6 py-8">
       <app-header></app-header>
       <h1 class="text-3xl font-bold mb-8">Data Structures & Algorithms</h1>
       
