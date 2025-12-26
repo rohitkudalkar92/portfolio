@@ -12,7 +12,6 @@ import { CONSTANTS } from './constants';
   template: `
     <div class="max-w-6xl mx-auto px-6 py-8">
       <app-header></app-header>
-
       <!-- Hero -->
       <section id="home" class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center py-24">
         <div class="md:col-span-7">
