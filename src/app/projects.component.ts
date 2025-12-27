@@ -15,9 +15,9 @@ import { CONSTANTS } from './constants';
       <h1 class="text-3xl font-bold mb-8">{{ pageTitle }}</h1>
       
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div *ngFor="let project of projects" class="glass p-6 rounded-xl hover:scale-105 transition-transform duration-300">
+        <div *ngFor="let project of projects" class="project-card glass p-6 rounded-xl transition-all duration-300 hover:scale-105">
           <div class="mb-4">
-            <img [src]="project.image" [alt]="project.title" class="w-full h-48 object-cover rounded-lg">
+            <img [src]="project.image" [alt]="project.title" class="w-full h-48 object-cover rounded-lg transition-transform duration-300 hover:scale-105">
           </div>
           <h3 class="font-semibold text-lg mb-2">{{ project.title }}</h3>
           <p class="text-sm opacity-80 mb-4">{{ project.description }}</p>
