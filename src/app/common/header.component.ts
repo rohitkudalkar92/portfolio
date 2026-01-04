@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import { CONSTANTS } from './constants';
+import { CONSTANTS } from '../constants';
 
 @Component({
   selector: 'app-header',
