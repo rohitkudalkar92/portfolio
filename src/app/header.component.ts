@@ -25,7 +25,7 @@ import { CONSTANTS } from './constants';
                [attr.aria-current]="item.path === currentRoute ? 'page' : null">
               {{ item.label }}
             </a>
-          </nav>
+          </nav>  
           
           <!-- Theme Toggle -->
           <button (click)="toggleTheme()" class="p-2 rounded-full glass hover:bg-white/10 transition-all duration-300 hover:scale-110">

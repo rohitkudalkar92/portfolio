@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { RouterOutlet } from '@angular/router';
-import { BackToTopComponent } from './back-to-top.component';
+import { BackToTopComponent } from './common/back-to-top.component';
 import { filter } from 'rxjs/operators';
 import { AnalyticsService, VisitorTrackingService } from './shared/services';
 

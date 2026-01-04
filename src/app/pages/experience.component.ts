@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LayoutComponent } from './layout.component';
+import { LayoutComponent } from '../common/layout.component';
 import { RouterModule } from '@angular/router';
-import { TitleService } from './title.service';
-import { CONSTANTS } from './constants';
+import { TitleService } from '../title.service';
+import { CONSTANTS } from '../constants';
 
 @Component({
   selector: 'app-experience',

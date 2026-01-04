@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HeaderComponent } from './header.component';
+import { LayoutComponent } from '../common/layout.component';
 
 @Component({
   selector: 'app-diagram',
   standalone: true,
-  imports: [CommonModule, HeaderComponent],
+  imports: [CommonModule, LayoutComponent],
   template: `
-    <div class="max-w-6xl mx-auto px-6 py-8">
-      <app-header></app-header>
+    <app-layout>
       <h1 class="text-3xl font-bold mb-8">Advanced System Architecture Diagrams</h1>
       
       <!-- Microservices Architecture -->
@@ -467,7 +466,7 @@ import { HeaderComponent } from './header.component';
           </svg>
         </div>
       </div>
-    </div>
+    </app-layout>
   `
 })
 export class DiagramComponent {

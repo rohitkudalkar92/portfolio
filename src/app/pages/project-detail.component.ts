@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
-import { LayoutComponent } from './layout.component';
-import { TitleService } from './title.service';
-import { CONSTANTS } from './constants';
+import { LayoutComponent } from '../common/layout.component';
+import { TitleService } from '../title.service';
+import { CONSTANTS } from '../constants';
 
 @Component({
   selector: 'app-project-detail',
