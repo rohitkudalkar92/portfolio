@@ -10,7 +10,7 @@ import { NotFoundComponent } from './common/not-found.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'timeline', component: ExperienceComponent },
+  { path: 'experience', component: ExperienceComponent },
   { path: 'skills', component: SkillsComponent },
   { path: 'projects', component: ProjectsComponent },
   { path: 'dsa', component: DSAComponent },

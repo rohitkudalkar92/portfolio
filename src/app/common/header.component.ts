@@ -8,31 +8,44 @@ import { CONSTANTS } from '../constants';
   standalone: true,
   imports: [RouterLink, RouterLinkActive, CommonModule],
   template: `
-    <header [class]="getHeaderClasses()" class="w-full sticky top-0 z-50 backdrop-blur-md flex items-center justify-between px-6 py-4 rounded-xl shadow-lg transition-all duration-300">
-      <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-indigo-400 to-purple-600 flex items-center justify-center font-bold text-black">
-          R
+    <div class="relative">
+      <header [class]="getHeaderClasses()" class="w-full sticky top-0 z-50 backdrop-blur-md flex items-center justify-between px-6 py-4 rounded-xl shadow-lg transition-all duration-300">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-indigo-400 to-purple-600 flex items-center justify-center font-bold text-black">
+            R
+          </div>
+          <div>
+            <div class="text-lg font-semibold">{{ brandName }}</div>
+            <div class="text-xs opacity-70">{{ brandSubtitle }}</div>
+          </div>
         </div>
-        <div>
-          <div class="text-lg font-semibold">{{ brandName }}</div>
-          <div class="text-xs opacity-70">{{ brandSubtitle }}</div>
+        <div class="flex items-center gap-4">
+          <nav class="hidden md:flex items-center gap-6 text-sm opacity-90">
+            <a *ngFor="let item of navItems" [routerLink]="item.route" routerLinkActive="text-accent font-semibold" [routerLinkActiveOptions]="{exact: item.exact}" class="hover:underline transition-all duration-200">{{ item.label }}</a>
+          </nav>
+          <button (click)="toggleTheme()" [class]="getButtonClasses()" class="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300 hover:scale-110">
+            <span class="inline-block transition-transform duration-300" [class.rotate-180]="isDark">
+              {{ isDark ? '☀️' : '🌙' }}
+            </span>
+          </button>
+          <button (click)="toggleMobileMenu()" class="md:hidden p-2 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300">
+            <span class="text-lg">{{ isMobileMenuOpen ? '✕' : '☰' }}</span>
+          </button>
         </div>
-      </div>
-      <div class="flex items-center gap-4">
-        <nav class="hidden md:flex items-center gap-6 text-sm opacity-90">
-          <a *ngFor="let item of navItems" [routerLink]="item.route" routerLinkActive="text-indigo-400 font-semibold" [routerLinkActiveOptions]="{exact: item.exact}" class="hover:underline transition-all duration-200">{{ item.label }}</a>
+      </header>
+      
+      <!-- Mobile Menu -->
+      <div *ngIf="isMobileMenuOpen" class="md:hidden absolute top-full left-0 right-0 bg-white text-black border border-gray-200 z-50 shadow-xl">
+        <nav class="px-4 py-4 space-y-2">
+          <a *ngFor="let item of navItems" [routerLink]="item.route" routerLinkActive="text-accent font-semibold" [routerLinkActiveOptions]="{exact: item.exact}" (click)="closeMobileMenu()" class="block py-3 px-4 rounded-lg text-sm hover:bg-gray-100 transition-all">{{ item.label }}</a>
         </nav>
-        <button (click)="toggleTheme()" [class]="getButtonClasses()" class="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300 hover:scale-110">
-          <span class="inline-block transition-transform duration-300" [class.rotate-180]="isDark">
-            {{ isDark ? '☀️' : '🌙' }}
-          </span>
-        </button>
       </div>
-    </header>
+    </div>
   `
 })
 export class HeaderComponent implements OnInit {
   isDark = false;
+  isMobileMenuOpen = false;
   brandName = CONSTANTS.BRAND_NAME;
   brandSubtitle = CONSTANTS.BRAND_SUBTITLE;
   nav = CONSTANTS.NAV;
@@ -43,7 +56,7 @@ export class HeaderComponent implements OnInit {
     { route: this.routes.SKILLS, label: this.nav.SKILLS, exact: false },
     { route: this.routes.PROJECTS, label: this.nav.PROJECTS, exact: false },
     { route: this.routes.DSA, label: this.nav.DSA, exact: false },
-    { route: this.routes.TIMELINE, label: this.nav.EXPERIENCE, exact: false }
+    { route: this.routes.EXPERIENCE, label: this.nav.EXPERIENCE, exact: false }
   ];
 
   ngOnInit() {
@@ -84,5 +97,13 @@ export class HeaderComponent implements OnInit {
     return this.isDark 
       ? 'bg-white/90 text-gray-900 border border-black/10' 
       : 'bg-gray-800/90 text-white border border-white/10';
+  }
+
+  toggleMobileMenu() {
+    this.isMobileMenuOpen = !this.isMobileMenuOpen;
+  }
+
+  closeMobileMenu() {
+    this.isMobileMenuOpen = false;
   }
 }

@@ -301,7 +301,7 @@ export const CONSTANTS = {
     SKILLS: '/skills',
     PROJECTS: '/projects',
     DSA: '/dsa',
-    TIMELINE: '/timeline'
+    EXPERIENCE: '/experience'
   },
   
   // UI Symbols
