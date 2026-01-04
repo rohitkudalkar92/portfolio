@@ -9,7 +9,7 @@ import { HeaderComponent } from './header.component';
   template: `
     <div class="max-w-6xl mx-auto px-3 py-3">
       <app-header></app-header>
-      <main class="mt-6 px-3">
+      <main class="mt-6 px-6">
         <ng-content></ng-content>
       </main>
     </div>

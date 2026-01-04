@@ -297,7 +297,7 @@ export const CONSTANTS = {
   
   // Route Paths
   ROUTES: {
-    HOME: '/home',
+    HOME: '/',
     SKILLS: '/skills',
     PROJECTS: '/projects',
     DSA: '/dsa',
