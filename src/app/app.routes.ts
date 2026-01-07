@@ -6,6 +6,7 @@ import { ProjectDetailComponent } from './pages/project-detail.component';
 import { SkillsComponent } from './pages/skills.component';
 import { DSAComponent } from './pages/dsa.component';
 import { DiagramComponent } from './pages/diagram.component';
+import { NotesComponent } from './pages/notes.component';
 import { NotFoundComponent } from './common/not-found.component';
 
 export const routes: Routes = [
@@ -15,6 +16,7 @@ export const routes: Routes = [
   { path: 'projects', component: ProjectsComponent },
   { path: 'dsa', component: DSAComponent },
   { path: 'diagram', component: DiagramComponent },
+  { path: 'notes', component: NotesComponent },
   { path: 'project/:id', component: ProjectDetailComponent },
   { path: '**', component: NotFoundComponent }
 ];

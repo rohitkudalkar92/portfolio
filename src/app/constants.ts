@@ -21,6 +21,7 @@ export const CONSTANTS = {
     EXPERIENCE: 'Experience',
     PROJECTS: 'Projects',
     DSA: 'DSA',
+    NOTES: 'Notes',
     PROJECT_NOT_FOUND: 'Project Not Found'
   },
   
@@ -30,7 +31,8 @@ export const CONSTANTS = {
     SKILLS: 'Skills',
     PROJECTS: 'Projects',
     DSA: 'DSA',
-    EXPERIENCE: 'Experience'
+    EXPERIENCE: 'Experience',
+    NOTES: 'Notes'
   },
   
   // Home Page
@@ -93,6 +95,12 @@ export const CONSTANTS = {
     VIEW_LIVE_BTN: 'View Live Site',
     VIEW_CODE_BTN: 'View Code',
     NOT_FOUND_TITLE: 'Project Not Found'
+  },
+  
+  // Notes Page
+  NOTES: {
+    TITLE: 'Learning Notes',
+    DESCRIPTION: 'My journey of continuous learning and personal development. From coding practices to daily habits, capturing insights that shape my growth.'
   },
   
   // Contact Labels
@@ -286,7 +294,8 @@ export const CONSTANTS = {
     SKILLS: '/skills',
     PROJECTS: '/projects',
     DSA: '/dsa',
-    EXPERIENCE: '/experience'
+    EXPERIENCE: '/experience',
+    NOTES: '/notes'
   },
   
   // UI Symbols

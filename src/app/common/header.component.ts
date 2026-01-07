@@ -58,7 +58,8 @@ export class HeaderComponent implements OnInit {
     { route: this.routes.SKILLS, label: this.nav.SKILLS, exact: false },
     { route: this.routes.PROJECTS, label: this.nav.PROJECTS, exact: false },
     { route: this.routes.DSA, label: this.nav.DSA, exact: false },
-    { route: this.routes.EXPERIENCE, label: this.nav.EXPERIENCE, exact: false }
+    { route: this.routes.EXPERIENCE, label: this.nav.EXPERIENCE, exact: false },
+    { route: this.routes.NOTES, label: this.nav.NOTES, exact: false }
   ];
 
   ngOnInit() {
