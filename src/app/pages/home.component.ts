@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LayoutComponent } from './layout.component';
+import { LayoutComponent } from '../common/layout.component';
 import { RouterModule } from '@angular/router';
-import { TitleService } from './title.service';
-import { CONSTANTS } from './constants';
+import { TitleService } from '../title.service';
+import { CONSTANTS } from '../constants';
 
 @Component({
   selector: 'app-home',
@@ -12,8 +12,8 @@ import { CONSTANTS } from './constants';
   template: `
     <app-layout>
       <!-- Hero -->
-      <section id="home" class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center py-24">
-        <div class="md:col-span-7">
+      <section id="home" class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center py-24 fade-in">
+        <div class="md:col-span-7 mb-10 md:mb-0 slide-in">
           <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
             {{ heroTitle.part1 }} <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 to-pink-400">{{ heroTitle.clean }}</span>
             {{ heroTitle.and }}
@@ -24,13 +24,13 @@ import { CONSTANTS } from './constants';
             {{ heroDescription }}
           </p>
           <div class="mt-6 flex gap-3">
-            <a routerLink="/skills" class="inline-flex items-center gap-2 px-5 py-3 rounded-lg text-black font-semibold btn-accent">{{ exploreSkillsBtn }}</a>
+            <a routerLink="/skills" class="inline-flex items-center gap-2 px-5 py-3 rounded-lg text-black font-semibold btn-accent hover:scale-105 transition-transform">{{ exploreSkillsBtn }}</a>
           </div>
         </div>
-        <div class="md:col-span-5 flex justify-center md:justify-end">
-          <div class="relative w-72 h-72 md:w-80 md:h-80 rounded-2xl glass p-4">
+        <div class="md:col-span-5 flex justify-center md:justify-end fade-in">
+          <div class="relative w-72 h-72 md:w-80 md:h-80 rounded-2xl glass p-4 hover:scale-105 transition-transform duration-300">
             <img src="assets/rohit1.jpg" alt="Rohit portrait"
-              class="absolute top-[-20px] right-[30px] w-56 md:w-64 rounded-xl shadow-2xl object-cover border-4 border-transparent rotate-6">
+              class="absolute top-[-20px] right-[30px] w-56 md:w-64 rounded-xl shadow-2xl object-cover border-4 border-transparent rotate-6 hover:rotate-3 transition-transform duration-300">
           </div>
         </div>
       </section>
