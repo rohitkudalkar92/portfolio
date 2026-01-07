@@ -62,6 +62,14 @@ export class NotesComponent implements OnInit {
       content: 'Aiming for 8 glasses (2 liters) of water daily. Using a water tracking app. Benefits: better skin, improved energy, better digestion.',
       date: '2026-01-05',
       tags: ['hydration', 'health', 'goals']
+    },
+    {
+      id: '4',
+      title: 'GitHub Pages Deployment Fix',
+      category: 'general',
+      content: 'Fixed GitHub Actions deployment by using official GitHub Pages actions instead of angular-cli-ghpages. Key: Set Pages source to "GitHub Actions" in repo settings, use upload-pages-artifact@v3 and deploy-pages@v4 actions.',
+      date: '2026-01-07',
+      tags: ['github', 'deployment', 'ci-cd', 'troubleshooting']
     }
   ];
 
