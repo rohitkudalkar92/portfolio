@@ -5,11 +5,16 @@ on:
     branches: [ master ]
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
     - uses: actions/checkout@v4
     
@@ -26,10 +31,12 @@ jobs:
         npm run build
         ls -la dist/
         ls -la dist/portfolio/
+        
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: ./dist/portfolio
       
     - name: Deploy
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./dist/portfolio
-        force_orphan: true
+      id: deployment
+      uses: actions/deploy-pages@v4
