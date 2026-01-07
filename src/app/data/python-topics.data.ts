@@ -12,6 +12,12 @@ export const PYTHON_TOPICS: PythonTopic[] = [
     title: 'Variables and Data Types',
     description: 'Learn about Python variables, strings, numbers, booleans, and basic data types.',
     difficulty: 'Beginner'
+  },
+  {
+    id: 'operators',
+    title: 'Python Operators',
+    description: 'Learn about arithmetic, comparison, logical, and other operators in Python.',
+    difficulty: 'Beginner'
   }
 ];
 

@@ -1,0 +1,296 @@
+<app-layout>
+  <!-- Header -->
+  <div class="flex items-center justify-between mb-8">
+    <a routerLink="/notes/python"
+      class="px-4 py-2 bg-secondary text-secondary rounded-lg hover:bg-accent/20 transition-colors">
+      ← Back to Python Topics
+    </a>
+  </div>
+
+  <!-- Topic Header -->
+  <div class="glass rounded-xl p-6 mb-8">
+    <div class="flex items-start justify-between mb-4">
+      <div>
+        <h1 class="text-3xl font-bold text-primary mb-2">Python Operators</h1>
+        <p class="text-secondary">Learn about arithmetic, comparison, logical, and other operators in Python.</p>
+      </div>
+      <span class="px-3 py-1 rounded-full text-xs font-medium bg-green-500/20 text-green-400">
+        Beginner
+      </span>
+    </div>
+  </div>
+
+  <!-- Content Sections -->
+  <div class="space-y-8">
+    <!-- Arithmetic Operators -->
+    <div class="glass rounded-xl p-6">
+      <h2 class="text-xl font-semibold text-primary mb-4">Arithmetic Operators</h2>
+      <p class="text-secondary mb-4">Used to perform mathematical operations on numbers.</p>
+
+      <div class="bg-gray-900 rounded-lg overflow-hidden">
+        <div class="px-4 py-2 bg-gray-800">
+          <span class="text-sm text-gray-300">Python</span>
+        </div>
+        <pre class="p-4 text-sm text-gray-100 overflow-x-auto"><code>a = 10
+b = 3
+
+print(a + b)    # Addition: 13
+print(a - b)    # Subtraction: 7
+print(a * b)    # Multiplication: 30
+print(a / b)    # Division: 3.333...
+print(a // b)   # Floor division: 3
+print(a % b)    # Modulus: 1
+print(a ** b)   # Exponentiation: 1000</code></pre>
+      </div>
+      
+      <div class="mt-4 bg-gray-800 rounded-lg overflow-hidden">
+        <div class="px-4 py-2 bg-gray-700">
+          <span class="text-sm text-green-400">Output</span>
+        </div>
+        <pre class="p-4 text-sm text-green-400"><code>13
+7
+30
+3.3333333333333335
+3
+1
+1000</code></pre>
+      </div>
+    </div>
+
+    <!-- Comparison Operators -->
+    <div class="glass rounded-xl p-6">
+      <h2 class="text-xl font-semibold text-primary mb-4">Comparison Operators</h2>
+      <p class="text-secondary mb-4">Used to compare values and return True or False.</p>
+
+      <div class="bg-gray-900 rounded-lg overflow-hidden">
+        <div class="px-4 py-2 bg-gray-800">
+          <span class="text-sm text-gray-300">Python</span>
+        </div>
+        <pre class="p-4 text-sm text-gray-100 overflow-x-auto"><code>x = 5
+y = 10
+
+print(x == y)   # Equal to: False
+print(x != y)   # Not equal to: True
+print(x < y)    # Less than: True
+print(x > y)    # Greater than: False
+print(x <= y)   # Less than or equal to: True
+print(x >= y)   # Greater than or equal to: False</code></pre>
+      </div>
+      
+      <div class="mt-4 bg-gray-800 rounded-lg overflow-hidden">
+        <div class="px-4 py-2 bg-gray-700">
+          <span class="text-sm text-green-400">Output</span>
+        </div>
+        <pre class="p-4 text-sm text-green-400"><code>False
+True
+True
+False
+True
+False</code></pre>
+      </div>
+    </div>
+
+    <!-- Logical Operators -->
+    <div class="glass rounded-xl p-6">
+      <h2 class="text-xl font-semibold text-primary mb-4">Logical Operators</h2>
+      <p class="text-secondary mb-4">Used to combine conditional statements.</p>
+
+      <div class="bg-gray-900 rounded-lg overflow-hidden">
+        <div class="px-4 py-2 bg-gray-800">
+          <span class="text-sm text-gray-300">Python</span>
+        </div>
+        <pre class="p-4 text-sm text-gray-100 overflow-x-auto"><code>a = True
+b = False
+
+print(a and b)  # Logical AND: False
+print(a or b)   # Logical OR: True
+print(not a)    # Logical NOT: False
+print(not b)    # Logical NOT: True
+
+# With conditions
+age = 25
+has_license = True
+print(age >= 18 and has_license)  # True</code></pre>
+      </div>
+      
+      <div class="mt-4 bg-gray-800 rounded-lg overflow-hidden">
+        <div class="px-4 py-2 bg-gray-700">
+          <span class="text-sm text-green-400">Output</span>
+        </div>
+        <pre class="p-4 text-sm text-green-400"><code>False
+True
+False
+True
+True</code></pre>
+      </div>
+    </div>
+
+    <!-- Assignment Operators -->
+    <div class="glass rounded-xl p-6">
+      <h2 class="text-xl font-semibold text-primary mb-4">Assignment Operators</h2>
+      <p class="text-secondary mb-4">Used to assign values to variables.</p>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <div>
+          <h3 class="text-lg font-medium text-primary mb-2">Basic Assignment</h3>
+          <div class="bg-gray-900 rounded-lg overflow-hidden">
+            <pre class="p-3 text-sm text-gray-100"><code>x = 10
+print(x)  # 10
+
+x += 5    # x = x + 5
+print(x)  # 15
+
+x -= 3    # x = x - 3
+print(x)  # 12</code></pre>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-medium text-primary mb-2">Compound Assignment</h3>
+          <div class="bg-gray-900 rounded-lg overflow-hidden">
+            <pre class="p-3 text-sm text-gray-100"><code>y = 8
+y *= 2    # y = y * 2
+print(y)  # 16
+
+y /= 4    # y = y / 4
+print(y)  # 4.0
+
+y **= 2   # y = y ** 2
+print(y)  # 16.0</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Identity and Membership Operators -->
+    <div class="glass rounded-xl p-6">
+      <h2 class="text-xl font-semibold text-primary mb-4">Identity & Membership Operators</h2>
+
+      <div class="space-y-6">
+        <!-- Identity Operators -->
+        <div>
+          <h3 class="text-lg font-medium text-primary mb-2">Identity Operators</h3>
+          <p class="text-secondary text-sm mb-3">Check if two variables refer to the same object</p>
+          <div class="bg-gray-900 rounded-lg overflow-hidden">
+            <pre class="p-3 text-sm text-gray-100"><code>a = [1, 2, 3]
+b = [1, 2, 3]
+c = a
+
+print(a is b)      # False (different objects)
+print(a is c)      # True (same object)
+print(a is not b)  # True</code></pre>
+          </div>
+          
+          <div class="mt-4 bg-gray-800 rounded-lg overflow-hidden">
+            <div class="px-4 py-2 bg-gray-700">
+              <span class="text-sm text-green-400">Output</span>
+            </div>
+            <pre class="p-4 text-sm text-green-400"><code>False
+True
+True</code></pre>
+          </div>
+        </div>
+
+        <!-- Membership Operators -->
+        <div>
+          <h3 class="text-lg font-medium text-primary mb-2">Membership Operators</h3>
+          <p class="text-secondary text-sm mb-3">Check if a value exists in a sequence</p>
+          <div class="bg-gray-900 rounded-lg overflow-hidden">
+            <pre class="p-3 text-sm text-gray-100"><code>fruits = ["apple", "banana", "orange"]
+text = "Hello World"
+
+print("apple" in fruits)        # True
+print("grape" in fruits)        # False
+print("grape" not in fruits)    # True
+print("Hello" in text)          # True</code></pre>
+          </div>
+          
+          <div class="mt-4 bg-gray-800 rounded-lg overflow-hidden">
+            <div class="px-4 py-2 bg-gray-700">
+              <span class="text-sm text-green-400">Output</span>
+            </div>
+            <pre class="p-4 text-sm text-green-400"><code>True
+False
+True
+True</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Operator Precedence -->
+    <div class="glass rounded-xl p-6">
+      <h2 class="text-xl font-semibold text-primary mb-4">Operator Precedence</h2>
+      <p class="text-secondary mb-4">Order in which operators are evaluated in expressions.</p>
+
+      <div class="bg-gray-900 rounded-lg overflow-hidden">
+        <div class="px-4 py-2 bg-gray-800">
+          <span class="text-sm text-gray-300">Python</span>
+        </div>
+        <pre class="p-4 text-sm text-gray-100 overflow-x-auto"><code># Without parentheses
+result1 = 2 + 3 * 4
+print(result1)  # 14 (multiplication first)
+
+# With parentheses
+result2 = (2 + 3) * 4
+print(result2)  # 20 (addition first)
+
+# Complex expression
+result3 = 10 + 5 * 2 ** 3 - 4
+print(result3)  # 46 (2**3=8, 5*8=40, 10+40-4=46)</code></pre>
+      </div>
+      
+      <div class="mt-4 bg-gray-800 rounded-lg overflow-hidden">
+        <div class="px-4 py-2 bg-gray-700">
+          <span class="text-sm text-green-400">Output</span>
+        </div>
+        <pre class="p-4 text-sm text-green-400"><code>14
+20
+46</code></pre>
+      </div>
+    </div>
+
+    <!-- Practice Section -->
+    <div class="glass rounded-xl p-6">
+      <h2 class="text-xl font-semibold text-primary mb-4">Practice</h2>
+      <p class="text-secondary mb-4">Try these exercises to practice working with Python operators.</p>
+      
+      <div class="bg-blue-500/10 border border-blue-500/20 rounded-lg p-4">
+        <h3 class="text-blue-400 font-medium mb-2">💡 Practice Exercise</h3>
+        <p class="text-secondary text-sm mb-3">Create a simple calculator that performs basic operations and comparisons.</p>
+        <div class="bg-gray-900 rounded-lg overflow-hidden">
+          <pre class="p-3 text-sm text-gray-100"><code># Calculator exercise
+num1 = 15
+num2 = 4
+
+# Arithmetic operations
+addition = num1 + num2
+subtraction = num1 - num2
+multiplication = num1 * num2
+division = num1 / num2
+floor_division = num1 // num2
+modulus = num1 % num2
+power = num1 ** 2
+
+# Comparisons
+is_greater = num1 > num2
+is_equal = num1 == num2
+
+# Display results
+print(f"{{ '{' }}num1{{ '}' }} + {{ '{' }}num2{{ '}' }} = {{ '{' }}addition{{ '}' }}")
+print(f"{{ '{' }}num1{{ '}' }} > {{ '{' }}num2{{ '}' }}: {{ '{' }}is_greater{{ '}' }}")
+print(f"{{ '{' }}num1{{ '}' }} % {{ '{' }}num2{{ '}' }} = {{ '{' }}modulus{{ '}' }}")</code></pre>
+        </div>
+        
+        <div class="mt-4 bg-gray-800 rounded-lg overflow-hidden">
+          <div class="px-4 py-2 bg-gray-700">
+            <span class="text-sm text-green-400">Output</span>
+          </div>
+          <pre class="p-4 text-sm text-green-400"><code>15 + 4 = 19
+15 > 4: True
+15 % 4 = 3</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</app-layout>
