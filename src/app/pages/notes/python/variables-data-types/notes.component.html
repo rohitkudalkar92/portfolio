@@ -182,51 +182,61 @@ x, y = coordinates</code></pre>
           </div>
         </div>
 
-        <!-- Dynamic Typing -->
+        <!-- Variable Naming Rules -->
         <div>
-          <h3 class="text-lg font-medium text-primary mb-2">Dynamic Typing</h3>
-          <p class="text-secondary text-sm mb-3">Variables can change types during runtime</p>
+          <h3 class="text-lg font-medium text-primary mb-2">Variable Naming Rules</h3>
+          <p class="text-secondary text-sm mb-3">Best practices for naming variables in Python</p>
           <div class="bg-gray-900 rounded-lg overflow-hidden">
-            <pre class="p-3 text-sm text-gray-100"><code># Variable changing types
-var = 42        # int
-print(type(var))  # &lt;class 'int'&gt;
+            <pre class="p-3 text-sm text-gray-100"><code># Valid variable names
+user_name = "Alice"
+age2 = 25
+_private_var = "hidden"
+PI = 3.14159
 
-var = "Hello"   # str
-print(type(var))  # &lt;class 'str'&gt;
-
-var = [1, 2, 3] # list
-print(type(var))  # &lt;class 'list'&gt;</code></pre>
-          </div>
-        </div>
-
-        <!-- String Operations -->
-        <div>
-          <h3 class="text-lg font-medium text-primary mb-2">String Operations</h3>
-          <p class="text-secondary text-sm mb-3">Advanced string manipulation techniques</p>
-          <div class="bg-gray-900 rounded-lg overflow-hidden">
-            <pre class="p-3 text-sm text-gray-100"><code># String slicing
-text = "Python Programming"
-print(text[0:6])        # "Python"
-print(text[-11:])       # "Programming"
-print(text[::2])        # "Pto rgamn"
-print(text[::-1])       # "gnimmargorP nohtyP"
-
-# String methods
-email = "  ALICE.SMITH&#64;EXAMPLE.COM  "
-clean_email = email.strip().lower().replace("example", "company")
-print(clean_email)  # "alice.smith&#64;company.com"</code></pre>
+print(user_name, age2, _private_var, PI)</code></pre>
           </div>
           
           <div class="mt-4 bg-gray-800 rounded-lg overflow-hidden">
             <div class="px-4 py-2 bg-gray-700">
               <span class="text-sm text-green-400">Output</span>
             </div>
-            <pre class="p-4 text-sm text-green-400"><code>Python
-Programming
-Pto rgamn
-gnimmargorP nohtyP
-alice.smith&#64;company.com</code></pre>
+            <pre class="p-4 text-sm text-green-400"><code>Alice 25 hidden 3.14159</code></pre>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Practice Section -->
+    <div class="glass rounded-xl p-6">
+      <h2 class="text-xl font-semibold text-primary mb-4">Practice</h2>
+      <p class="text-secondary mb-4">Try these exercises to practice working with variables and data types.</p>
+      
+      <div class="bg-blue-500/10 border border-blue-500/20 rounded-lg p-4">
+        <h3 class="text-blue-400 font-medium mb-2">💡 Practice Exercise</h3>
+        <p class="text-secondary text-sm mb-3">Create variables for your personal information and display them using different formatting methods.</p>
+        <div class="bg-gray-900 rounded-lg overflow-hidden">
+          <pre class="p-3 text-sm text-gray-100"><code># Your task: Create and display personal info
+first_name = "Your Name"
+last_name = "Your Last Name"
+age = 25
+height = 1.75
+is_student = True
+
+# Display using f-strings
+print(f"Name: {{ '{' }}first_name{{ '}' }} {{ '{' }}last_name{{ '}' }}")
+print(f"Age: {{ '{' }}age{{ '}' }} years old")
+print(f"Height: {{ '{' }}height{{ '}' }}m")
+print(f"Student: {{ '{' }}is_student{{ '}' }}")</code></pre>
+        </div>
+        
+        <div class="mt-4 bg-gray-800 rounded-lg overflow-hidden">
+          <div class="px-4 py-2 bg-gray-700">
+            <span class="text-sm text-green-400">Output</span>
+          </div>
+          <pre class="p-4 text-sm text-green-400"><code>Name: Your Name Your Last Name
+Age: 25 years old
+Height: 1.75m
+Student: True</code></pre>
         </div>
       </div>
     </div>
