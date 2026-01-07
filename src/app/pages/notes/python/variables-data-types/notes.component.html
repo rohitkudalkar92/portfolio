@@ -25,8 +25,7 @@
     <!-- Variables -->
     <div class="glass rounded-xl p-6">
       <h2 class="text-xl font-semibold text-primary mb-4">Variables</h2>
-      <p class="text-secondary mb-4">Variables are containers for storing data values. Python has no command for
-        declaring a variable.</p>
+      <p class="text-secondary mb-4">Variables are containers for storing data values. Python has no command for declaring a variable.</p>
 
       <div class="bg-gray-900 rounded-lg overflow-hidden">
         <div class="px-4 py-2 bg-gray-800">
@@ -39,6 +38,13 @@ height = 5.9
 is_student = True
 
 print(name, age, height, is_student)</code></pre>
+      </div>
+      
+      <div class="mt-4 bg-gray-800 rounded-lg overflow-hidden">
+        <div class="px-4 py-2 bg-gray-700">
+          <span class="text-sm text-green-400">Output</span>
+        </div>
+        <pre class="p-4 text-sm text-green-400"><code>John 25 5.9 True</code></pre>
       </div>
     </div>
 
@@ -108,6 +114,16 @@ print(type(age))       # &lt;class 'int'&gt;
 print(type(height))    # &lt;class 'float'&gt;
 print(type(is_student)) # &lt;class 'bool'&gt;</code></pre>
       </div>
+      
+      <div class="mt-4 bg-gray-800 rounded-lg overflow-hidden">
+        <div class="px-4 py-2 bg-gray-700">
+          <span class="text-sm text-green-400">Output</span>
+        </div>
+        <pre class="p-4 text-sm text-green-400"><code>&lt;class 'str'&gt;
+&lt;class 'int'&gt;
+&lt;class 'float'&gt;
+&lt;class 'bool'&gt;</code></pre>
+      </div>
     </div>
 
     <!-- Advanced Examples -->
@@ -134,6 +150,16 @@ print(bool(1))    # True
 print(bool(0))    # False
 print(bool(""))   # False
 print(bool("hi")) # True</code></pre>
+          </div>
+          
+          <div class="mt-4 bg-gray-800 rounded-lg overflow-hidden">
+            <div class="px-4 py-2 bg-gray-700">
+              <span class="text-sm text-green-400">Output</span>
+            </div>
+            <pre class="p-4 text-sm text-green-400"><code>True
+False
+False
+True</code></pre>
           </div>
         </div>
 
@@ -173,25 +199,33 @@ print(type(var))  # &lt;class 'list'&gt;</code></pre>
           </div>
         </div>
 
-        <!-- String Formatting -->
+        <!-- String Operations -->
         <div>
-          <h3 class="text-lg font-medium text-primary mb-2">String Formatting</h3>
+          <h3 class="text-lg font-medium text-primary mb-2">String Operations</h3>
           <p class="text-secondary text-sm mb-3">Advanced string manipulation techniques</p>
           <div class="bg-gray-900 rounded-lg overflow-hidden">
-            <pre class="p-3 text-sm text-gray-100"><code># f-strings (Python 3.6+)
-name = "Alice"
-age = 25
-message = f"Hello, name! You are age years old."
-
-# Format method
-template = "Name: placeholder, Age: placeholder"
-result = template.format(name, age)
+            <pre class="p-3 text-sm text-gray-100"><code># String slicing
+text = "Python Programming"
+print(text[0:6])        # "Python"
+print(text[-11:])       # "Programming"
+print(text[::2])        # "Pto rgamn"
+print(text[::-1])       # "gnimmargorP nohtyP"
 
 # String methods
-text = "  Python Programming  "
-print(text.strip())     # Remove whitespace 
-print(text.upper())     # Uppercase
-print(text.replace("Python", "Java"))</code></pre>
+email = "  ALICE.SMITH&#64;EXAMPLE.COM  "
+clean_email = email.strip().lower().replace("example", "company")
+print(clean_email)  # "alice.smith&#64;company.com"</code></pre>
+          </div>
+          
+          <div class="mt-4 bg-gray-800 rounded-lg overflow-hidden">
+            <div class="px-4 py-2 bg-gray-700">
+              <span class="text-sm text-green-400">Output</span>
+            </div>
+            <pre class="p-4 text-sm text-green-400"><code>Python
+Programming
+Pto rgamn
+gnimmargorP nohtyP
+alice.smith&#64;company.com</code></pre>
           </div>
         </div>
       </div>
