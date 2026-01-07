@@ -1,0 +1,200 @@
+<app-layout>
+  <!-- Header -->
+  <div class="flex items-center justify-between mb-8">
+    <a routerLink="/notes/python"
+      class="px-4 py-2 bg-secondary text-secondary rounded-lg hover:bg-accent/20 transition-colors">
+      ← Back to Python Topics
+    </a>
+  </div>
+
+  <!-- Topic Header -->
+  <div class="glass rounded-xl p-6 mb-8">
+    <div class="flex items-start justify-between mb-4">
+      <div>
+        <h1 class="text-3xl font-bold text-primary mb-2">Variables and Data Types</h1>
+        <p class="text-secondary">Learn about Python variables, strings, numbers, booleans, and basic data types.</p>
+      </div>
+      <span class="px-3 py-1 rounded-full text-xs font-medium bg-green-500/20 text-green-400">
+        Beginner
+      </span>
+    </div>
+  </div>
+
+  <!-- Content Sections -->
+  <div class="space-y-8">
+    <!-- Variables -->
+    <div class="glass rounded-xl p-6">
+      <h2 class="text-xl font-semibold text-primary mb-4">Variables</h2>
+      <p class="text-secondary mb-4">Variables are containers for storing data values. Python has no command for
+        declaring a variable.</p>
+
+      <div class="bg-gray-900 rounded-lg overflow-hidden">
+        <div class="px-4 py-2 bg-gray-800">
+          <span class="text-sm text-gray-300">Python</span>
+        </div>
+        <pre class="p-4 text-sm text-gray-100 overflow-x-auto"><code># Creating variables
+name = "John"
+age = 25
+height = 5.9
+is_student = True
+
+print(name, age, height, is_student)</code></pre>
+      </div>
+    </div>
+
+    <!-- Data Types -->
+    <div class="glass rounded-xl p-6">
+      <h2 class="text-xl font-semibold text-primary mb-4">Basic Data Types</h2>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <div>
+          <h3 class="text-lg font-medium text-primary mb-2">Strings (str)</h3>
+          <p class="text-secondary text-sm mb-3">Text data enclosed in quotes</p>
+          <div class="bg-gray-900 rounded-lg overflow-hidden">
+            <pre class="p-3 text-sm text-gray-100"><code>name = "Alice"
+message = 'Hello World'
+multiline = """This is a
+multiline string"""</code></pre>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-medium text-primary mb-2">Numbers</h3>
+          <p class="text-secondary text-sm mb-3">Integers and floating-point numbers</p>
+          <div class="bg-gray-900 rounded-lg overflow-hidden">
+            <pre class="p-3 text-sm text-gray-100"><code>age = 25          # int
+price = 19.99     # float
+complex_num = 3+4j # complex</code></pre>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-medium text-primary mb-2">Booleans (bool)</h3>
+          <p class="text-secondary text-sm mb-3">True or False values</p>
+          <div class="bg-gray-900 rounded-lg overflow-hidden">
+            <pre class="p-3 text-sm text-gray-100"><code>is_active = True
+is_complete = False
+result = 5 > 3  # True</code></pre>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-medium text-primary mb-2">None Type</h3>
+          <p class="text-secondary text-sm mb-3">Represents absence of value</p>
+          <div class="bg-gray-900 rounded-lg overflow-hidden">
+            <pre class="p-3 text-sm text-gray-100"><code>value = None
+print(value)  # None</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Type Checking -->
+    <div class="glass rounded-xl p-6">
+      <h2 class="text-xl font-semibold text-primary mb-4">Type Checking</h2>
+      <p class="text-secondary mb-4">Use type() function to check the data type of a variable.</p>
+
+      <div class="bg-gray-900 rounded-lg overflow-hidden">
+        <div class="px-4 py-2 bg-gray-800">
+          <span class="text-sm text-gray-300">Python</span>
+        </div>
+        <pre class="p-4 text-sm text-gray-100 overflow-x-auto"><code>name = "Alice"
+age = 25
+height = 5.9
+is_student = True
+
+print(type(name))      # &lt;class 'str'&gt;
+print(type(age))       # &lt;class 'int'&gt;
+print(type(height))    # &lt;class 'float'&gt;
+print(type(is_student)) # &lt;class 'bool'&gt;</code></pre>
+      </div>
+    </div>
+
+    <!-- Advanced Examples -->
+    <div class="glass rounded-xl p-6">
+      <h2 class="text-xl font-semibold text-primary mb-4">Advanced Examples</h2>
+
+      <div class="space-y-6">
+        <!-- Type Conversion -->
+        <div>
+          <h3 class="text-lg font-medium text-primary mb-2">Type Conversion</h3>
+          <p class="text-secondary text-sm mb-3">Converting between different data types</p>
+          <div class="bg-gray-900 rounded-lg overflow-hidden">
+            <pre class="p-3 text-sm text-gray-100"><code># String to number
+age_str = "25"
+age_int = int(age_str)
+age_float = float(age_str)
+
+# Number to string
+num = 42
+num_str = str(num)
+
+# Boolean conversion
+print(bool(1))    # True
+print(bool(0))    # False
+print(bool(""))   # False
+print(bool("hi")) # True</code></pre>
+          </div>
+        </div>
+
+        <!-- Multiple Assignment -->
+        <div>
+          <h3 class="text-lg font-medium text-primary mb-2">Multiple Assignment</h3>
+          <p class="text-secondary text-sm mb-3">Assign multiple variables in one line</p>
+          <div class="bg-gray-900 rounded-lg overflow-hidden">
+            <pre class="p-3 text-sm text-gray-100"><code># Multiple assignment
+x, y, z = 1, 2, 3
+name, age, city = "Alice", 25, "NYC"
+
+# Swapping variables
+a, b = 10, 20
+a, b = b, a  # Now a=20, b=10
+
+# Unpacking
+coordinates = (3, 4)
+x, y = coordinates</code></pre>
+          </div>
+        </div>
+
+        <!-- Dynamic Typing -->
+        <div>
+          <h3 class="text-lg font-medium text-primary mb-2">Dynamic Typing</h3>
+          <p class="text-secondary text-sm mb-3">Variables can change types during runtime</p>
+          <div class="bg-gray-900 rounded-lg overflow-hidden">
+            <pre class="p-3 text-sm text-gray-100"><code># Variable changing types
+var = 42        # int
+print(type(var))  # &lt;class 'int'&gt;
+
+var = "Hello"   # str
+print(type(var))  # &lt;class 'str'&gt;
+
+var = [1, 2, 3] # list
+print(type(var))  # &lt;class 'list'&gt;</code></pre>
+          </div>
+        </div>
+
+        <!-- String Formatting -->
+        <div>
+          <h3 class="text-lg font-medium text-primary mb-2">String Formatting</h3>
+          <p class="text-secondary text-sm mb-3">Advanced string manipulation techniques</p>
+          <div class="bg-gray-900 rounded-lg overflow-hidden">
+            <pre class="p-3 text-sm text-gray-100"><code># f-strings (Python 3.6+)
+name = "Alice"
+age = 25
+message = f"Hello, &#123;name&#125;! You are &#123;age&#125; years old."
+
+# Format method
+template = "Name: &#123;&#125;, Age: &#123;&#125;"
+result = template.format(name, age)
+
+# String methods
+text = "  Python Programming  "
+print(text.strip())     # Remove whitespace 
+print(text.upper())     # Uppercase
+print(text.replace("Python", "Java"))</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</app-layout>

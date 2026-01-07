@@ -7,7 +7,8 @@ import { SkillsComponent } from './pages/skills/skills.component';
 import { DSAComponent } from './pages/dsa.component';
 import { DiagramComponent } from './pages/diagram/diagram.component';
 import { NotesComponent } from './pages/notes/notes.component';
-import { PythonDetailsComponent } from './pages/notes/python-details.component';
+import { PythonDetailsComponent } from './pages/notes/python/python-details.component';
+import { VariablesDataTypesComponent } from './pages/notes/python/variables-data-types.component';
 import { NotFoundComponent } from './common/not-found.component';
 
 export const routes: Routes = [
@@ -19,6 +20,7 @@ export const routes: Routes = [
   { path: 'diagram', component: DiagramComponent },
   { path: 'notes', component: NotesComponent },
   { path: 'notes/python', component: PythonDetailsComponent },
+  { path: 'notes/python/variables-data-types', component: VariablesDataTypesComponent },
   { path: 'project/:id', component: ProjectDetailComponent },
   { path: '**', component: NotFoundComponent }
 ];

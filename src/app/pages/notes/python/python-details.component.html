@@ -1,0 +1,25 @@
+<app-layout>
+  <!-- Header -->
+  <div class="flex items-center justify-between mb-8">
+    <a routerLink="/notes" class="px-4 py-2 bg-secondary text-secondary rounded-lg hover:bg-accent/20 transition-colors">
+      ← Back to Notes
+    </a>
+  </div>
+
+  <!-- Python Basics List -->
+  <div class="space-y-4">
+    <div *ngFor="let topic of pythonTopics" class="glass rounded-xl p-4 hover:transform hover:scale-105 transition-all duration-300">
+      <a [routerLink]="'/notes/python/' + topic.id" class="block">
+        <div class="flex items-center justify-between">
+          <div>
+            <h3 class="text-lg font-semibold text-primary">{{ topic.title }}</h3>
+            <p class="text-secondary text-sm">{{ topic.description }}</p>
+          </div>
+          <span [class]="'px-3 py-1 rounded-full text-xs font-medium ' + getDifficultyColor(topic.difficulty)">
+            {{ topic.difficulty }}
+          </span>
+        </div>
+      </a>
+    </div>
+  </div>
+</app-layout>
