@@ -1,12 +1,12 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './pages/home.component';
-import { ExperienceComponent } from './pages/experience.component';
-import { ProjectsComponent } from './pages/projects.component';
-import { ProjectDetailComponent } from './pages/project-detail.component';
-import { SkillsComponent } from './pages/skills.component';
-import { DSAComponent } from './pages/dsa.component';
-import { DiagramComponent } from './pages/diagram.component';
-import { NotesComponent } from './pages/notes.component';
+import { HomeComponent } from './pages/home/home.component';
+import { ExperienceComponent } from './pages/experience/experience.component';
+import { ProjectsComponent } from './pages/projects/projects.component';
+import { ProjectDetailComponent } from './pages/projects/project-detail.component';
+import { SkillsComponent } from './pages/skills/skills.component';
+import { DSAComponent } from './pages/dsa/dsa.component';
+import { DiagramComponent } from './pages/diagram/diagram.component';
+import { NotesComponent } from './pages/notes/notes.component';
 import { NotFoundComponent } from './common/not-found.component';
 
 export const routes: Routes = [
