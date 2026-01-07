@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LayoutComponent } from '../../common/layout.component';
-import { TitleService } from '../../title.service';
-import { CONSTANTS } from '../../constants';
+import { LayoutComponent } from '../common/layout.component';
+import { TitleService } from '../title.service';
+import { CONSTANTS } from '../constants';
 
 @Component({
   selector: 'app-dsa',
@@ -10,8 +10,6 @@ import { CONSTANTS } from '../../constants';
   imports: [CommonModule, LayoutComponent],
   template: `
     <app-layout>
-      <h1 class="text-3xl font-bold mb-8">Data Structures & Algorithms</h1>
-      
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <div *ngFor="let topic of dsaTopics" class="glass p-6 rounded-xl hover:scale-105 transition-transform duration-300">
           <div class="flex items-center gap-3 mb-4">

@@ -11,8 +11,6 @@ import { CONSTANTS } from '../../constants';
   imports: [CommonModule, LayoutComponent, RouterLink],
   template: `
     <app-layout>
-      <h1 class="text-3xl font-bold mb-8">{{ pageTitle }}</h1>
-      
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <div *ngFor="let project of projects" class="project-card glass p-6 rounded-xl transition-all duration-300 hover:scale-105">
           <div class="mb-4">

@@ -8,8 +8,6 @@ import { LayoutComponent } from '../../common/layout.component';
   imports: [CommonModule, LayoutComponent],
   template: `
     <app-layout>
-      <h1 class="text-3xl font-bold mb-8">Advanced System Architecture Diagrams</h1>
-      
       <!-- Microservices Architecture -->
       <div class="mb-12 glass p-6 rounded-xl">
         <h3 class="text-xl font-semibold mb-4">Microservices Architecture</h3>

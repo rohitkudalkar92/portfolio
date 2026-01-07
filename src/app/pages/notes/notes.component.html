@@ -1,14 +1,4 @@
 <app-layout>
-  <!-- Header -->
-  <div class="text-center mb-12">
-    <h1 class="text-4xl md:text-5xl font-bold text-primary mb-4">
-      {{ CONSTANTS.NOTES.TITLE }}
-    </h1>
-    <p class="text-lg text-secondary max-w-2xl mx-auto">
-      {{ CONSTANTS.NOTES.DESCRIPTION }}
-    </p>
-  </div>
-
   <!-- Categories Filter -->
   <div class="flex flex-wrap justify-center gap-3 mb-8">
     <button 
@@ -39,13 +29,23 @@
       <h3 class="text-lg font-semibold text-primary mb-2">{{ note.title }}</h3>
       <p class="text-secondary text-sm mb-4 line-clamp-3">{{ note.content }}</p>
       
-      <div class="flex flex-wrap gap-1">
-        <span 
-          *ngFor="let tag of note.tags" 
-          class="text-xs px-2 py-1 bg-accent/20 text-accent rounded"
+      <div class="flex items-center justify-between">
+        <div class="flex flex-wrap gap-1">
+          <span 
+            *ngFor="let tag of note.tags" 
+            class="text-xs px-2 py-1 bg-accent/20 text-accent rounded"
+          >
+            #{{ tag }}
+          </span>
+        </div>
+        <!-- Always show for Python notes -->
+        <a 
+          *ngIf="note.category === 'python'" 
+          routerLink="/notes/python"
+          class="text-xs px-3 py-1 bg-accent text-black rounded font-medium hover:bg-accent/80 transition-colors flex-shrink-0"
         >
-          #{{ tag }}
-        </span>
+          View Details →
+        </a>
       </div>
     </div>
   </div>

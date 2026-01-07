@@ -1,0 +1,80 @@
+<app-layout>
+  <!-- Header -->
+  <div class="flex items-center justify-between mb-8">
+    <a routerLink="/notes" class="px-4 py-2 bg-secondary text-secondary rounded-lg hover:bg-accent/20 transition-colors">
+      ← Back to Notes
+    </a>
+  </div>
+
+  <!-- Topics Grid -->
+  <div class="space-y-8">
+    <div *ngFor="let topic of pythonTopics" class="glass rounded-xl p-6">
+      <!-- Topic Header -->
+      <div class="flex items-start justify-between mb-4">
+        <div>
+          <h2 class="text-2xl font-semibold text-primary mb-2">{{ topic.title }}</h2>
+          <p class="text-secondary">{{ topic.description }}</p>
+        </div>
+        <span [class]="'px-3 py-1 rounded-full text-xs font-medium ' + getDifficultyColor(topic.difficulty)">
+          {{ topic.difficulty }}
+        </span>
+      </div>
+
+      <!-- Code Block -->
+      <div class="mb-4">
+        <div class="bg-gray-900 rounded-lg overflow-hidden">
+          <div class="flex items-center justify-between px-4 py-2 bg-gray-800">
+            <span class="text-sm text-gray-300">Python</span>
+            <button class="text-xs text-gray-400 hover:text-white transition-colors">
+              Copy
+            </button>
+          </div>
+          <pre class="p-4 text-sm text-gray-100 overflow-x-auto"><code>{{ topic.code }}</code></pre>
+        </div>
+      </div>
+
+      <!-- Output (if available) -->
+      <div *ngIf="topic.output" class="mb-4">
+        <div class="bg-gray-800 rounded-lg overflow-hidden">
+          <div class="px-4 py-2 bg-gray-700">
+            <span class="text-sm text-gray-300">Output</span>
+          </div>
+          <pre class="p-4 text-sm text-green-400 overflow-x-auto"><code>{{ topic.output }}</code></pre>
+        </div>
+      </div>
+
+      <!-- Tags -->
+      <div class="flex flex-wrap gap-2">
+        <span 
+          *ngFor="let tag of topic.tags" 
+          class="text-xs px-2 py-1 bg-accent/20 text-accent rounded"
+        >
+          #{{ tag }}
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick Reference -->
+  <div class="mt-12 glass rounded-xl p-6">
+    <h3 class="text-xl font-semibold text-primary mb-4">🚀 Quick Reference</h3>
+    <div class="grid md:grid-cols-2 gap-4 text-sm">
+      <div>
+        <h4 class="font-medium text-secondary mb-2">Essential Commands</h4>
+        <ul class="space-y-1 text-muted">
+          <li><code class="bg-gray-800 px-2 py-1 rounded">python --version</code> - Check Python version</li>
+          <li><code class="bg-gray-800 px-2 py-1 rounded">pip install package</code> - Install packages</li>
+          <li><code class="bg-gray-800 px-2 py-1 rounded">python -m venv env</code> - Create virtual environment</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-medium text-secondary mb-2">Useful Resources</h4>
+        <ul class="space-y-1 text-muted">
+          <li><a href="https://docs.python.org" target="_blank" class="text-accent hover:underline">Official Documentation</a></li>
+          <li><a href="https://realpython.com" target="_blank" class="text-accent hover:underline">Real Python</a></li>
+          <li><a href="https://pythontutor.com" target="_blank" class="text-accent hover:underline">Python Tutor</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</app-layout>
