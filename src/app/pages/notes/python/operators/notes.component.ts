@@ -20,6 +20,40 @@ import { TitleService } from '../../../../title.service';
 })
 export class OperatorsNotesComponent implements OnInit {
 
+  rulesExampleCode = `# 1. Precedence example
+result = 2 + 3 * 4  # Multiplication first: 2 + 12 = 14
+print(f"2 + 3 * 4 = {result}")
+
+# 2. Comparison chaining
+age = 25
+print(f"18 <= {age} <= 65: {18 <= age <= 65}")  # True
+
+# 3. Logical short-circuit
+print(f"False and print('This won't execute'): {False and print('This won\'t execute')}")
+print(f"True or print('This won\'t execute'): {True or print('This won\'t execute')}")
+
+# 4. Identity vs Equality
+list1 = [1, 2, 3]
+list2 = [1, 2, 3]
+list3 = list1
+print(f"list1 == list2: {list1 == list2}")  # True (same values)
+print(f"list1 is list2: {list1 is list2}")  # False (different objects)
+print(f"list1 is list3: {list1 is list3}")  # True (same object)
+
+# 5. Assignment operators
+x = 10
+x += 5  # x = x + 5
+print(f"After x += 5: {x}")`;
+
+  rulesExampleOutput = `2 + 3 * 4 = 14
+18 <= 25 <= 65: True
+False and print('This won't execute'): False
+True or print('This won't execute'): True
+list1 == list2: True
+list1 is list2: False
+list1 is list3: True
+After x += 5: 15`;
+
   arithmeticCode = `a = 10
 b = 3
 

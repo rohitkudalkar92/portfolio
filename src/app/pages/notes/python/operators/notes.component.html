@@ -10,6 +10,20 @@
 
   <!-- Content Sections -->
   <div>
+    <!-- Key Rules -->
+    <app-content-section title="Key Rules" description="Important rules to remember when working with Python operators.">
+      <app-info-box type="info" title="📋 Operator Rules">
+        <ul class="text-secondary text-sm space-y-1 list-disc list-inside">
+          <li><strong>Precedence:</strong> Parentheses > Exponentiation > Multiplication/Division > Addition/Subtraction</li>
+          <li><strong>Comparison chaining:</strong> a < b < c is equivalent to (a < b) and (b < c)</li>
+          <li><strong>Logical short-circuit:</strong> 'and' stops at first False, 'or' stops at first True</li>
+          <li><strong>Identity vs Equality:</strong> 'is' checks object identity, '==' checks value equality</li>
+          <li><strong>Assignment operators:</strong> Modify variable in-place (+=, -=, *=, /=, etc.)</li>
+        </ul>
+      </app-info-box>
+      
+      <app-code-block [code]="rulesExampleCode" [output]="rulesExampleOutput" language="Python"></app-code-block>
+    </app-content-section>
     <!-- Basic Operators -->
     <app-content-section title="Arithmetic Operators" description="Used to perform mathematical operations on numbers.">
       <app-code-block [code]="arithmeticCode" [output]="arithmeticOutput" language="Python"></app-code-block>
