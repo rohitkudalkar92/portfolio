@@ -91,7 +91,6 @@ export const CONSTANTS = {
     KEY_FEATURES_TITLE: 'Key Features',
     PROJECT_DETAILS_TITLE: 'Project Details',
     VIEW_LIVE_BTN: 'View Live Site',
-    VIEW_CODE_BTN: 'View Code',
     NOT_FOUND_TITLE: 'Project Not Found'
   },
   
@@ -399,33 +398,6 @@ export const CONSTANTS = {
       technologies: ['Angular 17', 'TypeScript', 'Tailwind CSS', 'SCSS'],
       liveUrl: 'https://rohitkudalkar.dev',
       githubUrl: 'https://github.com/rohit/portfolio'
-    },
-    {
-      id: 'weather-dashboard',
-      title: 'Weather Dashboard',
-      description: 'Real-time weather application with location-based forecasts, interactive maps, and weather alerts. Integrates with multiple weather APIs for accurate data.',
-      image: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=400&h=300&fit=crop',
-      technologies: ['React', 'JavaScript', 'API Integration', 'CSS3'],
-      liveUrl: 'https://example.com',
-      githubUrl: 'https://github.com/rohit'
-    },
-    {
-      id: 'cms-dashboard',
-      title: 'CMS Dashboard',
-      description: 'Content management system with role-based access control, rich text editor, and media management. Built for scalability and ease of use.',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop',
-      technologies: ['Angular', 'TypeScript', 'Node.js', 'MySQL'],
-      liveUrl: 'https://example.com',
-      githubUrl: 'https://github.com/rohit'
-    },
-    {
-      id: 'social-media-app',
-      title: 'Social Media App',
-      description: 'Social networking platform with real-time messaging, post sharing, and user profiles. Features include image uploads, likes, comments, and friend connections.',
-      image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=400&h=300&fit=crop',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Socket.io'],
-      liveUrl: 'https://example.com',
-      githubUrl: 'https://github.com/rohit'
     }
   ]
 } as const;
