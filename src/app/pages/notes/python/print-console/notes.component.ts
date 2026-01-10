@@ -218,6 +218,95 @@ Line 1
 Line 2	Tabbed
 Quote: "Hello World"`;
 
+  // Monthly Salary Example
+  monthlySalaryCode = `# Calculate and display monthly salary
+user_salary = 65000
+
+# Calculate monthly salary with 2 decimal places
+print(f"Monthly Salary: $\{user_salary/12:.2f}")`;
+
+  monthlySalaryOutput = `Monthly Salary: $5416.67`;
+
+  // End Parameter Use Cases
+  endParameterUseCasesCode = `# Why use end parameter? Practical examples
+
+# 1. Progress Indicators
+print("Downloading", end="")
+print(".", end="")
+print(".", end="")
+print(".", end="")
+print(" Complete!")
+
+# 2. User Input Prompts
+print("Enter your name: ", end="")
+# name = input()  # Input appears on same line
+
+# 3. Status Updates
+print("Processing file 1", end=" -> ")
+print("Processing file 2", end=" -> ")
+print("Done")
+
+# 4. Building Output Dynamically
+print("Score: ", end="")
+print(95, end="")
+print("/100")
+
+# 5. Creating Lists
+print("Items: ", end="")
+for i, item in enumerate(["apple", "banana", "cherry"]):
+    if i > 0:
+        print(", ", end="")
+    print(item, end="")
+print()  # Final newline`;
+
+  endParameterUseCasesOutput = `Downloading... Complete!
+Enter your name: 
+Processing file 1 -> Processing file 2 -> Done
+Score: 95/100
+Items: apple, banana, cherry`;
+
+  // End Parameter Options
+  endParameterOptionsCode = `# Different end parameter options
+
+# 1. Space
+print("Hello", end=" ")
+print("World")
+
+# 2. Custom text
+print("Step 1", end=" -> ")
+print("Step 2", end=" -> ")
+print("Done")
+
+# 3. Special characters
+print("Item 1", end=" | ")
+print("Item 2", end=" | ")
+print("Item 3")
+
+# 4. Multiple characters
+print("Loading", end="...")
+print("Complete")
+
+# 5. Tab character
+print("Name", end="\\t")
+print("Age")
+
+# 6. Colon separator
+print("Username", end=": ")
+print("admin")
+
+# 7. No ending (empty string)
+print("A", end="")
+print("B", end="")
+print("C")`;
+
+  endParameterOptionsOutput = `Hello World
+Step 1 -> Step 2 -> Done
+Item 1 | Item 2 | Item 3
+Loading...Complete
+Name	Age
+Username: admin
+ABC`;
+
   // Print to Files Examples
   printToFileCode = `# Print to files
 import sys

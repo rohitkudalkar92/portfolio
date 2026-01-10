@@ -81,6 +81,43 @@
       </app-info-box>
     </app-content-section>
 
+    <!-- Monthly Salary Example -->
+    <app-content-section title="Monthly Salary Calculation" description="Calculate and format monthly salary from annual salary.">
+      <app-code-block [code]="monthlySalaryCode" [output]="monthlySalaryOutput" language="Python"></app-code-block>
+    </app-content-section>
+
+    <!-- End Parameter Use Cases -->
+    <app-content-section title="Why Use End Parameter?" description="Practical examples showing when and why to use the end parameter.">
+      <app-code-block [code]="endParameterUseCasesCode" [output]="endParameterUseCasesOutput" language="Python"></app-code-block>
+      
+      <app-info-box type="success" title="✅ Common Use Cases">
+        <ul class="text-secondary text-sm space-y-1 list-disc list-inside">
+          <li><strong>Progress bars:</strong> Show loading progress on same line</li>
+          <li><strong>User prompts:</strong> Keep input on same line as question</li>
+          <li><strong>Status chains:</strong> Connect related status messages</li>
+          <li><strong>Dynamic output:</strong> Build output piece by piece</li>
+          <li><strong>Real-time updates:</strong> Update counters or progress in place</li>
+        </ul>
+      </app-info-box>
+    </app-content-section>
+
+    <!-- End Parameter Options -->
+    <app-content-section title="End Parameter Options" description="All the different values you can use with the end parameter.">
+      <app-code-block [code]="endParameterOptionsCode" [output]="endParameterOptionsOutput" language="Python"></app-code-block>
+      
+      <app-info-box type="info" title="📝 End Parameter Values">
+        <ul class="text-secondary text-sm space-y-1 list-disc list-inside">
+          <li><strong>end=" "</strong> - Add space between outputs</li>
+          <li><strong>end=" -> "</strong> - Arrow connector for steps</li>
+          <li><strong>end=" | "</strong> - Pipe separator for items</li>
+          <li><strong>end="..."</strong> - Custom text ending</li>
+          <li><strong>end="\t"</strong> - Tab character for spacing</li>
+          <li><strong>end=": "</strong> - Colon for labels</li>
+          <li><strong>end=""</strong> - No ending (stay on same line)</li>
+        </ul>
+      </app-info-box>
+    </app-content-section>
+
     <!-- Print to Files -->
     <app-content-section title="Print to Files" description="Redirect print output to files and handle file operations.">
       <app-code-block [code]="printToFileCode" [output]="printToFileOutput" language="Python"></app-code-block>

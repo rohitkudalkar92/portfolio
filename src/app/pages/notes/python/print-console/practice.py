@@ -5,12 +5,17 @@ print("=== Basic Print Statements ===")
 print("=== basic print statements ===")
 # Simple text output
 print("Hello, World!")
+print("this is python statement")
+print('THis is single quote print example')
 print("Welcome to Python!")
 print()  # Empty line
+print('''this is multi line example ''')
 
 # Print numbers
 print(42)
+print(43)
 print(3.14159)
+print('This is floating number example', 3.12)
 print()
 
 print("=== Printing Variables ===")
@@ -36,8 +41,10 @@ print("=== String Formatting with F-strings ===")
 print(f"Hello, my name is {name}")
 print(f"I am {age} years old")
 print(f"I live in {city}")
+print(f"I live in {city} and my age in {age}, People called me by name {name}")
 
 # Expressions in f-strings
+print(f"Next year I'll be {age + 1}")
 print(f"Next year I'll be {age + 1}")
 print(f"My name in uppercase: {name.upper()}")
 print()
@@ -49,11 +56,11 @@ print("apple", "banana", "cherry", sep=", ")
 print("2024", "12", "25", sep="-")
 
 # Using end parameter
-print("Loading", end="")
-print(".", end="")
-print(".", end="")
-print(" Done!")
-print()
+print("Loading", end="")  # Print "Loading" without newline (stays on same line)
+print(".", end="")       # Add first dot, no newline
+print(".", end="")       # Add second dot, no newline
+print(" Done!")          # Add " Done!" with default newline (moves to next line)
+print()                  # Empty line
 
 print("=== Debugging Example ===")
 
