@@ -1,14 +1,4 @@
-import { Note, Category } from './notes.interface';
-
-export const CATEGORIES: Category[] = [
-  { key: 'all', name: 'All', icon: '📚' },
-  { key: 'python', name: 'Python', icon: '🐍' },
-  { key: 'git', name: 'Git', icon: '🔧' },
-  { key: 'health', name: 'Health', icon: '💪' },
-  { key: 'meditation', name: 'Meditation', icon: '🧘' },
-  { key: 'habits', name: 'Habits', icon: '⚡' },
-  { key: 'general', name: 'General', icon: '🌟' }
-];
+import { Note } from './notes.interface';
 
 export const NOTES_DATA: Note[] = [
   {

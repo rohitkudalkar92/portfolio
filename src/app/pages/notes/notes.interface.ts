@@ -5,9 +5,3 @@ export interface Note {
   content: string;
   tags: string[];
 }
-
-export interface Category {
-  key: string;
-  name: string;
-  icon: string;
-}

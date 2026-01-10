@@ -1,27 +1,13 @@
 <app-layout>
-  <!-- Categories Filter -->
-  <div class="flex flex-wrap justify-center gap-3 mb-8">
-    <button 
-      *ngFor="let category of categories"
-      (click)="filterByCategory(category.key)"
-      [class]="'px-4 py-2 rounded-full text-sm font-medium transition-all ' + 
-              (selectedCategory === category.key ? 
-               'bg-blue-500 text-white' : 
-               'bg-secondary text-secondary hover:bg-blue-500/10')"
-    >
-      {{ category.icon }} {{ category.name }}
-    </button>
-  </div>
-
   <!-- Notes Grid -->
   <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
     <div 
-      *ngFor="let note of filteredNotes" 
+      *ngFor="let note of notes" 
       class="glass rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300"
     >
       <div class="flex items-start justify-between mb-3">
         <span class="text-xs px-2 py-1 bg-blue-500/20 text-blue-400 rounded-full">
-          {{ getCategoryName(note.category) }}
+          {{ note.category | titlecase }}
         </span>
       </div>
       
@@ -65,7 +51,7 @@
   </div>
 
   <!-- Empty State -->
-  <div *ngIf="filteredNotes.length === 0" class="text-center py-16">
+  <div *ngIf="notes.length === 0" class="text-center py-16">
     <div class="text-6xl mb-4">📝</div>
     <h3 class="text-xl font-semibold text-primary mb-2">No notes found</h3>
     <p class="text-secondary">Start your learning journey by adding some notes!</p>

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { TitleService } from '../../title.service';
 import { CONSTANTS } from '../../constants';
-import { Note, Category } from './notes.interface';
-import { CATEGORIES, NOTES_DATA } from './notes.constants';
+import { Note } from './notes.interface';
+import { NOTES_DATA } from './notes.constants';
 
 @Component({
   selector: 'app-notes',
@@ -10,7 +10,6 @@ import { CATEGORIES, NOTES_DATA } from './notes.constants';
 })
 export class NotesComponent implements OnInit {
   CONSTANTS = CONSTANTS;
-  selectedCategory = 'all';
   
   constructor(private titleService: TitleService) {}
 
@@ -18,21 +17,5 @@ export class NotesComponent implements OnInit {
     this.titleService.setTitle(CONSTANTS.PAGE_TITLES.NOTES);
   }
   
-  categories: Category[] = CATEGORIES;
   notes: Note[] = NOTES_DATA;
-  filteredNotes = this.notes;
-
-  filterByCategory(category: string) {
-    this.selectedCategory = category;
-    if (category === 'all') {
-      this.filteredNotes = this.notes;
-    } else {
-      this.filteredNotes = this.notes.filter(note => note.category === category);
-    }
-  }
-
-  getCategoryName(categoryKey: string): string {
-    const category = this.categories.find(cat => cat.key === categoryKey);
-    return category ? category.name : categoryKey;
-  }
 }
