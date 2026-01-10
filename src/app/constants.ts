@@ -141,16 +141,6 @@ export const CONSTANTS = {
         icon: '🔧'
       },
       {
-        title: 'UI/UX & Design',
-        description: 'Design systems and user experience',
-        icon: '🎯'
-      },
-      {
-        title: 'AI & Machine Learning',
-        description: 'Artificial Intelligence and ML technologies',
-        icon: '🤖'
-      },
-      {
         title: 'Quality & Compatibility',
         description: 'Cross-browser support and responsive design',
         icon: '🔍'

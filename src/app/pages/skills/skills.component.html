@@ -12,22 +12,13 @@
       </div>
       
       <div class="space-y-4">
-        <div *ngFor="let skill of category.skills" class="flex items-center justify-between">
+        <div *ngFor="let skill of category.skills" class="flex items-center">
           <div class="flex items-center gap-3">
             <img [src]="getTechIcon(skill.name)" [alt]="skill.name" class="w-8 h-8">
             <div>
               <h3 class="font-semibold">{{ skill.name }}</h3>
               <p class="text-dark text-xs">{{ skill.experience }}</p>
             </div>
-          </div>
-          <div class="flex items-center gap-2">
-            <div class="w-24 h-2 bg-glass-bg rounded-full overflow-hidden">
-              <div 
-                class="h-full bg-gradient-to-r from-indigo-400 to-purple-600 rounded-full transition-all duration-1000"
-                [style.width.%]="skill.proficiency">
-              </div>
-            </div>
-            <span class="text-xs text-dark w-8">{{ skill.proficiency }}%</span>
           </div>
         </div>
       </div>
