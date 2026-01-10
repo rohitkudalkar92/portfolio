@@ -1,0 +1,57 @@
+<app-layout>
+  <app-back-nav backLink="/notes/angular" backText="Back to Angular"></app-back-nav>
+  
+  <app-topic-header 
+    title="Directives"
+    description="Structural and attribute directives in Angular">
+  </app-topic-header>
+
+  <app-content-section title="What are Directives?">
+    <p>Directives are classes that add behavior to elements in Angular templates. There are three types:</p>
+    <ul class="list-disc ml-6 mt-2 space-y-1">
+      <li><strong>Structural Directives:</strong> Change DOM layout by adding/removing elements</li>
+      <li><strong>Attribute Directives:</strong> Change appearance or behavior of elements</li>
+      <li><strong>Component Directives:</strong> Directives with templates (components)</li>
+    </ul>
+  </app-content-section>
+
+  <app-content-section title="Built-in Structural Directives">
+    <p>Common structural directives that modify DOM structure:</p>
+    <app-code-block 
+      language="html"
+      [code]="structuralExample">
+    </app-code-block>
+  </app-content-section>
+
+  <app-content-section title="Built-in Attribute Directives">
+    <p>Attribute directives that modify element appearance or behavior:</p>
+    <app-code-block 
+      language="html"
+      [code]="attributeExample">
+    </app-code-block>
+  </app-content-section>
+
+  <app-content-section title="Custom Attribute Directive">
+    <p>Create custom directives with &#64;Directive decorator:</p>
+    <app-code-block 
+      language="typescript"
+      [code]="customDirectiveExample">
+    </app-code-block>
+  </app-content-section>
+
+  <app-content-section title="Custom Structural Directive">
+    <p>Create structural directives with TemplateRef and ViewContainerRef:</p>
+    <app-code-block 
+      language="typescript"
+      [code]="structuralDirectiveExample">
+    </app-code-block>
+  </app-content-section>
+
+  <app-info-box 
+    type="info"
+    title="Best Practices">
+    <ul class="list-disc ml-6 space-y-1">
+      <li *ngFor="let practice of bestPractices">{{ practice }}</li>
+    </ul>
+  </app-info-box>
+</app-layout>
