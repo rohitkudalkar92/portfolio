@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 
 import { AngularDetailsComponent } from './angular-details.component';
 import { ServicesNotesComponent } from './services/services-notes.component';
+import { DirectivesNotesComponent } from './directives/directives-notes.component';
 import { LayoutComponent } from '../../../common/layout/layout.component';
 import { BackNavComponent } from '../../../common/back-nav/back-nav.component';
 import { PageHeaderComponent } from '../../../common/page-header/page-header.component';
@@ -17,13 +18,15 @@ import { PracticeExerciseComponent } from '../../../common/practice-exercise/pra
 
 const routes = [
   { path: '', component: AngularDetailsComponent },
-  { path: 'services', component: ServicesNotesComponent }
+  { path: 'services', component: ServicesNotesComponent },
+  { path: 'directives', component: DirectivesNotesComponent }
 ];
 
 @NgModule({
   declarations: [
     AngularDetailsComponent,
-    ServicesNotesComponent
+    ServicesNotesComponent,
+    DirectivesNotesComponent
   ],
   imports: [
     CommonModule,
