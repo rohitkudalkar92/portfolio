@@ -389,15 +389,6 @@ export const CONSTANTS = {
       ],
       liveUrl: 'https://example.com',
       githubUrl: 'https://github.com/rohit'
-    },
-    { 
-      id: 'portfolio-website',
-      title: 'Portfolio Website',
-      description: 'Modern portfolio website built with Angular 17, featuring dark/light theme toggle, responsive design, and smooth animations. Showcases work experience and projects.',
-      image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=400&h=300&fit=crop',
-      technologies: ['Angular 17', 'TypeScript', 'Tailwind CSS', 'SCSS'],
-      liveUrl: 'https://rohitkudalkar.dev',
-      githubUrl: 'https://github.com/rohit/portfolio'
     }
   ]
 } as const;

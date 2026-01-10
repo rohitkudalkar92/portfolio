@@ -9,7 +9,7 @@ import { CONSTANTS } from '../../constants';
   standalone: true,
   imports: [CommonModule, HeaderComponent, BreadcrumbComponent],
   template: `
-    <div class="max-w-6xl mx-auto px-3 py-3">
+    <div class="max-w-7xl mx-auto px-3 py-3">
       <app-header></app-header>
       <main class="mt-6 px-6">
         <app-breadcrumb></app-breadcrumb>
