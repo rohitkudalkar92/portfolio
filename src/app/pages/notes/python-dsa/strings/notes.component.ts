@@ -34,6 +34,15 @@ import { TitleService } from '../../../../title.service';
         </app-code-block>
       </app-content-section>
 
+      <app-content-section title="String Manipulation Practice">
+        <p>Practical string manipulation examples with real-world applications.</p>
+        <app-code-block 
+          language="python" 
+          [code]="stringManipulationCode"
+          [output]="stringManipulationOutput">
+        </app-code-block>
+      </app-content-section>
+
       <app-content-section title="Pattern Matching">
         <p>Finding patterns and substrings in strings.</p>
         <app-code-block 
@@ -106,4 +115,28 @@ def longest_common_prefix(strs):
 # Examples
 print(is_palindrome("A man a plan a canal Panama"))  # True
 print(longest_common_prefix(["flower", "flow", "flight"]))  # "fl"`;
+
+  stringManipulationCode = `# String Manipulation Practice
+sentence = "Python is a powerful programming language"
+
+# String transformations
+uppercase = sentence.upper()
+lowercase = sentence.lower()
+word_count = len(sentence.split())
+replaced = sentence.replace("Python", "JavaScript")
+first_10 = sentence[:10]
+
+print(f"Original: {sentence}")
+print(f"Uppercase: {uppercase}")
+print(f"Lowercase: {lowercase}")
+print(f"Word count: {word_count}")
+print(f"Replaced: {replaced}")
+print(f"First 10 chars: {first_10}")`;
+
+  stringManipulationOutput = `Original: Python is a powerful programming language
+Uppercase: PYTHON IS A POWERFUL PROGRAMMING LANGUAGE
+Lowercase: python is a powerful programming language
+Word count: 6
+Replaced: JavaScript is a powerful programming language
+First 10 chars: Python is `;
 }

@@ -62,7 +62,17 @@ print(".", end="")       # Add second dot, no newline
 print(" Done!")          # Add " Done!" with default newline (moves to next line)
 print()                  # Empty line
 
+
+# Rohit try Using end parameter
+
+print("Loading", end="")  # Print "Loading" without newline (stays on same line
+print(".", end="")       # Add first dot, no newline
+print(".", end="")       # Add second dot, no newline
+print("Done")            # Add "Done"
+
 print("=== Debugging Example ===")
+
+
 
 def calculate_total(price, tax_rate):
     print(f"DEBUG: price={price}, tax_rate={tax_rate}")

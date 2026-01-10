@@ -1,0 +1,59 @@
+<app-layout>
+  <app-back-nav backLink="/notes/python" backText="Back to Python Topics"></app-back-nav>
+  
+  <app-topic-header 
+    title="String Manipulation" 
+    description="Learn about string methods, formatting, slicing, and working with text data.">
+  </app-topic-header>
+
+  <div>
+    <!-- String Basics -->
+    <app-content-section title="String Basics" description="String creation, indexing, and slicing fundamentals.">
+      <app-code-block [code]="stringBasicsCode" [output]="stringBasicsOutput" language="Python"></app-code-block>
+    </app-content-section>
+
+    <!-- String Methods -->
+    <app-content-section title="String Methods" description="Common string operations and methods for text processing.">
+      <app-code-block [code]="stringMethodsCode" [output]="stringMethodsOutput" language="Python"></app-code-block>
+      
+      <app-info-box type="info" title="📋 Common String Methods">
+        <ul class="text-secondary text-sm space-y-1 list-disc list-inside">
+          <li><strong>upper(), lower(), title()</strong> - Case conversion</li>
+          <li><strong>strip(), lstrip(), rstrip()</strong> - Remove whitespace</li>
+          <li><strong>find(), count()</strong> - Search operations</li>
+          <li><strong>startswith(), endswith()</strong> - Check prefixes/suffixes</li>
+          <li><strong>split(), join()</strong> - Split strings and join lists</li>
+          <li><strong>replace()</strong> - Replace substrings</li>
+        </ul>
+      </app-info-box>
+    </app-content-section>
+
+    <!-- String Manipulation Practice -->
+    <app-content-section title="String Manipulation Practice" description="Practical string manipulation examples with real-world applications.">
+      <app-code-block [code]="stringManipulationCode" [output]="stringManipulationOutput" language="Python"></app-code-block>
+    </app-content-section>
+
+    <!-- String Formatting -->
+    <app-content-section title="String Formatting" description="Different ways to format strings in Python.">
+      <app-code-block [code]="stringFormattingCode" [output]="stringFormattingOutput" language="Python"></app-code-block>
+      
+      <app-info-box type="success" title="✅ Formatting Methods">
+        <ul class="text-secondary text-sm space-y-1 list-disc list-inside">
+          <li><strong>f-strings</strong> - Modern, readable (Python 3.6+)</li>
+          <li><strong>.format()</strong> - Flexible, works with older Python</li>
+          <li><strong>% formatting</strong> - Old style, still widely used</li>
+        </ul>
+      </app-info-box>
+    </app-content-section>
+
+    <!-- Practice Exercise -->
+    <app-content-section title="Practice" description="Practice string manipulation with a comprehensive example.">
+      <app-practice-exercise 
+        title="💡 Practice Exercise"
+        description="Process user input by cleaning, splitting, reversing words, and formatting the result."
+        [code]="practiceCode"
+        [output]="practiceOutput">
+      </app-practice-exercise>
+    </app-content-section>
+  </div>
+</app-layout>

@@ -9,10 +9,20 @@ print("=" * 50)
 print("\n1. BASIC VARIABLES")
 print("-" * 20)
 name = "John"
+developer_name = "Rohit"
+DeveloperName = "Rohan"
+_developer = "Kudalkar"
+developer_1 = "Kudalkar"
+is_handsome = True
+is_smart = True
+is_rich = True
+is_awesome = True
+is_available = False
 age = 25
 height = 5.9
 is_student = True
 
+print(f"Develop name {developer_name} ")
 print(f"Name: {name}")
 print(f"Age: {age}")
 print(f"Height: {height}")
@@ -29,22 +39,32 @@ multiline string"""
 
 # Numbers
 age = 25          # int
+pi = 3.14  #int
+age = 25.1 #float
+complex_digit = 3+2j
 price = 19.99     # float
 complex_num = 3+4j # complex
 
 # Booleans
 is_active = True
 is_complete = False
+is_valid = True
+is_correct = True
+is_always_correct = False
+is_going_to_USA = True
 result = 5 > 3  # True
 
 # None
 value = None
+value1 = None
 
 print(f"String: {name}")
 print(f"Integer: {age}")
 print(f"Float: {price}")
 print(f"Boolean: {is_active}")
 print(f"None: {value}")
+
+print("*" * 20)
 
 # 3. Type Checking
 print("\n3. TYPE CHECKING")
@@ -53,6 +73,12 @@ print(f"type(name): {type(name)}")
 print(f"type(age): {type(age)}")
 print(f"type(price): {type(price)}")
 print(f"type(is_active): {type(is_active)}")
+print(f"Types of is_complete:  {type(is_complete)}")
+print(f"Types of is_correct:  {type(is_correct)}")
+print(f"Types of pi:  {type(pi)}")
+print(f"Types of complex_digit:  {type(complex_digit)}")
+print(f"Type of developer_name", type(developer_name))
+print(f"Type of developer_name: {type(developer_name)}" )
 
 # 4. Type Conversion
 print("\n4. TYPE CONVERSION")
@@ -61,6 +87,14 @@ age_str = "25"
 age_int = int(age_str)
 age_float = float(age_str)
 
+marks_str = "85"
+marks_int = int(marks_str)
+marks_float = float(marks_str)
+
+pi_int = 3.14
+pi_str = str(pi_int)
+pi_float = float(pi_int)
+
 num = 42
 num_str = str(num)
 
@@ -68,17 +102,33 @@ print(f"String to int: '{age_str}' -> {age_int}")
 print(f"String to float: '{age_str}' -> {age_float}")
 print(f"Number to string: {num} -> '{num_str}'")
 
+# Additional type conversion examples
+print(f"Marks string to int: '{marks_str}' -> {marks_int}")
+print(f"Marks string to float: '{marks_str}' -> {marks_float}")
+print(f"Pi float to string: {pi_int} -> '{pi_str}'")
+print(f"Pi float to float: {pi_int} -> {pi_float}")
+
 # Boolean conversion
 print(f"bool(1): {bool(1)}")
 print(f"bool(0): {bool(0)}")
 print(f"bool(''): {bool('')}")
 print(f"bool('hi'): {bool('hi')}")
 
+print(f"bool(123): {bool(123)}")      # True
+print(f"bool(000): {bool(000)}")      # False
+print(f"bool(''): {bool('')}")        # False
+print(f"bool(''''''): {bool('''''')}")  # False
+print(f"bool('Rohit'): {bool('Rohit')}")  # True
+print(f"bool(-1): {bool(-1)}")        # True
+
 # 5. Multiple Assignment
 print("\n5. MULTIPLE ASSIGNMENT")
 print("-" * 20)
 x, y, z = 1, 2, 3
 print(f"x={x}, y={y}, z={z}")
+
+name, age, height= "ROhit", 33, 6
+print(f"name: {name}, age: {age}, height: {height}")
 
 # Swapping variables
 a, b = 10, 20
@@ -127,13 +177,15 @@ _private_var = "hidden"    # leading underscore
 PI = 3.14159              # constant
 first_name_alt = "John"    # alternative naming
 my_list = [1, 2, 3]       # descriptive
+my_array =[22,21,20]    #descriptive
 
 print(f"user_name: {user_name}")
 print(f"age2: {age2}")
 print(f"_private_var: {_private_var}")
 print(f"PI: {PI}")
-print(f"firstName: {firstName}")
+print(f"first_name_alt: {first_name_alt}")
 print(f"my_list: {my_list}")
+print(f'my array: {my_array}')
 print()
 
 # INVALID EXAMPLES (commented out):
@@ -154,8 +206,8 @@ print("Classes: PascalCase")
 print("Private: _leading_underscore")
 print("Very Private: __double_underscore")
 
-# 8. User Input Simulation
-print("\n8. USER INPUT & FORMATTING")
+# 8. String Manipulation & User Input
+print("\n8. STRING MANIPULATION & USER INPUT")
 print("-" * 20)
 name = "John"
 age_str = "25"
@@ -164,6 +216,17 @@ age = int(age_str)
 message = f"Hello {name}, you are {age} years old!"
 print(message)
 print(f"Next year you'll be {age + 1}")
+
+# Basic string operations
+text = "Python Programming"
+print(f"\nString operations on: {text}")
+print(f"Length: {len(text)}")
+print(f"Uppercase: {text.upper()}")
+print(f"First 6 chars: {text[:6]}")
+
+print("\n📚 For more string manipulation examples, see:")
+print("   Route: /notes/python/strings")
+print("   Title: String Manipulation - Learn about string methods, formatting, slicing, and working with text data.")
 
 # 9. Constants and Global Variables
 print("\n9. CONSTANTS & GLOBAL VARIABLES")
@@ -213,6 +276,11 @@ subtraction = num1 - num2
 multiplication = num1 * num2
 division = num1 / num2
 is_greater = num1 > num2
+addition = num1 + num2
+subtraction = num1 - num2
+multiplication = num1 * num2
+division = num1 / num2
+is_greater = num1 > num2
 
 print(f"{num1} + {num2} = {addition}")
 print(f"{num1} - {num2} = {subtraction}")
@@ -220,26 +288,8 @@ print(f"{num1} * {num2} = {multiplication}")
 print(f"{num1} / {num2} = {division}")
 print(f"{num1} > {num2}: {is_greater}")
 
-# Exercise 3: String Manipulation
-print("\nEXERCISE 3: String Manipulation")
-print("-" * 30)
-sentence = "Python is a powerful programming language"
-
-uppercase = sentence.upper()
-lowercase = sentence.lower()
-word_count = len(sentence.split())
-replaced = sentence.replace("Python", "JavaScript")
-first_10 = sentence[:10]
-
-print(f"Original: {sentence}")
-print(f"Uppercase: {uppercase}")
-print(f"Lowercase: {lowercase}")
-print(f"Word count: {word_count}")
-print(f"Replaced: {replaced}")
-print(f"First 10 chars: {first_10}")
-
 # Exercise 4: Type Conversion Challenge
-print("\nEXERCISE 4: Type Conversion Challenge")
+print("\nEXERCISE 3: Type Conversion Challenge")
 print("-" * 30)
 str_int = "123"
 str_float = "45.67"

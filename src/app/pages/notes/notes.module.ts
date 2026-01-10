@@ -9,6 +9,7 @@ import { PrintConsoleNotesComponent } from './python/print-console/notes.compone
 import { VariablesDataTypesNotesComponent } from './python/variables-data-types/notes.component';
 import { OperatorsNotesComponent } from './python/operators/notes.component';
 import { TypeConversionNotesComponent } from './python/type-conversion/notes.component';
+import { StringsNotesComponent } from './python/strings/notes.component';
 
 import { LayoutComponent } from '../../common/layout/layout.component';
 import { BackNavComponent } from '../../common/back-nav/back-nav.component';
@@ -32,7 +33,8 @@ const routes = [
   { path: 'python/print-console', component: PrintConsoleNotesComponent },
   { path: 'python/variables-data-types', component: VariablesDataTypesNotesComponent },
   { path: 'python/operators', component: OperatorsNotesComponent },
-  { path: 'python/type-conversion', component: TypeConversionNotesComponent }
+  { path: 'python/type-conversion', component: TypeConversionNotesComponent },
+  { path: 'python/strings', component: StringsNotesComponent }
 ];
 
 @NgModule({
@@ -42,7 +44,8 @@ const routes = [
     PrintConsoleNotesComponent,
     VariablesDataTypesNotesComponent,
     OperatorsNotesComponent,
-    TypeConversionNotesComponent
+    TypeConversionNotesComponent,
+    StringsNotesComponent
   ],
   imports: [
     CommonModule,

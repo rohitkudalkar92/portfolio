@@ -19,13 +19,42 @@
         </ul>
       </app-info-box>
 
-      <app-info-box type="success" title="✅ Valid Examples">
-        <app-code-block [code]="validExamplesCode"></app-code-block>
+      <app-info-box type="success" title="✅ Correct Variable Names">
+        <ul class="text-secondary text-sm space-y-1 list-disc list-inside">
+          <li><strong>name</strong> - starts with letter</li>
+          <li><strong>user_age</strong> - uses underscore</li>
+          <li><strong>_private</strong> - starts with underscore</li>
+          <li><strong>firstName</strong> - camelCase (valid but not Python convention)</li>
+          <li><strong>MAX_SIZE</strong> - constant naming</li>
+          <li><strong>count2</strong> - contains numbers</li>
+          <li><strong>is_valid</strong> - descriptive boolean name</li>
+        </ul>
       </app-info-box>
 
-      <app-info-box type="error" title="❌ Invalid Examples">
-        <app-code-block [code]="invalidExamplesCode"></app-code-block>
+      <app-info-box type="error" title="❌ Incorrect Variable Names">
+        <ul class="text-secondary text-sm space-y-1 list-disc list-inside">
+          <li><strong>2name</strong> - starts with number</li>
+          <li><strong>user-age</strong> - contains hyphen</li>
+          <li><strong>first name</strong> - contains space</li>
+          <li><strong>user&#64;email</strong> - contains special character</li>
+          <li><strong>if</strong> - Python keyword</li>
+          <li><strong>class</strong> - Python keyword</li>
+          <li><strong>$price</strong> - starts with special character</li>
+        </ul>
       </app-info-box>
+
+      <app-content-section title="Invalid Examples with Errors" description="See what happens when you try to use invalid variable names.">
+        <app-code-block [code]="invalidExamplesCode" [output]="invalidExamplesOutput" language="Python"></app-code-block>
+        
+        <app-info-box type="warning" title="⚠️ Common Errors">
+          <ul class="text-secondary text-sm space-y-1 list-disc list-inside">
+            <li><strong>SyntaxError:</strong> Python cannot parse the invalid syntax</li>
+            <li><strong>NameError:</strong> Using undefined variables</li>
+            <li><strong>Keywords:</strong> Reserved words cannot be used as variable names</li>
+            <li><strong>Special characters:</strong> Only letters, numbers, and underscores allowed</li>
+          </ul>
+        </app-info-box>
+      </app-content-section>
 
       <app-info-box type="warning" title="🎯 Naming Conventions">
         <ul class="text-secondary text-sm space-y-1">
