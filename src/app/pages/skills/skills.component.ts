@@ -1,39 +1,45 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LayoutComponent } from '../../common/layout/layout.component';
-import { RouterModule } from '@angular/router';
 import { TitleService } from '../../title.service';
 import { CONSTANTS } from '../../constants';
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [CommonModule, LayoutComponent, RouterModule],
+  imports: [CommonModule, LayoutComponent],
   templateUrl: './skills.component.html'
 })
 export class SkillsComponent implements OnInit {
-  pageTitle = CONSTANTS.SKILLS.TITLE;
-  additionalTitle = CONSTANTS.SKILLS.ADDITIONAL_TITLE;
 
   constructor(private titleService: TitleService) {}
 
   ngOnInit(): void {
     this.titleService.setTitle(CONSTANTS.PAGE_TITLES.SKILLS);
   }
+
   skillCategories = [
     {
       title: CONSTANTS.SKILLS_DATA.CATEGORIES[0].title,
       description: CONSTANTS.SKILLS_DATA.CATEGORIES[0].description,
       icon: CONSTANTS.SKILLS_DATA.CATEGORIES[0].icon,
       skills: [
-        { name: 'Angular', experience: '5+ years' },
-        { name: 'React', experience: '4+ years' },
-        { name: 'TypeScript', experience: '5+ years' },
-        { name: 'JavaScript', experience: '8+ years' },
-        { name: 'HTML5', experience: '8+ years' },
-        { name: 'CSS3', experience: '8+ years' },
-        { name: 'Tailwind CSS', experience: '3+ years' },
-        { name: 'SCSS', experience: '6+ years' }
+        { name: 'Angular' },
+        { name: 'React' },
+        { name: 'TypeScript' },
+        { name: 'JavaScript' },
+        { name: 'HTML5' },
+        { name: 'CSS3' },
+        { name: 'Tailwind CSS' },
+        { name: 'SCSS' },
+        { name: 'Material-UI' },
+        { name: 'Bootstrap' },
+        { name: 'Figma' },
+        { name: 'NgRx' },
+        { name: 'Redux' },
+        { name: 'RxJS' },
+        { name: 'Git' },
+        { name: 'Webpack' }
       ]
     },
     {
@@ -41,43 +47,26 @@ export class SkillsComponent implements OnInit {
       description: CONSTANTS.SKILLS_DATA.CATEGORIES[1].description,
       icon: CONSTANTS.SKILLS_DATA.CATEGORIES[1].icon,
       skills: [
-        { name: 'Node.js', experience: '4+ years' },
-        { name: 'Express', experience: '3+ years' },
-        { name: 'PHP', experience: '6+ years' },
-        { name: 'MySQL', experience: '7+ years' },
-        { name: 'MongoDB', experience: '3+ years' },
-        { name: 'REST APIs', experience: '6+ years' },
-        { name: 'WordPress', experience: '5+ years' }
-      ]
-    },
-    {
-      title: CONSTANTS.SKILLS_DATA.CATEGORIES[2].title,
-      description: CONSTANTS.SKILLS_DATA.CATEGORIES[2].description,
-      icon: CONSTANTS.SKILLS_DATA.CATEGORIES[2].icon,
-      skills: [
-        { name: 'NgRx', experience: '3+ years' },
-        { name: 'Redux', experience: '3+ years' },
-        { name: 'RxJS', experience: '4+ years' },
-        { name: 'Git', experience: '7+ years' },
-        { name: 'Webpack', experience: '3+ years' },
-        { name: 'Jest', experience: '3+ years' },
-        { name: 'Cypress', experience: '2+ years' },
-        { name: 'Docker', experience: '2+ years' }
+        { name: 'Node.js' },
+        { name: 'Express' },
+        { name: 'PHP' },
+        { name: 'Python' },
+        { name: 'MySQL' },
+        { name: 'MongoDB' },
+        { name: 'REST APIs' },
+        { name: 'WordPress' }
       ]
     },
     {
       title: CONSTANTS.SKILLS_DATA.CATEGORIES[3].title,
-      description: CONSTANTS.SKILLS_DATA.CATEGORIES[3].description,
-      icon: CONSTANTS.SKILLS_DATA.CATEGORIES[3].icon,
+      description: CONSTANTS.SKILLS_DATA.CATEGORIES[2].description,
+      icon: CONSTANTS.SKILLS_DATA.CATEGORIES[2].icon,
       skills: [
-        { name: 'Material-UI', experience: '4+ years' },
-        { name: 'Bootstrap', experience: '6+ years' },
-        { name: 'Figma', experience: '3+ years' },
-        { name: 'Responsive Design', experience: '7+ years' },
-        { name: 'Accessibility', experience: '4+ years' },
-        { name: 'Performance Optimization', experience: '5+ years' },
-        { name: 'Cross-browser Testing', experience: '6+ years' },
-        { name: 'Mobile-first Design', experience: '5+ years' }
+        { name: 'Responsive Design' },
+        { name: 'Accessibility' },
+        { name: 'Performance Optimization' },
+        { name: 'Cross-browser Testing' },
+        { name: 'Mobile-first Design' }
       ]
     }
   ];
@@ -109,9 +98,7 @@ export class SkillsComponent implements OnInit {
     }
   ];
 
-  private techIcons = CONSTANTS.TECH_ICONS;
-
   getTechIcon(tech: string): string {
-    return (this.techIcons as any)[tech] || CONSTANTS.DEFAULT_TECH_ICON;
+    return (CONSTANTS.TECH_ICONS as any)[tech] || CONSTANTS.DEFAULT_TECH_ICON;
   }
 }
