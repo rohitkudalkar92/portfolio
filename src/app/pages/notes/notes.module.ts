@@ -26,6 +26,7 @@ const routes = [
   { path: 'python', component: PythonDetailsComponent },
   { path: 'git', loadChildren: () => import('./git/git.module').then(m => m.GitModule) },
   { path: 'meditation', loadChildren: () => import('./meditation/meditation.module').then(m => m.MeditationModule) },
+  { path: 'python-dsa', loadChildren: () => import('./python-dsa/python-dsa.module').then(m => m.PythonDsaModule) },
   { path: 'python/print-console', component: PrintConsoleNotesComponent },
   { path: 'python/variables-data-types', component: VariablesDataTypesNotesComponent },
   { path: 'python/operators', component: OperatorsNotesComponent },

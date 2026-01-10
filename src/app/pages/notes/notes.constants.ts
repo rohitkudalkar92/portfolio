@@ -21,5 +21,12 @@ export const NOTES_DATA: Note[] = [
     category: 'meditation',
     content: 'Started 10-minute morning meditation using breathing techniques. Focus on breath counting from 1 to 10, then repeat. Notice when mind wanders and gently return to breath.',
     tags: ['mindfulness', 'breathing', 'morning']
+  },
+  {
+    id: '4',
+    title: 'Python DSA - Data Structures & Algorithms',
+    category: 'python-dsa',
+    content: 'Comprehensive guide to data structures and algorithms in Python. Covers arrays, strings, linked lists, stacks, queues, and trees with practical implementations.',
+    tags: ['python', 'dsa', 'algorithms', 'data-structures']
   }
 ];
