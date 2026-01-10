@@ -12,7 +12,7 @@ import { CONSTANTS } from '../../constants';
   template: `
     <app-layout>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div *ngFor="let project of projects" class="project-card glass p-6 rounded-xl transition-all duration-300">
+        <div *ngFor="let project of projects" class="project-card glass p-6 rounded-xl">
           <div class="mb-4">
             <img [src]="project.image" [alt]="project.title" class="w-full h-48 object-cover rounded-lg">
           </div>
@@ -28,7 +28,7 @@ import { CONSTANTS } from '../../constants';
             <a [routerLink]="['/project', project.id]" class="flex-1 text-center py-2 px-3 bg-gradient-to-r from-indigo-400 to-purple-600 text-white rounded-lg hover:opacity-90 transition-opacity text-xs">
               {{ detailsBtn }}
             </a>
-            <a [href]="project.liveUrl" target="_blank" class="flex-1 text-center py-2 px-3 border border-glass-border rounded-lg hover:bg-glass-bg transition-colors text-xs">
+            <a [href]="project.liveUrl" target="_blank" class="flex-1 text-center py-2 px-3 border border-glass-border rounded-lg hover:bg-glass-bg text-xs">
               {{ liveDemoBtn }}
             </a>
           </div>
