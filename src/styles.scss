@@ -228,3 +228,15 @@ a {
 .link-theme:hover {
   opacity: 0.8;
 }
+
+/* Lazy loading styles */
+.lazy-loading {
+  opacity: 0.7;
+  filter: blur(2px);
+}
+
+.lazy-loaded {
+  opacity: 1;
+  filter: none;
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}

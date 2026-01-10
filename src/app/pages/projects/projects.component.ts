@@ -4,23 +4,24 @@ import { RouterLink } from '@angular/router';
 import { LayoutComponent } from '../../common/layout/layout.component';
 import { TitleService } from '../../title.service';
 import { CONSTANTS } from '../../constants';
+import { LazyLoadDirective } from '../../shared/directives/lazy-load.directive';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule, LayoutComponent, RouterLink],
+  imports: [CommonModule, LayoutComponent, RouterLink, LazyLoadDirective],
   template: `
     <app-layout>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <div *ngFor="let project of projects" class="project-card glass p-6 rounded-xl">
           <div class="mb-4">
-            <img [src]="project.image" [alt]="project.title" class="w-full h-48 object-cover rounded-lg">
+            <img [appLazyLoad]="project.image" [alt]="project.title" class="w-full h-48 object-cover rounded-lg transition-opacity duration-300">
           </div>
           <h3 class="font-semibold text-lg mb-2">{{ project.title }}</h3>
           <p class="text-sm opacity-80 mb-4">{{ project.description }}</p>
           <div class="flex flex-wrap gap-2 mb-4">
             <span *ngFor="let tech of project.technologies" class="flex items-center gap-1 text-xs px-2 py-1 bg-glass-bg border border-glass-border rounded-md">
-              <img [src]="getTechIcon(tech)" [alt]="tech" class="w-3 h-3">
+              <img [appLazyLoad]="getTechIcon(tech)" [alt]="tech" class="w-3 h-3">
               <span>{{ tech }}</span>
             </span>
           </div>

@@ -4,9 +4,9 @@
     
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
       <div>
-        <img [src]="project.image" [alt]="project.title" class="w-full rounded-xl shadow-lg mb-4">
+        <img [appLazyLoad]="project.image" [alt]="project.title" class="w-full rounded-xl shadow-lg mb-4 transition-opacity duration-300">
         <div *ngIf="project.gallery" class="grid grid-cols-2 gap-2">
-          <img *ngFor="let img of project.gallery" [src]="img" [alt]="project.title" class="w-full h-24 object-cover rounded-lg cursor-pointer hover:opacity-80 transition-opacity" (click)="setMainImage(img)">
+          <img *ngFor="let img of project.gallery" [appLazyLoad]="img" [alt]="project.title" class="w-full h-24 object-cover rounded-lg cursor-pointer hover:opacity-80 transition-opacity" (click)="setMainImage(img)">
         </div>
       </div>
       
@@ -18,7 +18,7 @@
           <h3 class="text-xl font-semibold mb-3">{{ technologiesTitle }}</h3>
           <div class="flex flex-wrap gap-2">
             <span *ngFor="let tech of project.technologies" class="flex items-center gap-1 text-sm px-3 py-2 bg-glass-bg border border-glass-border rounded-lg">
-              <img [src]="getTechIcon(tech)" [alt]="tech" class="w-4 h-4">
+              <img [appLazyLoad]="getTechIcon(tech)" [alt]="tech" class="w-4 h-4">
               <span>{{ tech }}</span>
             </span>
           </div>

@@ -5,11 +5,12 @@ import { LayoutComponent } from '../../common/layout/layout.component';
 import { BackNavComponent } from '../../common/back-nav/back-nav.component';
 import { TitleService } from '../../title.service';
 import { CONSTANTS } from '../../constants';
+import { LazyLoadDirective } from '../../shared/directives/lazy-load.directive';
 
 @Component({
   selector: 'app-project-detail',
   standalone: true,
-  imports: [CommonModule, LayoutComponent, BackNavComponent, RouterLink],
+  imports: [CommonModule, LayoutComponent, BackNavComponent, RouterLink, LazyLoadDirective],
   templateUrl: './project-detail.component.html'
 })
 export class ProjectDetailComponent implements OnInit {

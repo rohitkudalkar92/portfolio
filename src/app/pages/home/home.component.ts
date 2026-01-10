@@ -5,11 +5,12 @@ import { RouterModule } from '@angular/router';
 import { TitleService } from '../../title.service';
 import { CONSTANTS } from '../../constants';
 import { HeroTitle, QuickInfo, Icons, Contact} from './home.interface';
+import { LazyLoadDirective } from '../../shared/directives/lazy-load.directive';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, LayoutComponent, RouterModule],
+  imports: [CommonModule, LayoutComponent, RouterModule, LazyLoadDirective],
   templateUrl: './home.component.html'
 })
 export class HomeComponent implements OnInit {
