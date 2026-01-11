@@ -8,8 +8,13 @@ import { CONSTANTS } from '../../constants';
   standalone: true,
   imports: [RouterLink, RouterLinkActive, CommonModule],
   template: `
-    <div class="sticky top-0 z-50">
-      <header [class]="getHeaderClasses()" class="w-full backdrop-blur-md flex items-center justify-between px-6 py-4 rounded-xl shadow-lg transition-all duration-300">
+    <div class="sticky top-0 z-50 relative">
+      <!-- Left circular decoration -->
+      <div class="absolute -left-20 top-1/2 -translate-y-1/2 w-40 h-40 rounded-full bg-gradient-to-br from-indigo-400/20 to-purple-600/20 blur-xl -z-10"></div>
+      <!-- Right circular decoration -->
+      <div class="absolute -right-20 top-1/2 -translate-y-1/2 w-40 h-40 rounded-full bg-gradient-to-br from-purple-400/20 to-pink-600/20 blur-xl -z-10"></div>
+      
+      <header [class]="getHeaderClasses()" class="w-full backdrop-blur-md flex items-center justify-between px-6 py-4 shadow-lg transition-all duration-300" style="border-radius: 50px;">
         <div class="flex items-center gap-3">
           <a [routerLink]="routes.HOME" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
             <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-indigo-400 to-purple-600 flex items-center justify-center font-bold text-black">
@@ -23,7 +28,7 @@ import { CONSTANTS } from '../../constants';
         </div>
         <div class="flex items-center gap-4">
           <nav class="hidden md:flex items-center gap-6 text-sm opacity-90">
-            <a *ngFor="let item of navItems" [routerLink]="item.route" routerLinkActive="border-b-2 border-indigo-400" [routerLinkActiveOptions]="{exact: item.exact}" class="hover:underline transition-all duration-200 px-3 py-2 rounded-lg hover:bg-white/10">{{ item.label }}</a>
+            <a *ngFor="let item of navItems" [routerLink]="item.route" routerLinkActive="border border-indigo-400" [routerLinkActiveOptions]="{exact: item.exact}" class="transition-all duration-200 px-3 py-2 rounded-lg hover:bg-white/10">{{ item.label }}</a>
           </nav>
           <button (click)="toggleTheme()" [class]="getButtonClasses()" class="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300 hover:scale-110">
             <span class="inline-block transition-transform duration-300" [class.rotate-180]="isDark">
