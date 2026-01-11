@@ -1,0 +1,122 @@
+<app-layout>
+  <app-back-nav backLink="/notes" backText="Back to All Notes"></app-back-nav>
+  
+  <app-topic-header 
+    title="Clean Code Principles" 
+    description="Essential rules and best practices for writing maintainable, readable, and professional code.">
+  </app-topic-header>
+
+  <div>
+    <!-- Overview -->
+    <app-content-section title="Clean Code Rules" description="Core principles every developer should follow.">
+      <app-info-box type="info" title="📋 Essential Rules">
+        <ul class="text-secondary text-sm space-y-1 list-disc list-inside">
+          <li><strong>Meaningful Names:</strong> Use descriptive variable and function names</li>
+          <li><strong>Small Functions:</strong> Keep functions under 20 lines</li>
+          <li><strong>Avoid Deep Nesting:</strong> Maximum 3 levels of indentation</li>
+          <li><strong>Single Responsibility:</strong> Each function should do one thing</li>
+          <li><strong>DRY Principle:</strong> Don't Repeat Yourself - eliminate code duplication</li>
+          <li><strong>Error Handling:</strong> Handle errors gracefully</li>
+          <li><strong>No Magic Numbers:</strong> Use named constants</li>
+          <li><strong>Consistent Formatting:</strong> Follow style guidelines</li>
+        </ul>
+      </app-info-box>
+    </app-content-section>
+
+    <!-- Meaningful Names -->
+    <app-content-section title="1. Use Meaningful Names" description="Choose names that reveal intent and make code self-documenting.">
+      <app-code-block [code]="meaningfulNamesCode" [output]="meaningfulNamesOutput" language="JavaScript"></app-code-block>
+      
+      <app-info-box type="success" title="✅ Naming Guidelines">
+        <ul class="text-secondary text-sm space-y-1 list-disc list-inside">
+          <li><strong>Variables:</strong> Use nouns (user_name, total_price)</li>
+          <li><strong>Functions:</strong> Use verbs (calculate_tax, send_email)</li>
+          <li><strong>Booleans:</strong> Use is/has/can (is_valid, has_permission)</li>
+          <li><strong>Constants:</strong> Use UPPER_CASE (MAX_RETRY_COUNT)</li>
+        </ul>
+      </app-info-box>
+    </app-content-section>
+
+    <!-- Small Functions -->
+    <app-content-section title="2. Write Small Functions" description="Keep functions focused and under 20 lines for better readability and testing.">
+      <app-code-block [code]="smallFunctionsCode" [output]="smallFunctionsOutput" language="JavaScript"></app-code-block>
+    </app-content-section>
+
+    <!-- Avoid Deep Nesting -->
+    <app-content-section title="3. Avoid Deep Nesting" description="Use early returns and guard clauses to keep code flat and readable.">
+      <app-code-block [code]="avoidNestingCode" [output]="avoidNestingOutput" language="JavaScript"></app-code-block>
+    </app-content-section>
+
+    <!-- Single Responsibility -->
+    <app-content-section title="4. Single Responsibility Principle" description="Each class and function should have only one reason to change.">
+      <app-code-block [code]="singleResponsibilityCode" [output]="singleResponsibilityOutput" language="JavaScript"></app-code-block>
+    </app-content-section>
+
+    <!-- DRY Principle -->
+    <app-content-section title="5. DRY Principle (Don't Repeat Yourself)" description="Eliminate code duplication by extracting common logic into reusable functions.">
+      <app-code-block [code]="dryPrincipleCode" [output]="dryPrincipleOutput" language="JavaScript"></app-code-block>
+      
+      <app-info-box type="warning" title="⚠️ Signs of Code Duplication">
+        <ul class="text-secondary text-sm space-y-1 list-disc list-inside">
+          <li><strong>Copy-paste code:</strong> Same logic appears in multiple places</li>
+          <li><strong>Similar functions:</strong> Functions that do almost the same thing</li>
+          <li><strong>Repeated validation:</strong> Same validation logic in multiple methods</li>
+          <li><strong>Duplicate constants:</strong> Same values defined in multiple files</li>
+        </ul>
+      </app-info-box>
+    </app-content-section>
+
+    <!-- Error Handling -->
+    <app-content-section title="6. Handle Errors Gracefully" description="Always anticipate and handle potential errors in your code.">
+      <app-code-block [code]="errorHandlingCode" [output]="errorHandlingOutput" language="JavaScript"></app-code-block>
+    </app-content-section>
+
+    <!-- Magic Numbers -->
+    <app-content-section title="7. Avoid Magic Numbers" description="Use named constants instead of hard-coded values.">
+      <app-code-block [code]="magicNumbersCode" [output]="magicNumbersOutput" language="JavaScript"></app-code-block>
+    </app-content-section>
+
+    <!-- Consistent Formatting -->
+    <app-content-section title="8. Consistent Formatting" description="Follow consistent style guidelines for better code readability.">
+      <app-code-block [code]="consistentFormattingCode" [output]="consistentFormattingOutput" language="JavaScript"></app-code-block>
+      
+      <app-info-box type="purple" title="🎯 Style Guidelines">
+        <ul class="text-secondary text-sm space-y-1 list-disc list-inside">
+          <li><strong>Python:</strong> Follow PEP 8 (4 spaces, snake_case)</li>
+          <li><strong>JavaScript:</strong> Use ESLint/Prettier (2 spaces, camelCase)</li>
+          <li><strong>Java:</strong> Follow Oracle conventions (camelCase, braces)</li>
+          <li><strong>General:</strong> Be consistent within your project</li>
+        </ul>
+      </app-info-box>
+    </app-content-section>
+
+    <!-- Best Practices Summary -->
+    <app-content-section title="Practice Exercise" description="Apply clean code principles to refactor messy code.">
+      <app-code-block [code]="practiceCode" [output]="practiceOutput" language="JavaScript"></app-code-block>
+      
+      <app-info-box type="info" title="🎯 Your Challenge">
+        <p class="text-secondary text-sm mb-2">Try refactoring the "BAD CODE" example above using these clean code principles:</p>
+        <ul class="text-secondary text-sm space-y-1 list-disc list-inside">
+          <li>Replace magic numbers with named constants</li>
+          <li>Use meaningful function and variable names</li>
+          <li>Extract small, focused functions</li>
+          <li>Eliminate deep nesting with early returns</li>
+          <li>Apply single responsibility principle</li>
+        </ul>
+      </app-info-box>
+    </app-content-section>
+
+    <!-- Best Practices Summary -->
+    <app-content-section title="Summary" description="Key takeaways for writing clean, maintainable code.">
+      <app-info-box type="success" title="🏆 Clean Code Benefits">
+        <ul class="text-secondary text-sm space-y-1 list-disc list-inside">
+          <li><strong>Readability:</strong> Code is easier to understand</li>
+          <li><strong>Maintainability:</strong> Changes are safer and faster</li>
+          <li><strong>Debugging:</strong> Issues are easier to find and fix</li>
+          <li><strong>Collaboration:</strong> Team members can work together effectively</li>
+          <li><strong>Quality:</strong> Fewer bugs and better software</li>
+        </ul>
+      </app-info-box>
+    </app-content-section>
+  </div>
+</app-layout>

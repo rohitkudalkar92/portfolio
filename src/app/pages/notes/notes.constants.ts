@@ -42,5 +42,12 @@ export const NOTES_DATA: Note[] = [
     category: 'react',
     content: 'React components are JavaScript functions that return JSX. Use function components with hooks. JSX syntax combines HTML with JavaScript. Props pass data to components. State manages component data with useState hook.',
     tags: ['react', 'components', 'jsx', 'hooks']
+  },
+  {
+    id: '7',
+    title: 'Clean Code Principles',
+    category: 'clean-code',
+    content: 'Essential clean code rules: Use meaningful names, write small functions (max 20 lines), avoid deep nesting (max 3 levels), follow single responsibility principle, write self-documenting code, use consistent formatting, handle errors gracefully, avoid magic numbers, prefer composition over inheritance, write tests first.',
+    tags: ['clean-code', 'best-practices', 'programming', 'maintainability']
   }
 ];

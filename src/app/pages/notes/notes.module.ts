@@ -10,6 +10,7 @@ import { VariablesDataTypesNotesComponent } from './python/variables-data-types/
 import { OperatorsNotesComponent } from './python/operators/notes.component';
 import { TypeConversionNotesComponent } from './python/type-conversion/notes.component';
 import { StringsNotesComponent } from './python/strings/notes.component';
+import { CleanCodeComponent } from './clean-code/clean-code.component';
 
 import { LayoutComponent } from '../../common/layout/layout.component';
 import { BackNavComponent } from '../../common/back-nav/back-nav.component';
@@ -34,7 +35,8 @@ const routes = [
   { path: 'python/variables-data-types', component: VariablesDataTypesNotesComponent },
   { path: 'python/operators', component: OperatorsNotesComponent },
   { path: 'python/type-conversion', component: TypeConversionNotesComponent },
-  { path: 'python/strings', component: StringsNotesComponent }
+  { path: 'python/strings', component: StringsNotesComponent },
+  { path: 'clean-code', component: CleanCodeComponent }
 ];
 
 @NgModule({
@@ -45,7 +47,8 @@ const routes = [
     VariablesDataTypesNotesComponent,
     OperatorsNotesComponent,
     TypeConversionNotesComponent,
-    StringsNotesComponent
+    StringsNotesComponent,
+    CleanCodeComponent
   ],
   imports: [
     CommonModule,
