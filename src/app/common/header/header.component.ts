@@ -9,12 +9,7 @@ import { CONSTANTS } from '../../constants';
   imports: [RouterLink, RouterLinkActive, CommonModule],
   template: `
     <div class="sticky top-0 z-50 relative">
-      <!-- Left circular decoration -->
-      <div class="absolute -left-20 top-1/2 -translate-y-1/2 w-40 h-40 rounded-full bg-gradient-to-br from-indigo-400/20 to-purple-600/20 blur-xl -z-10"></div>
-      <!-- Right circular decoration -->
-      <div class="absolute -right-20 top-1/2 -translate-y-1/2 w-40 h-40 rounded-full bg-gradient-to-br from-purple-400/20 to-pink-600/20 blur-xl -z-10"></div>
-      
-      <header [class]="getHeaderClasses()" class="w-full backdrop-blur-md flex items-center justify-between px-6 py-4 shadow-lg transition-all duration-300" style="border-radius: 50px;">
+      <header [class]="getHeaderClasses()" class="w-full flex items-center justify-between px-6 py-2 shadow-lg transition-all duration-300" style="border-radius: 5px;">
         <div class="flex items-center gap-3">
           <a [routerLink]="routes.HOME" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
             <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-indigo-400 to-purple-600 flex items-center justify-center font-bold text-black">
