@@ -26,23 +26,13 @@ import { LazyLoadDirective } from '../../shared/directives/lazy-load.directive';
               <span>{{ tech }}</span>
             </span>
           </div>
-          <div class="flex gap-2">
-            <app-button 
-              [routerLink]="['/projects', project.id]" 
-              [variant]="ButtonVariant.ACCENT"
-              [size]="ButtonSize.SMALL"
-              [block]="true"
-              [text]="detailsBtn">
-            </app-button>
-            <app-button 
-              [href]="project.liveUrl" 
-              target="_blank" 
-              [variant]="ButtonVariant.SECONDARY"
-              [size]="ButtonSize.SMALL"
-              [block]="true"
-              [text]="liveDemoBtn">
-            </app-button>
-          </div>
+          <app-button 
+            [routerLink]="['/projects', project.id]" 
+            [variant]="ButtonVariant.ACCENT"
+            [size]="ButtonSize.SMALL"
+            [block]="true"
+            [text]="detailsBtn">
+          </app-button>
         </div>
       </div>
     </app-layout>
@@ -54,7 +44,6 @@ export class ProjectsComponent implements OnInit {
   
   pageTitle = CONSTANTS.PROJECTS.TITLE;
   detailsBtn = CONSTANTS.PROJECTS.DETAILS_BTN;
-  liveDemoBtn = CONSTANTS.PROJECTS.LIVE_DEMO_BTN;
 
   constructor(private titleService: TitleService) {}
 
