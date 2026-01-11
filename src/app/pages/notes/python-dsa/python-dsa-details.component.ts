@@ -29,7 +29,7 @@ import { PYTHON_DSA_TOPICS } from '../../../data/python-dsa-topics.data';
         
         <app-topics-list 
           [topics]="filteredTopics" 
-          badgeColor="bg-orange-500">
+          baseRoute="/notes/python-dsa">
         </app-topics-list>
       </div>
     </app-layout>

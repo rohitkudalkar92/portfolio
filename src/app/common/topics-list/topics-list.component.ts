@@ -33,5 +33,5 @@ export interface TopicItem {
 export class TopicsListComponent {
   @Input() topics: TopicItem[] = [];
   @Input() baseRoute: string = '';
-  @Input() badgeClass: string = 'bg-blue-500/20 text-blue-400';
+  @Input() badgeClass: string = 'btn-accent text-black';
 }
