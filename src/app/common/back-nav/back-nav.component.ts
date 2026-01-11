@@ -9,7 +9,7 @@ import { RouterLink } from '@angular/router';
   template: `
     <div class="flex items-center justify-between mb-8">
       <a [routerLink]="backLink"
-        class="px-4 py-2 bg-secondary text-secondary rounded-lg hover:bg-accent/20 transition-colors">
+        class="px-4 py-2 btn-accent text-black rounded-lg hover:opacity-90 transition-opacity">
         ← {{ backText }}
       </a>
     </div>

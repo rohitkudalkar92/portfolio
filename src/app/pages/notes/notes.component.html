@@ -12,8 +12,8 @@
       <app-button 
         *ngIf="note.routerLink" 
         [routerLink]="note.routerLink"
-        variant="accent"
-        size="sm"
+        [variant]="ButtonVariant.ACCENT"
+        [size]="ButtonSize.SMALL"
         [block]="true"
         text="View Details">
       </app-button>

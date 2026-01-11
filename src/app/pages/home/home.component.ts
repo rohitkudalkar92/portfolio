@@ -6,7 +6,7 @@ import { TitleService } from '../../title.service';
 import { CONSTANTS } from '../../constants';
 import { HeroTitle, QuickInfo, Icons, Contact} from './home.interface';
 import { LazyLoadDirective } from '../../shared/directives/lazy-load.directive';
-import { ButtonComponent } from '../../common/button/button.component';
+import { ButtonComponent, ButtonVariant } from '../../common/button/button.component';
 
 @Component({
   selector: 'app-home',
@@ -15,6 +15,8 @@ import { ButtonComponent } from '../../common/button/button.component';
   templateUrl: './home.component.html'
 })
 export class HomeComponent implements OnInit {
+  ButtonVariant = ButtonVariant;
+  
   // Hero section
   heroTitle: HeroTitle = {
     part1: CONSTANTS.HOME.HERO_TITLE_PART1,

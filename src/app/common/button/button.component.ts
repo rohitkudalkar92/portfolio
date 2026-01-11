@@ -2,36 +2,65 @@ import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
+export enum ButtonVariant {
+  ACCENT = 'accent',
+  PRIMARY = 'primary',
+  SECONDARY = 'secondary',
+  DETAILS = 'details'
+}
+
+export enum ButtonSize {
+  SMALL = 'sm',
+  MEDIUM = 'md',
+  LARGE = 'lg'
+}
+
 @Component({
   selector: 'app-button',
   standalone: true,
   imports: [CommonModule, RouterLink],
   template: `
-    <a *ngIf="routerLink; else buttonTemplate" 
+    <a *ngIf="routerLink; else hrefTemplate" 
        [routerLink]="routerLink" 
        [class]="getClasses()">
       {{ text }}
-      <svg *ngIf="variant === 'details'" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg *ngIf="variant === ButtonVariant.DETAILS" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
       </svg>
     </a>
     
-    <ng-template #buttonTemplate>
-      <button [class]="getClasses()" (click)="onClick()">
+    <ng-template #hrefTemplate>
+      <a *ngIf="href; else buttonTemplate" 
+         [href]="href" 
+         [target]="target"
+         [class]="getClasses()">
         {{ text }}
-        <svg *ngIf="variant === 'details'" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg *ngIf="variant === ButtonVariant.DETAILS" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
         </svg>
-      </button>
+      </a>
+      
+      <ng-template #buttonTemplate>
+        <button [class]="getClasses()" (click)="onClick()">
+          {{ text }}
+          <svg *ngIf="variant === ButtonVariant.DETAILS" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </button>
+      </ng-template>
     </ng-template>
   `
 })
 export class ButtonComponent {
+  ButtonVariant = ButtonVariant;
+  
   @Input() text = '';
-  @Input() variant: 'accent' | 'primary' | 'secondary' | 'details' = 'primary';
-  @Input() size: 'sm' | 'md' | 'lg' = 'md';
+  @Input() variant: ButtonVariant = ButtonVariant.PRIMARY;
+  @Input() size: ButtonSize = ButtonSize.MEDIUM;
   @Input() block = false;
-  @Input() routerLink?: string;
+  @Input() routerLink?: string | any[];
+  @Input() href?: string;
+  @Input() target?: string;
 
   onClick() {
     // Handle button click if needed
@@ -41,16 +70,16 @@ export class ButtonComponent {
     const baseClasses = 'inline-flex items-center justify-center gap-2 rounded-lg font-semibold hover:opacity-90 transition-all duration-200';
     
     const variantClasses = {
-      accent: 'text-black btn-accent',
-      primary: 'text-white bg-indigo-600 hover:bg-indigo-700',
-      secondary: 'text-gray-700 bg-gray-200 hover:bg-gray-300',
-      details: 'text-white bg-blue-500 hover:bg-blue-600 shadow-sm hover:shadow-md w-full'
+      [ButtonVariant.ACCENT]: 'text-black btn-accent',
+      [ButtonVariant.PRIMARY]: 'text-white bg-indigo-600 hover:bg-indigo-700',
+      [ButtonVariant.SECONDARY]: 'text-gray-700 bg-gray-200 hover:bg-gray-300',
+      [ButtonVariant.DETAILS]: 'text-white bg-blue-500 hover:bg-blue-600 shadow-sm hover:shadow-md w-full'
     };
     
     const sizeClasses = {
-      sm: 'px-3 py-1.5 text-xs',
-      md: 'px-5 py-3',
-      lg: 'px-6 py-4 text-lg'
+      [ButtonSize.SMALL]: 'px-3 py-1.5 text-xs',
+      [ButtonSize.MEDIUM]: 'px-5 py-3',
+      [ButtonSize.LARGE]: 'px-6 py-4 text-lg'
     };
     
     const blockClass = this.block ? 'w-full' : '';

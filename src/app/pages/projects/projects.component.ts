@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { LayoutComponent } from '../../common/layout/layout.component';
+import { ButtonComponent, ButtonVariant, ButtonSize } from '../../common/button/button.component';
 import { TitleService } from '../../title.service';
 import { CONSTANTS } from '../../constants';
 import { LazyLoadDirective } from '../../shared/directives/lazy-load.directive';
@@ -9,7 +10,7 @@ import { LazyLoadDirective } from '../../shared/directives/lazy-load.directive';
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule, LayoutComponent, RouterLink, LazyLoadDirective],
+  imports: [CommonModule, LayoutComponent, RouterLink, LazyLoadDirective, ButtonComponent],
   template: `
     <app-layout>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -26,12 +27,21 @@ import { LazyLoadDirective } from '../../shared/directives/lazy-load.directive';
             </span>
           </div>
           <div class="flex gap-2">
-            <a [routerLink]="['/projects', project.id]" class="flex-1 text-center py-2 px-3 bg-gradient-to-r from-indigo-400 to-purple-600 text-white rounded-lg hover:opacity-90 transition-opacity text-xs">
-              {{ detailsBtn }}
-            </a>
-            <a [href]="project.liveUrl" target="_blank" class="flex-1 text-center py-2 px-3 border border-glass-border rounded-lg hover:bg-glass-bg text-xs">
-              {{ liveDemoBtn }}
-            </a>
+            <app-button 
+              [routerLink]="['/projects', project.id]" 
+              [variant]="ButtonVariant.ACCENT"
+              [size]="ButtonSize.SMALL"
+              [block]="true"
+              [text]="detailsBtn">
+            </app-button>
+            <app-button 
+              [href]="project.liveUrl" 
+              target="_blank" 
+              [variant]="ButtonVariant.SECONDARY"
+              [size]="ButtonSize.SMALL"
+              [block]="true"
+              [text]="liveDemoBtn">
+            </app-button>
           </div>
         </div>
       </div>
@@ -39,6 +49,9 @@ import { LazyLoadDirective } from '../../shared/directives/lazy-load.directive';
   `
 })
 export class ProjectsComponent implements OnInit {
+  ButtonVariant = ButtonVariant;
+  ButtonSize = ButtonSize;
+  
   pageTitle = CONSTANTS.PROJECTS.TITLE;
   detailsBtn = CONSTANTS.PROJECTS.DETAILS_BTN;
   liveDemoBtn = CONSTANTS.PROJECTS.LIVE_DEMO_BTN;
