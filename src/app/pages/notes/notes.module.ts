@@ -11,6 +11,7 @@ import { OperatorsNotesComponent } from './python/operators/notes.component';
 import { TypeConversionNotesComponent } from './python/type-conversion/notes.component';
 import { StringsNotesComponent } from './python/strings/notes.component';
 import { ErrorTypesNotesComponent } from './python/error-types/notes.component';
+import { EscapeSequenceCharactersNotesComponent } from './python/escape-sequence-characters/notes.component';
 import { CleanCodeComponent } from './clean-code/clean-code.component';
 import { ES6Component } from './es6/es6.component';
 
@@ -40,6 +41,7 @@ const routes = [
   { path: 'python/type-conversion', component: TypeConversionNotesComponent },
   { path: 'python/strings', component: StringsNotesComponent },
   { path: 'python/error-types', component: ErrorTypesNotesComponent },
+  { path: 'python/escape-sequence-characters', component: EscapeSequenceCharactersNotesComponent },
   { path: 'clean-code', component: CleanCodeComponent },
   { path: 'es6', component: ES6Component }
 ];
@@ -54,6 +56,7 @@ const routes = [
     TypeConversionNotesComponent,
     StringsNotesComponent,
     ErrorTypesNotesComponent,
+    EscapeSequenceCharactersNotesComponent,
     CleanCodeComponent,
     ES6Component
   ],

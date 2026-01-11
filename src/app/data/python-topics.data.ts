@@ -32,6 +32,11 @@ export const PYTHON_TOPICS: PythonTopic[] = [
     title: 'Type Conversion',
     description: 'Learn how to convert between different data types in Python - strings, numbers, booleans, and more.'
   },
+  {
+    id: 'escape-sequence-characters',
+    title: 'Escape Sequence Characters',
+    description: 'Learn about escape sequences like \n, \t, \\, \" and how to use special characters in strings.'
+  },
   // {
   //   id: 'input-output',
   //   title: 'Input and Output',

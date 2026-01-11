@@ -1,0 +1,34 @@
+<app-layout>
+  <app-back-nav></app-back-nav>
+  
+  <app-topic-header 
+    title="Escape Sequence Characters" 
+    description="Learn about escape sequences like newline, tab, backslash and how to use special characters in strings.">
+  </app-topic-header>
+
+  <app-content-section title="Summary">
+    <p>Escape sequences are special character combinations that represent characters that are difficult to type or display directly in strings. They start with a backslash (\) followed by a specific character.</p>
+    <ul>
+      <li><strong>\n</strong> - Creates a new line - <code>print("Hello\nWorld")</code></li>
+      <li><strong>\t</strong> - Adds a tab space - <code>print("Name:\tJohn")</code></li>
+      <li><strong>\\</strong> - Displays a literal backslash - <code>print("Path: C:\\Users")</code></li>
+      <li><strong>\"</strong> - Displays a double quote - <code>print("He said \"Hello\"")</code></li>
+      <li><strong>\'</strong> - Displays a single quote - <code>print('It\'s working')</code></li>
+    </ul>
+  </app-content-section>
+
+  <app-content-section title="Newline Character (\n)">
+    <p>The newline character creates a line break in your text output.</p>
+    <app-code-block [code]="newlineCode" [output]="newlineOutput"></app-code-block>
+  </app-content-section>
+
+  <app-content-section title="Tab Character (\t)">
+    <p>The tab character adds horizontal spacing, useful for formatting aligned text.</p>
+    <app-code-block [code]="tabCode" [output]="tabOutput"></app-code-block>
+  </app-content-section>
+
+  <app-content-section title="Backslash Character (\\)">
+    <p>Use double backslashes to display a literal backslash character.</p>
+    <app-code-block [code]="backslashCode" [output]="backslashOutput"></app-code-block>
+  </app-content-section>
+</app-layout>
