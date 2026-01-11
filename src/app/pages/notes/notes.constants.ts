@@ -31,7 +31,7 @@ export const NOTES_DATA: Note[] = [
   },
   {
     id: '5',
-    title: 'Angular Components Basics',
+    title: 'Angular',
     category: 'angular',
     content: 'Components are the building blocks of Angular apps. Create with @Component decorator, define selector, template, and styles. Use ng generate component to scaffold. Lifecycle hooks: ngOnInit, ngOnDestroy.',
     tags: ['angular', 'components', 'typescript']
@@ -49,5 +49,12 @@ export const NOTES_DATA: Note[] = [
     category: 'clean-code',
     content: 'Essential clean code rules: Use meaningful names, write small functions (max 20 lines), avoid deep nesting (max 3 levels), follow single responsibility principle, write self-documenting code, use consistent formatting, handle errors gracefully, avoid magic numbers, prefer composition over inheritance, write tests first.',
     tags: ['clean-code', 'best-practices', 'programming', 'maintainability']
+  },
+  {
+    id: '8',
+    title: 'ES6 Modern JavaScript',
+    category: 'es6',
+    content: 'Learn ES6/ES2015 features: let/const, arrow functions, template literals, destructuring, spread/rest operators, default parameters, classes, modules. Modern JavaScript syntax for cleaner, more maintainable code.',
+    tags: ['javascript', 'es6', 'modern-js', 'syntax']
   }
 ];

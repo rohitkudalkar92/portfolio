@@ -1,0 +1,168 @@
+<app-layout>
+  <app-back-nav backLink="/notes" backText="Back to All Notes"></app-back-nav>
+  
+  <app-topic-header 
+    title="Modern JavaScript (ES6-ES2024)" 
+    description="Learn JavaScript features from ES6/ES2015 to ES2024 - the complete modern JavaScript guide.">
+  </app-topic-header>
+
+  <div>
+    <!-- Overview -->
+    <app-content-section title="Modern JavaScript Features" description="Essential JavaScript features from ES6 to ES2024.">
+      <app-info-box type="info" title="🚀 Modern JavaScript Features">
+        <ul class="text-secondary text-sm space-y-1 list-disc list-inside">
+          <li><strong>ES6 (2015):</strong> let/const, arrow functions, classes, modules</li>
+          <li><strong>ES2017:</strong> async/await, Object.entries/values</li>
+          <li><strong>ES2018:</strong> Rest/spread for objects, async iteration</li>
+          <li><strong>ES2019:</strong> Array.flat(), Object.fromEntries()</li>
+          <li><strong>ES2020:</strong> Optional chaining, nullish coalescing</li>
+          <li><strong>ES2021:</strong> Logical assignment, Promise.any()</li>
+          <li><strong>ES2022:</strong> Top-level await, private fields</li>
+          <li><strong>ES2023:</strong> Array.findLast(), toSorted()</li>
+          <li><strong>ES2024:</strong> Object.groupBy(), Promise.withResolvers()</li>
+        </ul>
+      </app-info-box>
+    </app-content-section>
+
+    <!-- let & const -->
+    <app-content-section title="1. let & const" description="Block-scoped variable declarations replacing var.">
+      <app-info-box type="warning" title="❌ Problem with var">
+        <p class="text-secondary text-sm"><strong>Issue:</strong> var has function scope and hoisting issues, causing unexpected behavior and bugs in loops and closures.</p>
+      </app-info-box>
+      <app-code-block [code]="letConstCode" [output]="letConstOutput" language="JavaScript"></app-code-block>
+    </app-content-section>
+
+    <!-- Arrow Functions -->
+    <app-content-section title="2. Arrow Functions" description="Concise syntax for writing functions with lexical this binding.">
+      <app-info-box type="warning" title="❌ Problem with function expressions">
+        <p class="text-secondary text-sm"><strong>Issue:</strong> Traditional functions are verbose, have confusing 'this' binding, and require explicit binding in callbacks.</p>
+      </app-info-box>
+      <app-code-block [code]="arrowFunctionsCode" [output]="arrowFunctionsOutput" language="JavaScript"></app-code-block>
+    </app-content-section>
+
+    <!-- Template Literals -->
+    <app-content-section title="3. Template Literals" description="String interpolation and multi-line strings using backticks.">
+      <app-info-box type="warning" title="❌ Problem with string concatenation">
+        <p class="text-secondary text-sm"><strong>Issue:</strong> String concatenation with + is verbose, error-prone, and doesn't support multi-line strings easily.</p>
+      </app-info-box>
+      <app-code-block [code]="templateLiteralsCode" [output]="templateLiteralsOutput" language="JavaScript"></app-code-block>
+    </app-content-section>
+
+    <!-- Destructuring -->
+    <app-content-section title="4. Destructuring Assignment" description="Extract values from arrays and objects into distinct variables.">
+      <app-info-box type="warning" title="❌ Problem with property access">
+        <p class="text-secondary text-sm"><strong>Issue:</strong> Extracting multiple values from objects/arrays requires repetitive code and multiple variable assignments.</p>
+      </app-info-box>
+      <app-code-block [code]="destructuringCode" [output]="destructuringOutput" language="JavaScript"></app-code-block>
+    </app-content-section>
+
+    <!-- Spread/Rest -->
+    <app-content-section title="5. Spread & Rest Operators" description="Expand arrays/objects or collect multiple elements into arrays.">
+      <app-info-box type="warning" title="❌ Problem with array/object operations">
+        <p class="text-secondary text-sm"><strong>Issue:</strong> Copying arrays/objects and handling variable arguments required verbose methods like .concat(), .apply(), or manual loops.</p>
+      </app-info-box>
+      <app-code-block [code]="spreadRestCode" [output]="spreadRestOutput" language="JavaScript"></app-code-block>
+    </app-content-section>
+
+    <!-- Default Parameters -->
+    <app-content-section title="6. Default Parameters" description="Set default values for function parameters.">
+      <app-info-box type="warning" title="❌ Problem with undefined parameters">
+        <p class="text-secondary text-sm"><strong>Issue:</strong> Functions needed manual checks for undefined parameters, leading to repetitive if statements and verbose code.</p>
+      </app-info-box>
+      <app-code-block [code]="defaultParametersCode" [output]="defaultParametersOutput" language="JavaScript"></app-code-block>
+    </app-content-section>
+
+    <!-- Classes -->
+    <app-content-section title="7. Classes" description="Object-oriented programming with class syntax and inheritance.">
+      <app-info-box type="warning" title="❌ Problem with prototype syntax">
+        <p class="text-secondary text-sm"><strong>Issue:</strong> Creating objects with prototypes was confusing, verbose, and didn't provide clear inheritance patterns.</p>
+      </app-info-box>
+      <app-code-block [code]="classesCode" [output]="classesOutput" language="JavaScript"></app-code-block>
+    </app-content-section>
+
+    <!-- Modules -->
+    <app-content-section title="8. Modules" description="Organize code into reusable modules with import/export.">
+      <app-info-box type="warning" title="❌ Problem with script organization">
+        <p class="text-secondary text-sm"><strong>Issue:</strong> No native module system led to global namespace pollution, dependency management issues, and script loading problems.</p>
+      </app-info-box>
+      <app-code-block [code]="modulesCode" [output]="modulesOutput" language="JavaScript"></app-code-block>
+    </app-content-section>
+
+    <!-- Practice Exercise -->
+    <app-content-section title="Practice Exercise" description="Apply ES6 features to modernize JavaScript code.">
+      <app-code-block [code]="practiceCode" [output]="practiceOutput" language="JavaScript"></app-code-block>
+    </app-content-section>
+
+    <!-- Promises -->
+    <app-content-section title="9. Promises & Async/Await" description="Handle asynchronous operations with promises and modern async/await syntax.">
+      <app-info-box type="warning" title="❌ Problem with callback hell">
+        <p class="text-secondary text-sm"><strong>Issue:</strong> Nested callbacks created "callback hell" - deeply nested, hard-to-read code that was difficult to debug and maintain.</p>
+      </app-info-box>
+      <app-code-block [code]="promisesCode" [output]="promisesOutput" language="JavaScript"></app-code-block>
+    </app-content-section>
+
+    <!-- for...of Loops -->
+    <app-content-section title="10. for...of Loops" description="Modern iteration over arrays, strings, and other iterable objects.">
+      <app-info-box type="warning" title="❌ Problem with for...in loops">
+        <p class="text-secondary text-sm"><strong>Issue:</strong> for...in loops iterate over object properties (including inherited ones), not array values, causing confusion and bugs.</p>
+      </app-info-box>
+      <app-code-block [code]="forOfLoopsCode" [output]="forOfLoopsOutput" language="JavaScript"></app-code-block>
+    </app-content-section>
+
+    <!-- Map & Set -->
+    <app-content-section title="11. Map & Set" description="New data structures for collections with unique features.">
+      <app-info-box type="warning" title="❌ Problem with objects as maps">
+        <p class="text-secondary text-sm"><strong>Issue:</strong> Using objects as maps had limitations: only string keys, prototype pollution, no size property, and no easy iteration.</p>
+      </app-info-box>
+      <app-code-block [code]="mapSetCode" [output]="mapSetOutput" language="JavaScript"></app-code-block>
+    </app-content-section>
+
+    <!-- String & Array Methods -->
+    <app-content-section title="12. New String & Array Methods" description="Useful methods added to String and Array prototypes.">
+      <app-info-box type="warning" title="❌ Problem with limited built-in methods">
+        <p class="text-secondary text-sm"><strong>Issue:</strong> Common operations like checking if string contains text or finding array elements required verbose workarounds or external libraries.</p>
+      </app-info-box>
+      <app-code-block [code]="stringArrayMethodsCode" [output]="stringArrayMethodsOutput" language="JavaScript"></app-code-block>
+    </app-content-section>
+
+    <!-- Object Enhancements -->
+    <app-content-section title="13. Object Enhancements" description="Shorthand properties, computed keys, and Object methods.">
+      <app-info-box type="warning" title="❌ Problem with object creation">
+        <p class="text-secondary text-sm"><strong>Issue:</strong> Creating objects required repetitive property assignments, and dynamic property names needed bracket notation workarounds.</p>
+      </app-info-box>
+      <app-code-block [code]="objectEnhancementsCode" [output]="objectEnhancementsOutput" language="JavaScript"></app-code-block>
+    </app-content-section>
+
+    <!-- ES2020 Features -->
+    <app-content-section title="14. Optional Chaining & Nullish Coalescing (ES2020)" description="Safe property access and null handling.">
+      <app-info-box type="warning" title="❌ Problem with null/undefined access">
+        <p class="text-secondary text-sm"><strong>Issue:</strong> Accessing nested properties safely required verbose null checks, and || operator gave wrong results with falsy values like 0 or false.</p>
+      </app-info-box>
+      <app-code-block [code]="optionalChainingCode" [output]="optionalChainingOutput" language="JavaScript"></app-code-block>
+    </app-content-section>
+
+    <!-- ES2022 Features -->
+    <app-content-section title="15. Private Fields & Top-level Await (ES2022)" description="True private class members and module-level async operations.">
+      <app-info-box type="warning" title="❌ Problem with class privacy">
+        <p class="text-secondary text-sm"><strong>Issue:</strong> JavaScript had no true private fields - developers used naming conventions (_private) but fields were still accessible externally.</p>
+      </app-info-box>
+      <app-code-block [code]="privateFieldsCode" [output]="privateFieldsOutput" language="JavaScript"></app-code-block>
+    </app-content-section>
+
+    <!-- ES2023 Features -->
+    <app-content-section title="16. Non-mutating Array Methods (ES2023)" description="Array methods that don't modify the original array.">
+      <app-info-box type="warning" title="❌ Problem with array mutation">
+        <p class="text-secondary text-sm"><strong>Issue:</strong> Array methods like sort(), reverse(), splice() mutate the original array, causing side effects and making functional programming difficult.</p>
+      </app-info-box>
+      <app-code-block [code]="arrayMethodsES2023Code" [output]="arrayMethodsES2023Output" language="JavaScript"></app-code-block>
+    </app-content-section>
+
+    <!-- ES2024 Features -->
+    <app-content-section title="17. Object.groupBy & Promise.withResolvers (ES2024)" description="Latest JavaScript features for grouping and promise handling.">
+      <app-info-box type="warning" title="❌ Problem with data grouping">
+        <p class="text-secondary text-sm"><strong>Issue:</strong> Grouping arrays by criteria required verbose reduce() operations, and creating externally resolvable promises needed complex workarounds.</p>
+      </app-info-box>
+      <app-code-block [code]="es2024FeaturesCode" [output]="es2024FeaturesOutput" language="JavaScript"></app-code-block>
+    </app-content-section>
+  </div>
+</app-layout>

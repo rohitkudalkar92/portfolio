@@ -12,6 +12,7 @@ import { TypeConversionNotesComponent } from './python/type-conversion/notes.com
 import { StringsNotesComponent } from './python/strings/notes.component';
 import { ErrorTypesNotesComponent } from './python/error-types/notes.component';
 import { CleanCodeComponent } from './clean-code/clean-code.component';
+import { ES6Component } from './es6/es6.component';
 
 import { LayoutComponent } from '../../common/layout/layout.component';
 import { BackNavComponent } from '../../common/back-nav/back-nav.component';
@@ -38,7 +39,8 @@ const routes = [
   { path: 'python/type-conversion', component: TypeConversionNotesComponent },
   { path: 'python/strings', component: StringsNotesComponent },
   { path: 'python/error-types', component: ErrorTypesNotesComponent },
-  { path: 'clean-code', component: CleanCodeComponent }
+  { path: 'clean-code', component: CleanCodeComponent },
+  { path: 'es6', component: ES6Component }
 ];
 
 @NgModule({
@@ -51,7 +53,8 @@ const routes = [
     TypeConversionNotesComponent,
     StringsNotesComponent,
     ErrorTypesNotesComponent,
-    CleanCodeComponent
+    CleanCodeComponent,
+    ES6Component
   ],
   imports: [
     CommonModule,
