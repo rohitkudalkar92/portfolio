@@ -8,7 +8,9 @@ import { DataTypeItem } from '../../../../common/data-types-grid/data-types-grid
 })
 export class VariablesDataTypesNotesComponent implements OnInit {
 
-  // Code examples for reusable components
+  // Navigation constants
+  readonly BACK_LINK = '/notes/python';
+  readonly BACK_TEXT = 'Back to Python Topics';
   validExamplesCode = `user_name = "Alice"        # snake_case (recommended)
 age2 = 25                  # numbers allowed
 _private_var = "hidden"    # leading underscore
