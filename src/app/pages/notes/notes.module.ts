@@ -27,6 +27,7 @@ import { SearchBoxComponent } from '../../common/search-box/search-box.component
 import { TopicsListComponent } from '../../common/topics-list/topics-list.component';
 import { PageHeaderComponent } from '../../common/page-header/page-header.component';
 import { ButtonComponent } from '../../common/button/button.component';
+import { ParagraphComponent } from '../../common/paragraph/paragraph.component';
 
 const routes = [
   { path: '', component: NotesComponent },
@@ -76,7 +77,8 @@ const routes = [
     SearchBoxComponent,
     TopicsListComponent,
     PageHeaderComponent,
-    ButtonComponent
+    ButtonComponent,
+    ParagraphComponent
   ]
 })
 export class NotesModule { }

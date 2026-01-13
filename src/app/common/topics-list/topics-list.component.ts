@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { ParagraphComponent } from '../paragraph/paragraph.component';
 
 export interface TopicItem {
   id: string;
@@ -11,7 +12,7 @@ export interface TopicItem {
 @Component({
   selector: 'app-topics-list',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, ParagraphComponent],
   template: `
     <div class="space-y-4">
       <div *ngFor="let topic of topics; let i = index" class="glass rounded-xl p-4 hover:transform hover:scale-105 transition-all duration-300">
@@ -22,7 +23,7 @@ export interface TopicItem {
             </span>
             <div>
               <h3 class="text-lg font-semibold text-primary">{{ topic.title }}</h3>
-              <p class="text-secondary text-sm">{{ topic.description }}</p>
+              <app-paragraph [text]="topic.description"></app-paragraph>
             </div>
           </div>
         </a>

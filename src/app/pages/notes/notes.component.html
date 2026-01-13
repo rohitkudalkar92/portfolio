@@ -6,7 +6,7 @@
       class="glass rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300"
     >
       <h3 class="text-lg font-semibold text-primary mb-2">{{ note.title }}</h3>
-      <p class="text-secondary text-sm mb-4 line-clamp-3">{{ note.content }}</p>
+      <app-paragraph text="{{ note.content }}" margin="mb-4" size="sm"></app-paragraph>
       
       <!-- Show details button if routerLink exists -->
       <app-button 

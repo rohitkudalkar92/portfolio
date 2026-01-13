@@ -21,6 +21,7 @@ import { CodeBlockComponent } from '../../../common/code-block/code-block.compon
 import { ContentSectionComponent } from '../../../common/content-section/content-section.component';
 import { InfoBoxComponent } from '../../../common/info-box/info-box.component';
 import { DescriptionTextComponent } from '../../../common/description-text/description-text.component';
+import { ParagraphComponent } from '../../../common/paragraph/paragraph.component';
 
 const routes = [
   { 
@@ -65,7 +66,8 @@ const routes = [
     CodeBlockComponent,
     ContentSectionComponent,
     InfoBoxComponent,
-    DescriptionTextComponent
+    DescriptionTextComponent,
+    ParagraphComponent
   ]
 })
 export class CssScssModule { }

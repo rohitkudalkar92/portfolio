@@ -1,14 +1,15 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ParagraphComponent } from '../paragraph/paragraph.component';
 
 @Component({
   selector: 'app-content-section',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ParagraphComponent],
   template: `
     <div class="glass rounded-xl p-6 my-8">
       <h2 class="text-xl font-semibold text-primary mb-4">{{ title }}</h2>
-      <p class="text-secondary mb-4" *ngIf="description">{{ description }}</p>
+      <app-paragraph [text]="description" *ngIf="description"></app-paragraph>
       <ng-content></ng-content>
     </div>
   `

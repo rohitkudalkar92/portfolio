@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { LayoutComponent } from '../../common/layout/layout.component';
 import { TitleService } from '../../title.service';
 import { CONSTANTS } from '../../constants';
+import { DescriptionTextComponent } from '../../common/description-text/description-text.component';
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [CommonModule, LayoutComponent],
+  imports: [CommonModule, LayoutComponent, DescriptionTextComponent],
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.scss']
 })

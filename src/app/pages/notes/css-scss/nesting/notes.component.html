@@ -10,36 +10,36 @@
     <div class="space-y-4">
       <div class="glass p-4 rounded-lg">
         <h4 class="text-accent font-semibold mb-2">Better Organization</h4>
-        <p class="text-secondary text-sm">Code structure matches HTML hierarchy</p>
+        <app-paragraph text="Code structure matches HTML hierarchy"></app-paragraph>
       </div>
       <div class="glass p-4 rounded-lg">
         <h4 class="text-accent font-semibold mb-2">Less Repetition</h4>
-        <p class="text-secondary text-sm">No need to repeat parent selectors</p>
+        <app-paragraph text="No need to repeat parent selectors"></app-paragraph>
       </div>
       <div class="glass p-4 rounded-lg">
         <h4 class="text-accent font-semibold mb-2">Easier Maintenance</h4>
-        <p class="text-secondary text-sm">Related styles grouped together</p>
+        <app-paragraph text="Related styles grouped together"></app-paragraph>
       </div>
     </div>
   </app-content-section>
 
   <app-content-section title="What is SCSS Nesting?">
-    <p class="text-secondary mb-4">SCSS nesting allows you to write CSS rules inside other rules, creating a hierarchy that mirrors your HTML structure.</p>
+    <app-paragraph text="SCSS nesting allows you to write CSS rules inside other rules, creating a hierarchy that mirrors your HTML structure."></app-paragraph>
     <app-code-block language="scss" [code]="basicExample"></app-code-block>
   </app-content-section>
 
   <app-content-section title="Parent Selector (&)">
-    <p class="text-secondary mb-4">Use & to reference the parent selector for pseudo-classes, modifiers, and BEM naming:</p>
+    <app-paragraph text="Use & to reference the parent selector for pseudo-classes, modifiers, and BEM naming:"></app-paragraph>
     <app-code-block language="scss" [code]="parentSelector"></app-code-block>
   </app-content-section>
 
   <app-content-section title="Good Practice">
-    <p class="text-secondary mb-4">Keep nesting logical and limit to 3-4 levels maximum:</p>
+    <app-paragraph text="Keep nesting logical and limit to 3-4 levels maximum:"></app-paragraph>
     <app-code-block language="scss" [code]="goodPractice"></app-code-block>
   </app-content-section>
 
   <app-content-section title="Bad Practice">
-    <p class="text-secondary mb-4">Avoid excessive nesting and unrelated groupings:</p>
+    <app-paragraph text="Avoid excessive nesting and unrelated groupings:"></app-paragraph>
     <app-code-block language="scss" [code]="badPractice"></app-code-block>
   </app-content-section>
 

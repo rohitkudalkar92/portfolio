@@ -7,7 +7,7 @@
   </app-page-header>
 
   <app-content-section title="What are SCSS Extends?">
-    <p class="text-secondary mb-4">SCSS extends allow you to share CSS properties from one selector to another using &#64;extend. This creates efficient, grouped selectors in the compiled CSS.</p>
+    <app-paragraph text="SCSS extends allow you to share CSS properties from one selector to another using @extend. This creates efficient, grouped selectors in the compiled CSS."></app-paragraph>
   </app-content-section>
 
   <app-content-section title="Benefits">
@@ -25,22 +25,22 @@
   </app-content-section>
 
   <app-content-section title="Basic Extends">
-    <p class="text-secondary mb-4">Use &#64;extend to inherit styles from existing selectors:</p>
+    <app-paragraph text="Use @extend to inherit styles from existing selectors:"></app-paragraph>
     <app-code-block language="scss" [code]="basicExample"></app-code-block>
   </app-content-section>
 
   <app-content-section title="Placeholder Selectors (%)">
-    <p class="text-secondary mb-4">Use % placeholders for styles that only exist to be extended:</p>
+    <app-paragraph text="Use % placeholders for styles that only exist to be extended:"></app-paragraph>
     <app-code-block language="scss" [code]="placeholderExample"></app-code-block>
   </app-content-section>
 
   <app-content-section title="Good Practice">
-    <p class="text-secondary mb-4">Use extends for related components with shared base styles:</p>
+    <app-paragraph text="Use extends for related components with shared base styles:"></app-paragraph>
     <app-code-block language="scss" [code]="goodPractice"></app-code-block>
   </app-content-section>
 
   <app-content-section title="Bad Practice">
-    <p class="text-secondary mb-4">Avoid extending unrelated selectors and complex chains:</p>
+    <app-paragraph text="Avoid extending unrelated selectors and complex chains:"></app-paragraph>
     <app-code-block language="scss" [code]="badPractice"></app-code-block>
   </app-content-section>
 

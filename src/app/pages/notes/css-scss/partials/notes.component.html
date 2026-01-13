@@ -7,7 +7,7 @@
   </app-page-header>
 
   <app-content-section title="What are SCSS Partials?">
-    <p class="text-secondary mb-4">SCSS partials are separate files that contain specific parts of your CSS. They start with an underscore (_) and are imported into a main stylesheet, helping organize and modularize your code.</p>
+    <app-paragraph text="SCSS partials are separate files that contain specific parts of your CSS. They start with an underscore (_) and are imported into a main stylesheet, helping organize and modularize your code."></app-paragraph>
   </app-content-section>
 
   <app-content-section title="Benefits">
@@ -25,22 +25,22 @@
   </app-content-section>
 
   <app-content-section title="Basic Partials">
-    <p class="text-secondary mb-4">Create partial files with underscore prefix and import them:</p>
+    <app-paragraph text="Create partial files with underscore prefix and import them:"></app-paragraph>
     <app-code-block language="scss" [code]="basicExample"></app-code-block>
   </app-content-section>
 
   <app-content-section title="File Structure">
-    <p class="text-secondary mb-4">Recommended organization for SCSS partials:</p>
+    <app-paragraph text="Recommended organization for SCSS partials:"></app-paragraph>
     <app-code-block language="scss" [code]="fileStructure"></app-code-block>
   </app-content-section>
 
   <app-content-section title="@import vs @use">
-    <p class="text-secondary mb-4">Modern SCSS uses &#64;use instead of &#64;import for better namespacing:</p>
+    <app-paragraph text="Modern SCSS uses @use instead of @import for better namespacing:"></app-paragraph>
     <app-code-block language="scss" [code]="importVsUse"></app-code-block>
   </app-content-section>
 
   <app-content-section title="Best Practices">
-    <p class="text-secondary mb-4">Guidelines for organizing and structuring SCSS partials:</p>
+    <app-paragraph text="Guidelines for organizing and structuring SCSS partials:"></app-paragraph>
     <app-code-block language="scss" [code]="bestPractices"></app-code-block>
   </app-content-section>
 

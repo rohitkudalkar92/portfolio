@@ -7,43 +7,43 @@
   </app-page-header>
 
   <app-content-section title="What are SCSS Mixins?">
-    <p class="text-secondary mb-4">SCSS mixins are reusable blocks of CSS declarations that can be included in multiple selectors. They help eliminate code duplication and maintain consistency across your stylesheet.</p>
+    <app-paragraph text="SCSS mixins are reusable blocks of CSS declarations that can be included in multiple selectors. They help eliminate code duplication and maintain consistency across your stylesheet."></app-paragraph>
   </app-content-section>
 
   <app-content-section title="Benefits">
     <div class="space-y-4">
       <div class="glass p-4 rounded-lg">
         <h4 class="text-accent font-semibold mb-2">Code Reusability</h4>
-        <p class="text-secondary text-sm">Write once, use multiple times across your stylesheet</p>
+        <app-description-text text="Write once, use multiple times across your stylesheet"></app-description-text>
       </div>
       <div class="glass p-4 rounded-lg">
         <h4 class="text-accent font-semibold mb-2">Consistency</h4>
-        <p class="text-secondary text-sm">Ensure uniform styling patterns throughout your project</p>
+        <app-description-text text="Ensure uniform styling patterns throughout your project"></app-description-text>
       </div>
       <div class="glass p-4 rounded-lg">
         <h4 class="text-accent font-semibold mb-2">Maintainability</h4>
-        <p class="text-secondary text-sm">Update styles in one place, changes reflect everywhere</p>
+        <app-description-text text="Update styles in one place, changes reflect everywhere"></app-description-text>
       </div>
     </div>
   </app-content-section>
 
   <app-content-section title="Basic Mixins">
-    <p class="text-secondary mb-4">Define reusable CSS patterns with &#64;mixin and use them with &#64;include:</p>
+    <app-paragraph text="Define reusable CSS patterns with @mixin and use them with @include:"></app-paragraph>
     <app-code-block language="scss" [code]="basicExample"></app-code-block>
   </app-content-section>
 
   <app-content-section title="Parameters & Default Values">
-    <p class="text-secondary mb-4">Make mixins flexible with parameters and default values:</p>
+    <app-paragraph text="Make mixins flexible with parameters and default values:"></app-paragraph>
     <app-code-block language="scss" [code]="parametersExample"></app-code-block>
   </app-content-section>
 
   <app-content-section title="@content Directive">
-    <p class="text-secondary mb-4">Pass custom CSS blocks to mixins using &#64;content:</p>
+    <app-paragraph text="Pass custom CSS blocks to mixins using @content:"></app-paragraph>
     <app-code-block language="scss" [code]="contentExample"></app-code-block>
   </app-content-section>
 
   <app-content-section title="Best Practices">
-    <p class="text-secondary mb-4">Follow these guidelines for effective mixin usage:</p>
+    <app-paragraph text="Follow these guidelines for effective mixin usage:"></app-paragraph>
     <app-code-block language="scss" [code]="bestPractices"></app-code-block>
   </app-content-section>
 
