@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { CssScssDetailsComponent } from './css-scss-details.component';
 import { CssScssOutletComponent } from './css-scss-outlet.component';
 import { VariablesNotesComponent } from './variables/notes.component';
+import { NestingNotesComponent } from './nesting/notes.component';
 import { LayoutComponent } from '../../../common/layout/layout.component';
 import { BackNavComponent } from '../../../common/back-nav/back-nav.component';
 import { PageHeaderComponent } from '../../../common/page-header/page-header.component';
@@ -18,7 +19,8 @@ const routes = [
     component: CssScssOutletComponent,
     children: [
       { path: '', component: CssScssDetailsComponent },
-      { path: 'variables', component: VariablesNotesComponent }
+      { path: 'variables', component: VariablesNotesComponent },
+      { path: 'nesting', component: NestingNotesComponent }
     ]
   }
 ];
@@ -27,7 +29,8 @@ const routes = [
   declarations: [
     CssScssDetailsComponent,
     CssScssOutletComponent,
-    VariablesNotesComponent
+    VariablesNotesComponent,
+    NestingNotesComponent
   ],
   imports: [
     CommonModule,

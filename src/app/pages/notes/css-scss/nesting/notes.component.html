@@ -1,0 +1,46 @@
+<app-layout>
+  <app-back-nav backLink="/notes/css-scss" backText="Back to CSS & SCSS"></app-back-nav>
+  
+  <app-page-header 
+    title="SCSS Nesting" 
+    description="Write nested CSS rules that mirror HTML structure">
+  </app-page-header>
+
+  <app-content-section title="Benefits">
+    <div class="space-y-4">
+      <div class="glass p-4 rounded-lg">
+        <h4 class="text-accent font-semibold mb-2">Better Organization</h4>
+        <p class="text-secondary text-sm">Code structure matches HTML hierarchy</p>
+      </div>
+      <div class="glass p-4 rounded-lg">
+        <h4 class="text-accent font-semibold mb-2">Less Repetition</h4>
+        <p class="text-secondary text-sm">No need to repeat parent selectors</p>
+      </div>
+      <div class="glass p-4 rounded-lg">
+        <h4 class="text-accent font-semibold mb-2">Easier Maintenance</h4>
+        <p class="text-secondary text-sm">Related styles grouped together</p>
+      </div>
+    </div>
+  </app-content-section>
+
+  <app-content-section title="What is SCSS Nesting?">
+    <p class="text-secondary mb-4">SCSS nesting allows you to write CSS rules inside other rules, creating a hierarchy that mirrors your HTML structure.</p>
+    <app-code-block language="scss" [code]="basicExample"></app-code-block>
+  </app-content-section>
+
+  <app-content-section title="Parent Selector (&)">
+    <p class="text-secondary mb-4">Use & to reference the parent selector for pseudo-classes, modifiers, and BEM naming:</p>
+    <app-code-block language="scss" [code]="parentSelector"></app-code-block>
+  </app-content-section>
+
+  <app-content-section title="Good Practice">
+    <p class="text-secondary mb-4">Keep nesting logical and limit to 3-4 levels maximum:</p>
+    <app-code-block language="scss" [code]="goodPractice"></app-code-block>
+  </app-content-section>
+
+  <app-content-section title="Bad Practice">
+    <p class="text-secondary mb-4">Avoid excessive nesting and unrelated groupings:</p>
+    <app-code-block language="scss" [code]="badPractice"></app-code-block>
+  </app-content-section>
+
+</app-layout>
