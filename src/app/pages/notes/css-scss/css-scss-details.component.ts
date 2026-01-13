@@ -25,6 +25,21 @@ export class CssScssDetailsComponent implements OnInit {
       description: 'Reusable groups of CSS declarations'
     },
     {
+      id: 'extends',
+      title: 'Extends',
+      description: 'Inherit styles from other selectors using @extend'
+    },
+    {
+      id: 'operators',
+      title: 'Operators',
+      description: 'Mathematical operations and string manipulation'
+    },
+    {
+      id: 'loops',
+      title: 'Loops',
+      description: '@for, @each, @while loops for generating repetitive styles'
+    },
+    {
       id: 'partials',
       title: 'Partials',
       description: 'Split CSS into smaller, maintainable files'

@@ -9,6 +9,8 @@ import { LayoutComponent } from '../../../common/layout/layout.component';
 import { BackNavComponent } from '../../../common/back-nav/back-nav.component';
 import { PageHeaderComponent } from '../../../common/page-header/page-header.component';
 import { TopicsListComponent } from '../../../common/topics-list/topics-list.component';
+import { CodeBlockComponent } from '../../../common/code-block/code-block.component';
+import { ContentSectionComponent } from '../../../common/content-section/content-section.component';
 
 const routes = [
   { 
@@ -33,7 +35,9 @@ const routes = [
     LayoutComponent,
     BackNavComponent,
     PageHeaderComponent,
-    TopicsListComponent
+    TopicsListComponent,
+    CodeBlockComponent,
+    ContentSectionComponent
   ]
 })
 export class CssScssModule { }
