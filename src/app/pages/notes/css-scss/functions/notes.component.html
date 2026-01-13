@@ -1,0 +1,47 @@
+<app-layout>
+  <app-back-nav backLink="/notes/css-scss" backText="Back to CSS & SCSS"></app-back-nav>
+  
+  <app-page-header 
+    title="SCSS Functions" 
+    description="Built-in and custom functions for calculations">
+  </app-page-header>
+
+  <app-content-section title="What are SCSS Functions?">
+    <p class="text-secondary mb-4">SCSS functions are reusable pieces of code that accept parameters and return values. They help perform calculations, manipulate data, and create dynamic CSS values.</p>
+  </app-content-section>
+
+  <app-content-section title="Benefits">
+    <div class="space-y-4">
+      <app-info-box title="Reusable Logic">
+        <app-description-text text="Encapsulate complex calculations and reuse them throughout your stylesheet"></app-description-text>
+      </app-info-box>
+      <app-info-box title="Complex Calculations">
+        <app-description-text text="Perform advanced math, color manipulation, and string operations"></app-description-text>
+      </app-info-box>
+      <app-info-box title="Custom Utilities">
+        <app-description-text text="Create your own helper functions for project-specific needs"></app-description-text>
+      </app-info-box>
+    </div>
+  </app-content-section>
+
+  <app-content-section title="Built-in Functions">
+    <p class="text-secondary mb-4">SCSS provides many built-in functions for colors, math, and strings:</p>
+    <app-code-block language="scss" [code]="builtInExample"></app-code-block>
+  </app-content-section>
+
+  <app-content-section title="Custom Functions">
+    <p class="text-secondary mb-4">Create your own functions with &#64;function and &#64;return:</p>
+    <app-code-block language="scss" [code]="customExample"></app-code-block>
+  </app-content-section>
+
+  <app-content-section title="Practical Examples">
+    <p class="text-secondary mb-4">Real-world function applications:</p>
+    <app-code-block language="scss" [code]="practicalExample"></app-code-block>
+  </app-content-section>
+
+  <app-content-section title="Best Practices">
+    <p class="text-secondary mb-4">Guidelines for writing effective SCSS functions:</p>
+    <app-code-block language="scss" [code]="bestPractices"></app-code-block>
+  </app-content-section>
+
+</app-layout>

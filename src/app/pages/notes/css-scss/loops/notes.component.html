@@ -1,0 +1,47 @@
+<app-layout>
+  <app-back-nav backLink="/notes/css-scss" backText="Back to CSS & SCSS"></app-back-nav>
+  
+  <app-page-header 
+    title="SCSS Loops" 
+    description="@for, @each, @while loops for generating repetitive styles">
+  </app-page-header>
+
+  <app-content-section title="What are SCSS Loops?">
+    <p class="text-secondary mb-4">SCSS loops allow you to generate repetitive CSS code programmatically, perfect for creating utility classes, grid systems, and design tokens.</p>
+  </app-content-section>
+
+  <app-content-section title="Benefits">
+    <div class="space-y-4">
+      <app-info-box title="Generate Repetitive CSS">
+        <app-description-text text="Automatically create utility classes and design systems"></app-description-text>
+      </app-info-box>
+      <app-info-box title="Utility Classes">
+        <app-description-text text="Build spacing, sizing, and color utilities like Tailwind CSS"></app-description-text>
+      </app-info-box>
+      <app-info-box title="Grid Systems">
+        <app-description-text text="Create responsive grid columns and layout utilities"></app-description-text>
+      </app-info-box>
+    </div>
+  </app-content-section>
+
+  <app-content-section title="@for Loops">
+    <p class="text-secondary mb-4">Use &#64;for to iterate through a range of numbers:</p>
+    <app-code-block language="scss" [code]="forExample"></app-code-block>
+  </app-content-section>
+
+  <app-content-section title="@each Loops">
+    <p class="text-secondary mb-4">Use &#64;each to iterate through lists and maps:</p>
+    <app-code-block language="scss" [code]="eachExample"></app-code-block>
+  </app-content-section>
+
+  <app-content-section title="@while Loops">
+    <p class="text-secondary mb-4">Use &#64;while for conditional iteration:</p>
+    <app-code-block language="scss" [code]="whileExample"></app-code-block>
+  </app-content-section>
+
+  <app-content-section title="Practical Examples">
+    <p class="text-secondary mb-4">Real-world applications of SCSS loops:</p>
+    <app-code-block language="scss" [code]="practicalExample"></app-code-block>
+  </app-content-section>
+
+</app-layout>

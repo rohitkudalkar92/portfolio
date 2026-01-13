@@ -1,0 +1,47 @@
+<app-layout>
+  <app-back-nav backLink="/notes/css-scss" backText="Back to CSS & SCSS"></app-back-nav>
+  
+  <app-page-header 
+    title="SCSS Partials" 
+    description="Split CSS into smaller, maintainable files">
+  </app-page-header>
+
+  <app-content-section title="What are SCSS Partials?">
+    <p class="text-secondary mb-4">SCSS partials are separate files that contain specific parts of your CSS. They start with an underscore (_) and are imported into a main stylesheet, helping organize and modularize your code.</p>
+  </app-content-section>
+
+  <app-content-section title="Benefits">
+    <div class="space-y-4">
+      <app-info-box title="Organization">
+        <app-description-text text="Keep related styles together in focused, manageable files"></app-description-text>
+      </app-info-box>
+      <app-info-box title="Modularity">
+        <app-description-text text="Reuse and maintain components independently"></app-description-text>
+      </app-info-box>
+      <app-info-box title="Team Collaboration">
+        <app-description-text text="Multiple developers can work on different partials simultaneously"></app-description-text>
+      </app-info-box>
+    </div>
+  </app-content-section>
+
+  <app-content-section title="Basic Partials">
+    <p class="text-secondary mb-4">Create partial files with underscore prefix and import them:</p>
+    <app-code-block language="scss" [code]="basicExample"></app-code-block>
+  </app-content-section>
+
+  <app-content-section title="File Structure">
+    <p class="text-secondary mb-4">Recommended organization for SCSS partials:</p>
+    <app-code-block language="scss" [code]="fileStructure"></app-code-block>
+  </app-content-section>
+
+  <app-content-section title="@import vs @use">
+    <p class="text-secondary mb-4">Modern SCSS uses &#64;use instead of &#64;import for better namespacing:</p>
+    <app-code-block language="scss" [code]="importVsUse"></app-code-block>
+  </app-content-section>
+
+  <app-content-section title="Best Practices">
+    <p class="text-secondary mb-4">Guidelines for organizing and structuring SCSS partials:</p>
+    <app-code-block language="scss" [code]="bestPractices"></app-code-block>
+  </app-content-section>
+
+</app-layout>

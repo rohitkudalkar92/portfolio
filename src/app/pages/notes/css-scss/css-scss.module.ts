@@ -8,6 +8,11 @@ import { VariablesNotesComponent } from './variables/notes.component';
 import { NestingNotesComponent } from './nesting/notes.component';
 import { MixinsNotesComponent } from './mixins/notes.component';
 import { ExtendsNotesComponent } from './extends/notes.component';
+import { OperatorsNotesComponent } from './operators/notes.component';
+import { LoopsNotesComponent } from './loops/notes.component';
+import { PartialsNotesComponent } from './partials/notes.component';
+import { FunctionsNotesComponent } from './functions/notes.component';
+import { ControlDirectivesNotesComponent } from './control-directives/notes.component';
 import { LayoutComponent } from '../../../common/layout/layout.component';
 import { BackNavComponent } from '../../../common/back-nav/back-nav.component';
 import { PageHeaderComponent } from '../../../common/page-header/page-header.component';
@@ -26,7 +31,12 @@ const routes = [
       { path: 'variables', component: VariablesNotesComponent },
       { path: 'nesting', component: NestingNotesComponent },
       { path: 'mixins', component: MixinsNotesComponent },
-      { path: 'extends', component: ExtendsNotesComponent }
+      { path: 'extends', component: ExtendsNotesComponent },
+      { path: 'operators', component: OperatorsNotesComponent },
+      { path: 'loops', component: LoopsNotesComponent },
+      { path: 'partials', component: PartialsNotesComponent },
+      { path: 'functions', component: FunctionsNotesComponent },
+      { path: 'control-directives', component: ControlDirectivesNotesComponent }
     ]
   }
 ];
@@ -38,7 +48,12 @@ const routes = [
     VariablesNotesComponent,
     NestingNotesComponent,
     MixinsNotesComponent,
-    ExtendsNotesComponent
+    ExtendsNotesComponent,
+    OperatorsNotesComponent,
+    LoopsNotesComponent,
+    PartialsNotesComponent,
+    FunctionsNotesComponent,
+    ControlDirectivesNotesComponent
   ],
   imports: [
     CommonModule,

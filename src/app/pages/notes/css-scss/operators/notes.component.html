@@ -1,0 +1,47 @@
+<app-layout>
+  <app-back-nav backLink="/notes/css-scss" backText="Back to CSS & SCSS"></app-back-nav>
+  
+  <app-page-header 
+    title="SCSS Operators" 
+    description="Mathematical operations and string manipulation">
+  </app-page-header>
+
+  <app-content-section title="What are SCSS Operators?">
+    <p class="text-secondary mb-4">SCSS operators allow you to perform mathematical calculations, string operations, and comparisons directly in your stylesheets, making your CSS dynamic and maintainable.</p>
+  </app-content-section>
+
+  <app-content-section title="Benefits">
+    <div class="space-y-4">
+      <app-info-box title="Dynamic Calculations">
+        <app-description-text text="Perform math operations for responsive and scalable designs"></app-description-text>
+      </app-info-box>
+      <app-info-box title="Responsive Values">
+        <app-description-text text="Calculate breakpoints, spacing, and typography dynamically"></app-description-text>
+      </app-info-box>
+      <app-info-box title="Color Manipulation">
+        <app-description-text text="Generate color variations and themes programmatically"></app-description-text>
+      </app-info-box>
+    </div>
+  </app-content-section>
+
+  <app-content-section title="Arithmetic Operators">
+    <p class="text-secondary mb-4">Use +, -, *, /, % for mathematical calculations:</p>
+    <app-code-block language="scss" [code]="arithmeticExample"></app-code-block>
+  </app-content-section>
+
+  <app-content-section title="Comparison Operators">
+    <p class="text-secondary mb-4">Use ==, !=, <, >, <=, >= for conditional logic:</p>
+    <app-code-block language="scss" [code]="comparisonExample"></app-code-block>
+  </app-content-section>
+
+  <app-content-section title="String Operators">
+    <p class="text-secondary mb-4">Concatenate strings and build dynamic values:</p>
+    <app-code-block language="scss" [code]="stringExample"></app-code-block>
+  </app-content-section>
+
+  <app-content-section title="Color Functions">
+    <p class="text-secondary mb-4">Manipulate colors with built-in functions:</p>
+    <app-code-block language="scss" [code]="colorExample"></app-code-block>
+  </app-content-section>
+
+</app-layout>

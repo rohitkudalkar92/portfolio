@@ -1,0 +1,47 @@
+<app-layout>
+  <app-back-nav backLink="/notes/css-scss" backText="Back to CSS & SCSS"></app-back-nav>
+  
+  <app-page-header 
+    title="SCSS Control Directives" 
+    description="@if, @for, @each, @while for dynamic styles">
+  </app-page-header>
+
+  <app-content-section title="What are Control Directives?">
+    <p class="text-secondary mb-4">SCSS control directives add programming logic to your stylesheets, allowing conditional styling, loops, and dynamic CSS generation based on variables and conditions.</p>
+  </app-content-section>
+
+  <app-content-section title="Benefits">
+    <div class="space-y-4">
+      <app-info-box title="Conditional Styling">
+        <app-description-text text="Apply styles based on variables, themes, and configuration"></app-description-text>
+      </app-info-box>
+      <app-info-box title="Dynamic Generation">
+        <app-description-text text="Generate CSS classes and utilities programmatically"></app-description-text>
+      </app-info-box>
+      <app-info-box title="Logic in CSS">
+        <app-description-text text="Add programming logic to create smart, adaptive stylesheets"></app-description-text>
+      </app-info-box>
+    </div>
+  </app-content-section>
+
+  <app-content-section title="@if/@else Conditions">
+    <p class="text-secondary mb-4">Use conditional logic to apply styles based on variables:</p>
+    <app-code-block language="scss" [code]="ifElseExample"></app-code-block>
+  </app-content-section>
+
+  <app-content-section title="Combined with Loops">
+    <p class="text-secondary mb-4">Combine &#64;if with &#64;for and &#64;each for powerful CSS generation:</p>
+    <app-code-block language="scss" [code]="combinedExample"></app-code-block>
+  </app-content-section>
+
+  <app-content-section title="Practical Use Cases">
+    <p class="text-secondary mb-4">Real-world applications of control directives:</p>
+    <app-code-block language="scss" [code]="practicalExample"></app-code-block>
+  </app-content-section>
+
+  <app-content-section title="Best Practices">
+    <p class="text-secondary mb-4">Guidelines for effective use of control directives:</p>
+    <app-code-block language="scss" [code]="bestPractices"></app-code-block>
+  </app-content-section>
+
+</app-layout>
