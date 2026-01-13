@@ -7,7 +7,8 @@ import { ButtonVariant, ButtonSize } from '../../common/button/button.component'
 
 @Component({
   selector: 'app-notes',
-  templateUrl: './notes.component.html'
+  templateUrl: './notes.component.html',
+  styleUrls: ['./notes.component.scss']
 })
 export class NotesComponent implements OnInit {
   CONSTANTS = CONSTANTS;

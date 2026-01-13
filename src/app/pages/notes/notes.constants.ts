@@ -35,5 +35,10 @@ export const NOTES_DATA: Note[] = [
     title: 'ES6 Modern JavaScript',
     content: 'Learn ES6/ES2015 features: let/const, arrow functions, template literals, destructuring, spread/rest operators, default parameters, classes, modules. Modern JavaScript syntax for cleaner, more maintainable code.',
     routerLink: '/notes/es6'
+  },
+  {
+    title: 'CSS & SCSS Styling',
+    content: 'Modern CSS with SCSS preprocessing. Features: variables, mixins, nesting, partials, imports. SCSS syntax: $variables, @mixin/@include, &:hover, @media queries. Build responsive, maintainable stylesheets.',
+    routerLink: '/notes/css-scss'
   }
 ];

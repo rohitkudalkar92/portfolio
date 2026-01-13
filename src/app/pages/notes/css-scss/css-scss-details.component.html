@@ -1,0 +1,14 @@
+<app-layout>
+  <app-back-nav backLink="/notes" backText="Back to Notes"></app-back-nav>
+  
+  <app-page-header 
+    title="CSS & SCSS Styling" 
+    description="Modern CSS with SCSS preprocessing for maintainable stylesheets">
+  </app-page-header>
+
+  <app-topics-list 
+    [topics]="topics" 
+    baseRoute="/notes/css-scss">
+  </app-topics-list>
+
+</app-layout>

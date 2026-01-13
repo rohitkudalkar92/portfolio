@@ -1,0 +1,148 @@
+@import '../../shared/styles/mixins';
+
+// Notes component specific styles
+.notes-grid {
+  @include responsive-grid(300px, 1.5rem);
+}
+
+.note-card {
+  @include glass-card(10px);
+  padding: 1.5rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), var(--primary-400));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+    border-color: var(--accent);
+    
+    &::before {
+      transform: scaleX(1);
+    }
+    
+    .note-title {
+      color: var(--accent);
+    }
+  }
+}
+
+.note-title {
+  color: var(--text-primary);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  transition: color 0.3s ease;
+  line-height: 1.4;
+}
+
+.note-content {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.note-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--accent);
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    gap: 0.75rem;
+    opacity: 0.8;
+  }
+  
+  &::after {
+    content: '→';
+    transition: transform 0.3s ease;
+  }
+  
+  &:hover::after {
+    transform: translateX(4px);
+  }
+}
+
+.notes-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  
+  h1 {
+    @include gradient-text();
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    
+    @include respond-to('sm') {
+      font-size: 2rem;
+    }
+  }
+  
+  p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+// Loading animation for notes
+.notes-loading {
+  .note-card {
+    animation: pulse 1.5s ease-in-out infinite;
+  }
+}
+
+// Search functionality styles
+.notes-search {
+  max-width: 400px;
+  margin: 0 auto 2rem;
+  position: relative;
+  
+  input {
+    width: 100%;
+    padding: 0.75rem 1rem 0.75rem 2.5rem;
+    @include glass-card(6px);
+    color: var(--text-primary);
+    font-size: 1rem;
+    
+    &::placeholder {
+      color: var(--text-muted);
+    }
+    
+    &:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(201, 245, 192, 0.1);
+    }
+  }
+  
+  .search-icon {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+  }
+}

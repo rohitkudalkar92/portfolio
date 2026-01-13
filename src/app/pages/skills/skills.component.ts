@@ -8,7 +8,8 @@ import { CONSTANTS } from '../../constants';
   selector: 'app-skills',
   standalone: true,
   imports: [CommonModule, LayoutComponent],
-  templateUrl: './skills.component.html'
+  templateUrl: './skills.component.html',
+  styleUrls: ['./skills.component.scss']
 })
 export class SkillsComponent implements OnInit {
 

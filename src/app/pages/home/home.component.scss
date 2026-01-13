@@ -1,0 +1,54 @@
+@import '../../shared/styles/mixins';
+
+// Home component specific styles
+.hero-section {
+  background: linear-gradient(135deg, var(--primary-900) 0%, var(--primary-800) 100%);
+  
+  .hero-title {
+    @include gradient-text(var(--accent), var(--primary-300));
+    
+    &.animated {
+      animation: titleGlow 2s ease-in-out infinite alternate;
+    }
+  }
+}
+
+.expertise-card {
+  @include hover-lift();
+}
+
+.skill-tag {
+  @include glass-card(8px);
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background: var(--accent);
+    color: var(--primary-900);
+    transform: scale(1.05);
+  }
+}
+
+.contact-link {
+  @include button-glow();
+}
+
+@keyframes titleGlow {
+  0% {
+    filter: brightness(1);
+  }
+  100% {
+    filter: brightness(1.2);
+  }
+}
+
+// Responsive design
+@include respond-to('md') {
+  .hero-section {
+    padding: 2rem 1rem;
+  }
+  
+  .skill-tag {
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+  }
+}

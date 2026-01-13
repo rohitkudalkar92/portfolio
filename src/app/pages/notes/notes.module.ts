@@ -43,7 +43,8 @@ const routes = [
   { path: 'python/error-types', component: ErrorTypesNotesComponent },
   { path: 'python/escape-sequence-characters', component: EscapeSequenceCharactersNotesComponent },
   { path: 'clean-code', component: CleanCodeComponent },
-  { path: 'es6', component: ES6Component }
+  { path: 'es6', component: ES6Component },
+  { path: 'css-scss', loadChildren: () => import('./css-scss/css-scss.module').then(m => m.CssScssModule) }
 ];
 
 @NgModule({

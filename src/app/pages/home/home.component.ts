@@ -12,7 +12,8 @@ import { ButtonComponent, ButtonVariant } from '../../common/button/button.compo
   selector: 'app-home',
   standalone: true,
   imports: [CommonModule, LayoutComponent, RouterModule, LazyLoadDirective, ButtonComponent],
-  templateUrl: './home.component.html'
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
   ButtonVariant = ButtonVariant;
