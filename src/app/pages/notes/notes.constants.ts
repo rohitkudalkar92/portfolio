@@ -42,6 +42,11 @@ export const NOTES_DATA: Note[] = [
     routerLink: '/notes/typescript'
   },
   {
+    title: 'React',
+    content: 'JavaScript library for building user interfaces. Features: components, JSX, hooks, virtual DOM, state management. Build interactive UIs with reusable components.',
+    routerLink: '/notes/react'
+  },
+  {
     title: 'CSS & SCSS Styling',
     content: 'Modern CSS with SCSS preprocessing. Features: variables, mixins, nesting, partials, imports. SCSS syntax: $variables, @mixin/@include, &:hover, @media queries. Build responsive, maintainable stylesheets.',
     routerLink: '/notes/css-scss'

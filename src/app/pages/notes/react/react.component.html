@@ -1,0 +1,247 @@
+<app-layout>
+  <app-back-nav backLink="/notes" backText="Back to All Notes"></app-back-nav>
+  
+  <app-topic-header 
+    title="React" 
+    description="JavaScript library for building user interfaces.">
+  </app-topic-header>
+
+  <div>
+    <!-- Quick Reference -->
+    <app-content-section title="Quick Reference" description="Navigate to any topic quickly.">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+        <a (click)="scrollToSection('basics')" class="glass p-3 rounded-lg hover:opacity-80 transition-opacity cursor-pointer">
+          <span class="text-accent font-semibold">1.</span> React Basics
+        </a>
+        <a (click)="scrollToSection('jsx')" class="glass p-3 rounded-lg hover:opacity-80 transition-opacity cursor-pointer">
+          <span class="text-accent font-semibold">2.</span> JSX
+        </a>
+        <a (click)="scrollToSection('components')" class="glass p-3 rounded-lg hover:opacity-80 transition-opacity cursor-pointer">
+          <span class="text-accent font-semibold">3.</span> Components
+        </a>
+        <a (click)="scrollToSection('props')" class="glass p-3 rounded-lg hover:opacity-80 transition-opacity cursor-pointer">
+          <span class="text-accent font-semibold">4.</span> Props
+        </a>
+        <a (click)="scrollToSection('state')" class="glass p-3 rounded-lg hover:opacity-80 transition-opacity cursor-pointer">
+          <span class="text-accent font-semibold">5.</span> State
+        </a>
+        <a (click)="scrollToSection('events')" class="glass p-3 rounded-lg hover:opacity-80 transition-opacity cursor-pointer">
+          <span class="text-accent font-semibold">6.</span> Event Handling
+        </a>
+        <a (click)="scrollToSection('conditional')" class="glass p-3 rounded-lg hover:opacity-80 transition-opacity cursor-pointer">
+          <span class="text-accent font-semibold">7.</span> Conditional Rendering
+        </a>
+        <a (click)="scrollToSection('lists')" class="glass p-3 rounded-lg hover:opacity-80 transition-opacity cursor-pointer">
+          <span class="text-accent font-semibold">8.</span> Lists
+        </a>
+        <a (click)="scrollToSection('useeffect')" class="glass p-3 rounded-lg hover:opacity-80 transition-opacity cursor-pointer">
+          <span class="text-accent font-semibold">9.</span> useEffect
+        </a>
+        <a (click)="scrollToSection('forms')" class="glass p-3 rounded-lg hover:opacity-80 transition-opacity cursor-pointer">
+          <span class="text-accent font-semibold">10.</span> Forms
+        </a>
+        <a (click)="scrollToSection('styling')" class="glass p-3 rounded-lg hover:opacity-80 transition-opacity cursor-pointer">
+          <span class="text-accent font-semibold">11.</span> Styling
+        </a>
+        <a (click)="scrollToSection('hooks')" class="glass p-3 rounded-lg hover:opacity-80 transition-opacity cursor-pointer">
+          <span class="text-accent font-semibold">12.</span> Custom Hooks
+        </a>
+        <a (click)="scrollToSection('usecontext')" class="glass p-3 rounded-lg hover:opacity-80 transition-opacity cursor-pointer">
+          <span class="text-accent font-semibold">13.</span> useContext
+        </a>
+        <a (click)="scrollToSection('usereducer')" class="glass p-3 rounded-lg hover:opacity-80 transition-opacity cursor-pointer">
+          <span class="text-accent font-semibold">14.</span> useReducer
+        </a>
+        <a (click)="scrollToSection('usememo')" class="glass p-3 rounded-lg hover:opacity-80 transition-opacity cursor-pointer">
+          <span class="text-accent font-semibold">15.</span> useMemo
+        </a>
+        <a (click)="scrollToSection('usecallback')" class="glass p-3 rounded-lg hover:opacity-80 transition-opacity cursor-pointer">
+          <span class="text-accent font-semibold">16.</span> useCallback
+        </a>
+        <a (click)="scrollToSection('useref')" class="glass p-3 rounded-lg hover:opacity-80 transition-opacity cursor-pointer">
+          <span class="text-accent font-semibold">17.</span> useRef
+        </a>
+        <a (click)="scrollToSection('api-calls')" class="glass p-3 rounded-lg hover:opacity-80 transition-opacity cursor-pointer">
+          <span class="text-accent font-semibold">18.</span> API Calls
+        </a>
+        <a (click)="scrollToSection('error-boundary')" class="glass p-3 rounded-lg hover:opacity-80 transition-opacity cursor-pointer">
+          <span class="text-accent font-semibold">19.</span> Error Boundaries
+        </a>
+        <a (click)="scrollToSection('lazy-loading')" class="glass p-3 rounded-lg hover:opacity-80 transition-opacity cursor-pointer">
+          <span class="text-accent font-semibold">20.</span> Lazy Loading
+        </a>
+        <a (click)="scrollToSection('react-memo')" class="glass p-3 rounded-lg hover:opacity-80 transition-opacity cursor-pointer">
+          <span class="text-accent font-semibold">21.</span> React.memo
+        </a>
+      </div>
+    </app-content-section>
+
+    <!-- React Basics -->
+    <app-content-section id="basics" title="1. React Basics" description="Introduction to React library.">
+      <app-info-box type="info" title="📚 What is React?">
+        <app-styled-list [items]="reactBasics"></app-styled-list>
+      </app-info-box>
+    </app-content-section>
+
+    <!-- JSX -->
+    <app-content-section id="jsx" title="2. JSX" description="JavaScript XML syntax extension.">
+      <app-info-box type="success" title="✅ Why Important?">
+        <p class="text-secondary text-sm">JSX makes it easier to write and understand React components by combining HTML-like syntax with JavaScript logic.</p>
+      </app-info-box>
+      <app-code-block [code]="jsxCode" language="javascript"></app-code-block>
+    </app-content-section>
+
+    <!-- Components -->
+    <app-content-section id="components" title="3. Components" description="Building blocks of React applications.">
+      <app-info-box type="success" title="✅ Why Important?">
+        <p class="text-secondary text-sm">Components let you split UI into independent, reusable pieces and think about each piece in isolation.</p>
+      </app-info-box>
+      <app-code-block [code]="componentCode" language="javascript"></app-code-block>
+    </app-content-section>
+
+    <!-- Props -->
+    <app-content-section id="props" title="4. Props" description="Pass data from parent to child components.">
+      <app-info-box type="success" title="✅ Why Important?">
+        <p class="text-secondary text-sm">Props enable component reusability and data flow from parent to child components.</p>
+      </app-info-box>
+      <app-code-block [code]="propsCode" language="javascript"></app-code-block>
+    </app-content-section>
+
+    <!-- State -->
+    <app-content-section id="state" title="5. State (useState)" description="Manage component data that changes over time.">
+      <app-info-box type="success" title="✅ Why Important?">
+        <p class="text-secondary text-sm">State allows components to create and manage their own data, making them interactive and dynamic.</p>
+      </app-info-box>
+      <app-code-block [code]="stateCode" language="javascript"></app-code-block>
+    </app-content-section>
+
+    <!-- Event Handling -->
+    <app-content-section id="events" title="6. Event Handling" description="Respond to user interactions.">
+      <app-info-box type="success" title="✅ Why Important?">
+        <p class="text-secondary text-sm">Event handling makes your application interactive by responding to user actions like clicks, typing, and form submissions.</p>
+      </app-info-box>
+      <app-code-block [code]="eventHandlingCode" language="javascript"></app-code-block>
+    </app-content-section>
+
+    <!-- Conditional Rendering -->
+    <app-content-section id="conditional" title="7. Conditional Rendering" description="Show different UI based on conditions.">
+      <app-info-box type="success" title="✅ Why Important?">
+        <p class="text-secondary text-sm">Conditional rendering allows you to display different content based on application state or user permissions.</p>
+      </app-info-box>
+      <app-code-block [code]="conditionalRenderingCode" language="javascript"></app-code-block>
+    </app-content-section>
+
+    <!-- Lists -->
+    <app-content-section id="lists" title="8. Lists and Keys" description="Render multiple items dynamically.">
+      <app-info-box type="success" title="✅ Why Important?">
+        <p class="text-secondary text-sm">Lists let you render collections of data efficiently. Keys help React identify which items have changed.</p>
+      </app-info-box>
+      <app-code-block [code]="listRenderingCode" language="javascript"></app-code-block>
+    </app-content-section>
+
+    <!-- useEffect -->
+    <app-content-section id="useeffect" title="9. useEffect Hook" description="Handle side effects in components.">
+      <app-info-box type="success" title="✅ Why Important?">
+        <p class="text-secondary text-sm">useEffect handles side effects like data fetching, subscriptions, and DOM manipulation in functional components.</p>
+      </app-info-box>
+      <app-code-block [code]="useEffectCode" language="javascript"></app-code-block>
+    </app-content-section>
+
+    <!-- Forms -->
+    <app-content-section id="forms" title="10. Forms" description="Handle user input with controlled components.">
+      <app-info-box type="success" title="✅ Why Important?">
+        <p class="text-secondary text-sm">Controlled forms give React full control over form data, making validation and submission easier.</p>
+      </app-info-box>
+      <app-code-block [code]="formsCode" language="javascript"></app-code-block>
+    </app-content-section>
+
+    <!-- Styling -->
+    <app-content-section id="styling" title="11. Styling" description="Different ways to style React components.">
+      <app-info-box type="success" title="✅ Why Important?">
+        <p class="text-secondary text-sm">React offers multiple styling approaches: inline styles, CSS classes, CSS modules, and CSS-in-JS libraries.</p>
+      </app-info-box>
+      <app-code-block [code]="stylingCode" language="javascript"></app-code-block>
+    </app-content-section>
+
+    <!-- Custom Hooks -->
+    <app-content-section id="hooks" title="12. Custom Hooks" description="Create reusable stateful logic.">
+      <app-info-box type="success" title="✅ Why Important?">
+        <p class="text-secondary text-sm">Custom hooks let you extract component logic into reusable functions, promoting code reuse and cleaner components.</p>
+      </app-info-box>
+      <app-code-block [code]="hooksCode" language="javascript"></app-code-block>
+    </app-content-section>
+
+    <!-- useContext -->
+    <app-content-section id="usecontext" title="13. useContext & Context API" description="Share data across components without prop drilling.">
+      <app-info-box type="success" title="✅ Why Important?">
+        <p class="text-secondary text-sm">Context API solves prop drilling by allowing data to be shared across the component tree without passing props manually.</p>
+      </app-info-box>
+      <app-code-block [code]="useContextCode" language="javascript"></app-code-block>
+    </app-content-section>
+
+    <!-- useReducer -->
+    <app-content-section id="usereducer" title="14. useReducer Hook" description="Manage complex state logic.">
+      <app-info-box type="success" title="✅ Why Important?">
+        <p class="text-secondary text-sm">useReducer is better than useState for complex state logic with multiple sub-values or when next state depends on previous.</p>
+      </app-info-box>
+      <app-code-block [code]="useReducerCode" language="javascript"></app-code-block>
+    </app-content-section>
+
+    <!-- useMemo -->
+    <app-content-section id="usememo" title="15. useMemo Hook" description="Optimize performance by memoizing expensive calculations.">
+      <app-info-box type="success" title="✅ Why Important?">
+        <p class="text-secondary text-sm">useMemo prevents expensive calculations from running on every render, improving performance for computationally intensive operations.</p>
+      </app-info-box>
+      <app-code-block [code]="useMemoCode" language="javascript"></app-code-block>
+    </app-content-section>
+
+    <!-- useCallback -->
+    <app-content-section id="usecallback" title="16. useCallback Hook" description="Memoize callback functions.">
+      <app-info-box type="success" title="✅ Why Important?">
+        <p class="text-secondary text-sm">useCallback prevents unnecessary re-renders of child components by maintaining the same function reference across renders.</p>
+      </app-info-box>
+      <app-code-block [code]="useCallbackCode" language="javascript"></app-code-block>
+    </app-content-section>
+
+    <!-- useRef -->
+    <app-content-section id="useref" title="17. useRef Hook" description="Access DOM elements and persist values.">
+      <app-info-box type="success" title="✅ Why Important?">
+        <p class="text-secondary text-sm">useRef provides a way to access DOM elements directly and store mutable values that don't trigger re-renders.</p>
+      </app-info-box>
+      <app-code-block [code]="useRefCode" language="javascript"></app-code-block>
+    </app-content-section>
+
+    <!-- API Calls -->
+    <app-content-section id="api-calls" title="18. API Calls & Data Fetching" description="Fetch data from external APIs.">
+      <app-info-box type="success" title="✅ Why Important?">
+        <p class="text-secondary text-sm">Most applications need to fetch data from APIs. Proper handling of loading, error, and success states is crucial.</p>
+      </app-info-box>
+      <app-code-block [code]="apiCallsCode" language="javascript"></app-code-block>
+    </app-content-section>
+
+    <!-- Error Boundaries -->
+    <app-content-section id="error-boundary" title="19. Error Boundaries" description="Catch JavaScript errors in component tree.">
+      <app-info-box type="success" title="✅ Why Important?">
+        <p class="text-secondary text-sm">Error boundaries prevent the entire app from crashing by catching errors and displaying fallback UI.</p>
+      </app-info-box>
+      <app-code-block [code]="errorBoundaryCode" language="javascript"></app-code-block>
+    </app-content-section>
+
+    <!-- Lazy Loading -->
+    <app-content-section id="lazy-loading" title="20. Code Splitting & Lazy Loading" description="Load components on demand.">
+      <app-info-box type="success" title="✅ Why Important?">
+        <p class="text-secondary text-sm">Code splitting reduces initial bundle size by loading components only when needed, improving app performance.</p>
+      </app-info-box>
+      <app-code-block [code]="lazyLoadingCode" language="javascript"></app-code-block>
+    </app-content-section>
+
+    <!-- React.memo -->
+    <app-content-section id="react-memo" title="21. React.memo" description="Prevent unnecessary component re-renders.">
+      <app-info-box type="success" title="✅ Why Important?">
+        <p class="text-secondary text-sm">React.memo optimizes performance by preventing re-renders when props haven't changed, especially useful for expensive components.</p>
+      </app-info-box>
+      <app-code-block [code]="reactMemoCode" language="javascript"></app-code-block>
+    </app-content-section>
+
+  </div>
+</app-layout>
