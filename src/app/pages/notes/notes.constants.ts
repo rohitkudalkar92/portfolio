@@ -52,6 +52,11 @@ export const NOTES_DATA: Note[] = [
     routerLink: '/notes/system-design'
   },
   {
+    title: 'JavaScript',
+    content: 'Core JavaScript concepts: variables, data types, functions, closures, async programming, array methods, destructuring, spread/rest, this keyword, prototypes, event loop, modules.',
+    routerLink: '/notes/javascript'
+  },
+  {
     title: 'CSS & SCSS Styling',
     content: 'Modern CSS with SCSS preprocessing. Features: variables, mixins, nesting, partials, imports. SCSS syntax: $variables, @mixin/@include, &:hover, @media queries. Build responsive, maintainable stylesheets.',
     routerLink: '/notes/css-scss'

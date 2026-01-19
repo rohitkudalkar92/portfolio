@@ -1,0 +1,248 @@
+<app-layout>
+  <app-back-nav backLink="/notes" backText="Back to All Notes"></app-back-nav>
+  
+  <app-topic-header 
+    title="JavaScript" 
+    description="Essential JavaScript concepts from fundamentals to advanced topics.">
+  </app-topic-header>
+
+  <div>
+    <!-- Quick Reference -->
+    <app-content-section title="Quick Reference" description="Navigate to any topic quickly.">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+        <a (click)="scrollToSection('variables')" class="glass p-3 rounded-lg hover:opacity-80 transition-opacity cursor-pointer">
+          <span class="text-accent font-semibold">1.</span> Variables
+        </a>
+        <a (click)="scrollToSection('data-types')" class="glass p-3 rounded-lg hover:opacity-80 transition-opacity cursor-pointer">
+          <span class="text-accent font-semibold">2.</span> Data Types
+        </a>
+        <a (click)="scrollToSection('functions')" class="glass p-3 rounded-lg hover:opacity-80 transition-opacity cursor-pointer">
+          <span class="text-accent font-semibold">3.</span> Functions
+        </a>
+        <a (click)="scrollToSection('closures')" class="glass p-3 rounded-lg hover:opacity-80 transition-opacity cursor-pointer">
+          <span class="text-accent font-semibold">4.</span> Closures
+        </a>
+        <a (click)="scrollToSection('async')" class="glass p-3 rounded-lg hover:opacity-80 transition-opacity cursor-pointer">
+          <span class="text-accent font-semibold">5.</span> Async Programming
+        </a>
+        <a (click)="scrollToSection('array-methods')" class="glass p-3 rounded-lg hover:opacity-80 transition-opacity cursor-pointer">
+          <span class="text-accent font-semibold">6.</span> Array Methods
+        </a>
+        <a (click)="scrollToSection('destructuring')" class="glass p-3 rounded-lg hover:opacity-80 transition-opacity cursor-pointer">
+          <span class="text-accent font-semibold">7.</span> Destructuring
+        </a>
+        <a (click)="scrollToSection('spread-rest')" class="glass p-3 rounded-lg hover:opacity-80 transition-opacity cursor-pointer">
+          <span class="text-accent font-semibold">8.</span> Spread & Rest
+        </a>
+        <a (click)="scrollToSection('this')" class="glass p-3 rounded-lg hover:opacity-80 transition-opacity cursor-pointer">
+          <span class="text-accent font-semibold">9.</span> This Keyword
+        </a>
+        <a (click)="scrollToSection('prototypes')" class="glass p-3 rounded-lg hover:opacity-80 transition-opacity cursor-pointer">
+          <span class="text-accent font-semibold">10.</span> Prototypes
+        </a>
+        <a (click)="scrollToSection('event-loop')" class="glass p-3 rounded-lg hover:opacity-80 transition-opacity cursor-pointer">
+          <span class="text-accent font-semibold">11.</span> Event Loop
+        </a>
+        <a (click)="scrollToSection('modules')" class="glass p-3 rounded-lg hover:opacity-80 transition-opacity cursor-pointer">
+          <span class="text-accent font-semibold">12.</span> Modules
+        </a>
+        <a (click)="scrollToSection('hoisting')" class="glass p-3 rounded-lg hover:opacity-80 transition-opacity cursor-pointer">
+          <span class="text-accent font-semibold">13.</span> Hoisting
+        </a>
+        <a (click)="scrollToSection('object-methods')" class="glass p-3 rounded-lg hover:opacity-80 transition-opacity cursor-pointer">
+          <span class="text-accent font-semibold">14.</span> Object Methods
+        </a>
+        <a (click)="scrollToSection('error-handling')" class="glass p-3 rounded-lg hover:opacity-80 transition-opacity cursor-pointer">
+          <span class="text-accent font-semibold">15.</span> Error Handling
+        </a>
+        <a (click)="scrollToSection('json')" class="glass p-3 rounded-lg hover:opacity-80 transition-opacity cursor-pointer">
+          <span class="text-accent font-semibold">16.</span> JSON
+        </a>
+        <a (click)="scrollToSection('timers')" class="glass p-3 rounded-lg hover:opacity-80 transition-opacity cursor-pointer">
+          <span class="text-accent font-semibold">17.</span> Timers
+        </a>
+        <a (click)="scrollToSection('dom')" class="glass p-3 rounded-lg hover:opacity-80 transition-opacity cursor-pointer">
+          <span class="text-accent font-semibold">18.</span> DOM Manipulation
+        </a>
+        <a (click)="scrollToSection('events')" class="glass p-3 rounded-lg hover:opacity-80 transition-opacity cursor-pointer">
+          <span class="text-accent font-semibold">19.</span> Event Handling
+        </a>
+        <a (click)="scrollToSection('storage')" class="glass p-3 rounded-lg hover:opacity-80 transition-opacity cursor-pointer">
+          <span class="text-accent font-semibold">20.</span> Local Storage
+        </a>
+        <a (click)="scrollToSection('regex')" class="glass p-3 rounded-lg hover:opacity-80 transition-opacity cursor-pointer">
+          <span class="text-accent font-semibold">21.</span> Regular Expressions
+        </a>
+      </div>
+    </app-content-section>
+
+    <!-- Variables -->
+    <app-content-section id="variables" title="1. Variables (var, let, const)" description="Understanding variable scoping and declarations.">
+      <app-info-box type="success" title="✅ Why Important?">
+        <p class="text-secondary text-sm">Understanding variable scoping prevents bugs and memory leaks. Use const by default, let when reassignment needed, avoid var.</p>
+      </app-info-box>
+      <app-code-block [code]="variablesCode" language="javascript"></app-code-block>
+    </app-content-section>
+
+    <!-- Data Types -->
+    <app-content-section id="data-types" title="2. Data Types" description="Primitives and reference types in JavaScript.">
+      <app-info-box type="success" title="✅ Why Important?">
+        <p class="text-secondary text-sm">JavaScript has 7 primitive types and reference types. Understanding the difference prevents unexpected behavior with comparisons and mutations.</p>
+      </app-info-box>
+      <app-code-block [code]="dataTypesCode" language="javascript"></app-code-block>
+    </app-content-section>
+
+    <!-- Functions -->
+    <app-content-section id="functions" title="3. Functions" description="Function declarations, expressions, and arrow functions.">
+      <app-info-box type="success" title="✅ Why Important?">
+        <p class="text-secondary text-sm">Functions are first-class citizens in JavaScript. Arrow functions have lexical this binding, making them ideal for callbacks.</p>
+      </app-info-box>
+      <app-code-block [code]="functionsCode" language="javascript"></app-code-block>
+    </app-content-section>
+
+    <!-- Closures -->
+    <app-content-section id="closures" title="4. Closures" description="Functions that remember their lexical scope.">
+      <app-info-box type="success" title="✅ Why Important?">
+        <p class="text-secondary text-sm">Closures enable data privacy, factory functions, and functional programming patterns. Essential for React hooks and event handlers.</p>
+      </app-info-box>
+      <app-code-block [code]="closuresCode" language="javascript"></app-code-block>
+    </app-content-section>
+
+    <!-- Async Programming -->
+    <app-content-section id="async" title="5. Async Programming" description="Callbacks, Promises, and Async/Await.">
+      <app-info-box type="success" title="✅ Why Important?">
+        <p class="text-secondary text-sm">JavaScript is single-threaded. Async/await makes asynchronous code readable and easier to debug than callbacks or raw promises.</p>
+      </app-info-box>
+      <app-code-block [code]="asyncCode" language="javascript"></app-code-block>
+    </app-content-section>
+
+    <!-- Array Methods -->
+    <app-content-section id="array-methods" title="6. Array Methods" description="Functional array operations.">
+      <app-info-box type="success" title="✅ Why Important?">
+        <p class="text-secondary text-sm">Functional array methods enable declarative programming, reduce bugs, and are essential for modern JavaScript and React development.</p>
+      </app-info-box>
+      <app-code-block [code]="arrayMethodsCode" language="javascript"></app-code-block>
+    </app-content-section>
+
+    <!-- Destructuring -->
+    <app-content-section id="destructuring" title="7. Destructuring" description="Extract values from arrays and objects.">
+      <app-info-box type="success" title="✅ Why Important?">
+        <p class="text-secondary text-sm">Destructuring makes code cleaner and more readable. Commonly used in React props, function parameters, and API responses.</p>
+      </app-info-box>
+      <app-code-block [code]="destructuringCode" language="javascript"></app-code-block>
+    </app-content-section>
+
+    <!-- Spread & Rest -->
+    <app-content-section id="spread-rest" title="8. Spread & Rest Operators" description="Expand and collect elements.">
+      <app-info-box type="success" title="✅ Why Important?">
+        <p class="text-secondary text-sm">Spread creates shallow copies preventing mutations. Rest parameters enable flexible function arguments. Critical for immutable state updates.</p>
+      </app-info-box>
+      <app-code-block [code]="spreadRestCode" language="javascript"></app-code-block>
+    </app-content-section>
+
+    <!-- This Keyword -->
+    <app-content-section id="this" title="9. This Keyword" description="Understanding context and binding.">
+      <app-info-box type="success" title="✅ Why Important?">
+        <p class="text-secondary text-sm">Understanding 'this' context prevents common bugs in event handlers, callbacks, and OOP. Arrow functions inherit 'this' from parent scope.</p>
+      </app-info-box>
+      <app-code-block [code]="thisKeywordCode" language="javascript"></app-code-block>
+    </app-content-section>
+
+    <!-- Prototypes -->
+    <app-content-section id="prototypes" title="10. Prototypes & Inheritance" description="JavaScript's prototypal inheritance model.">
+      <app-info-box type="success" title="✅ Why Important?">
+        <p class="text-secondary text-sm">JavaScript uses prototypal inheritance. Understanding the prototype chain helps debug issues and understand how classes work under the hood.</p>
+      </app-info-box>
+      <app-code-block [code]="prototypesCode" language="javascript"></app-code-block>
+    </app-content-section>
+
+    <!-- Event Loop -->
+    <app-content-section id="event-loop" title="11. Event Loop" description="How JavaScript handles asynchronous operations.">
+      <app-info-box type="success" title="✅ Why Important?">
+        <p class="text-secondary text-sm">The event loop manages async operations. Understanding microtasks vs macrotasks explains execution order and prevents race conditions.</p>
+      </app-info-box>
+      <app-code-block [code]="eventLoopCode" language="javascript"></app-code-block>
+    </app-content-section>
+
+    <!-- Modules -->
+    <app-content-section id="modules" title="12. Modules" description="ES6 and CommonJS module systems.">
+      <app-info-box type="success" title="✅ Why Important?">
+        <p class="text-secondary text-sm">Modules enable code organization, reusability, and encapsulation. ES6 modules are standard in modern JavaScript and frameworks.</p>
+      </app-info-box>
+      <app-code-block [code]="modulesCode" language="javascript"></app-code-block>
+    </app-content-section>
+
+    <!-- Hoisting -->
+    <app-content-section id="hoisting" title="13. Hoisting" description="Variable and function hoisting behavior.">
+      <app-info-box type="success" title="✅ Why Important?">
+        <p class="text-secondary text-sm">Understanding hoisting prevents unexpected undefined values and reference errors. Functions are fully hoisted, var is partially hoisted.</p>
+      </app-info-box>
+      <app-code-block [code]="hoistingCode" language="javascript"></app-code-block>
+    </app-content-section>
+
+    <!-- Object Methods -->
+    <app-content-section id="object-methods" title="14. Object Methods" description="Built-in methods for object manipulation.">
+      <app-info-box type="success" title="✅ Why Important?">
+        <p class="text-secondary text-sm">Object methods enable iteration, merging, cloning, and controlling mutability. Essential for data transformation and state management.</p>
+      </app-info-box>
+      <app-code-block [code]="objectMethodsCode" language="javascript"></app-code-block>
+    </app-content-section>
+
+    <!-- Error Handling -->
+    <app-content-section id="error-handling" title="15. Error Handling" description="Try-catch blocks and custom errors.">
+      <app-info-box type="success" title="✅ Why Important?">
+        <p class="text-secondary text-sm">Proper error handling prevents crashes, improves debugging, and provides better user experience with meaningful error messages.</p>
+      </app-info-box>
+      <app-code-block [code]="errorHandlingCode" language="javascript"></app-code-block>
+    </app-content-section>
+
+    <!-- JSON -->
+    <app-content-section id="json" title="16. JSON" description="JavaScript Object Notation for data exchange.">
+      <app-info-box type="success" title="✅ Why Important?">
+        <p class="text-secondary text-sm">JSON is the standard format for API communication and data storage. Understanding stringify/parse is essential for web development.</p>
+      </app-info-box>
+      <app-code-block [code]="jsonCode" language="javascript"></app-code-block>
+    </app-content-section>
+
+    <!-- Timers -->
+    <app-content-section id="timers" title="17. setTimeout & setInterval" description="Schedule code execution.">
+      <app-info-box type="success" title="✅ Why Important?">
+        <p class="text-secondary text-sm">Timers enable delayed execution, polling, animations, and debouncing. Critical for async operations and user experience.</p>
+      </app-info-box>
+      <app-code-block [code]="setTimeoutIntervalCode" language="javascript"></app-code-block>
+    </app-content-section>
+
+    <!-- DOM Manipulation -->
+    <app-content-section id="dom" title="18. DOM Manipulation" description="Interact with HTML elements.">
+      <app-info-box type="success" title="✅ Why Important?">
+        <p class="text-secondary text-sm">DOM manipulation is fundamental for dynamic web pages. Understanding it helps even when using frameworks like React or Angular.</p>
+      </app-info-box>
+      <app-code-block [code]="domManipulationCode" language="javascript"></app-code-block>
+    </app-content-section>
+
+    <!-- Event Handling -->
+    <app-content-section id="events" title="19. Event Handling" description="Respond to user interactions.">
+      <app-info-box type="success" title="✅ Why Important?">
+        <p class="text-secondary text-sm">Events enable interactivity. Event delegation improves performance by reducing listeners. Understanding bubbling/capturing prevents bugs.</p>
+      </app-info-box>
+      <app-code-block [code]="eventHandlingCode" language="javascript"></app-code-block>
+    </app-content-section>
+
+    <!-- Local Storage -->
+    <app-content-section id="storage" title="20. Local Storage & Session Storage" description="Client-side data persistence.">
+      <app-info-box type="success" title="✅ Why Important?">
+        <p class="text-secondary text-sm">Web storage enables offline functionality, user preferences, and caching. localStorage persists, sessionStorage is temporary.</p>
+      </app-info-box>
+      <app-code-block [code]="localStorageCode" language="javascript"></app-code-block>
+    </app-content-section>
+
+    <!-- Regular Expressions -->
+    <app-content-section id="regex" title="21. Regular Expressions" description="Pattern matching and text manipulation.">
+      <app-info-box type="success" title="✅ Why Important?">
+        <p class="text-secondary text-sm">Regex enables powerful string validation, searching, and replacement. Essential for form validation, parsing, and text processing.</p>
+      </app-info-box>
+      <app-code-block [code]="regularExpressionsCode" language="javascript"></app-code-block>
+    </app-content-section>
+
+  </div>
+</app-layout>
