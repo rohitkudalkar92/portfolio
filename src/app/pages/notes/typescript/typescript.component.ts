@@ -296,21 +296,24 @@ console.log(circle.describe());        // "A red shape"
 console.log(circle.calculateArea());   // 78.5
 console.log(rectangle.calculateArea()); // 200`;
 
-  genericsCode = `// Generic function
-function identity<T>(arg: T): T {
-  return arg;
+  genericsCode = `// Generic function - works with any type
+function getFirst<T>(arr: T[]): T {
+  return arr[0];  // T is a placeholder for any type
 }
 
-let output1 = identity<string>("Hello");
-let output2 = identity<number>(42);
+const firstString = getFirst<string>(["a", "b"]);  // T = string
+const firstNumber = getFirst<number>([1, 2, 3]);   // T = number
 
 // Generic interface
 interface Box<T> {
   value: T;
+  getValue: () => T;
 }
 
-const stringBox: Box<string> = { value: "text" };
-const numberBox: Box<number> = { value: 123 };
+const stringBox: Box<string> = {
+  value: "Hello",
+  getValue: () => "Hello"
+};
 
 // Generic class
 class DataStore<T> {
@@ -323,23 +326,60 @@ class DataStore<T> {
   get(index: number): T {
     return this.data[index];
   }
+
+  getAll(): T[] {
+    return this.data;
+  }
 }
 
 const numberStore = new DataStore<number>();
 numberStore.add(1);
 numberStore.add(2);
 
-// Generic constraints
+// Multiple type parameters
+function pair<T, U>(first: T, second: U): [T, U] {
+  return [first, second];
+}
+
+const result = pair<string, number>("age", 30);  // ["age", 30]
+
+// Generic constraints - T must have length property
 interface HasLength {
   length: number;
 }
 
 function logLength<T extends HasLength>(arg: T): void {
-  console.log(arg.length);
+  console.log(arg.length);  // Safe because T has length
 }
 
-logLength("Hello"); // OK
-logLength([1, 2, 3]); // OK`;
+logLength("Hello");   // OK - string has length
+logLength([1, 2, 3]); // OK - array has length
+
+// Generic with keyof - type-safe property access
+function getProperty<T, K extends keyof T>(obj: T, key: K): T[K] {
+  return obj[key];
+}
+
+const person = { name: "John", age: 30 };
+const name = getProperty(person, "name");  // "John"
+
+// Real-world: API Response
+interface ApiResponse<T> {
+  data: T;
+  status: number;
+  message: string;
+}
+
+interface User {
+  id: number;
+  name: string;
+}
+
+const userResponse: ApiResponse<User> = {
+  data: { id: 1, name: "John" },
+  status: 200,
+  message: "Success"
+}`;
 
   enumsCode = `// Numeric enum
 enum Direction {
