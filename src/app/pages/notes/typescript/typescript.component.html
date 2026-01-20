@@ -89,6 +89,9 @@
       <app-info-box type="success" title="✅ Why Important?">
         <p class="text-secondary text-sm">Classes provide encapsulation, inheritance, and access control for building maintainable object-oriented applications.</p>
       </app-info-box>
+      <app-info-box type="error" title="❌ JavaScript Class Problems">
+        <app-styled-list [items]="classJsProblems"></app-styled-list>
+      </app-info-box>
       <app-code-block [code]="classesCode" language="typescript"></app-code-block>
     </app-content-section>
 

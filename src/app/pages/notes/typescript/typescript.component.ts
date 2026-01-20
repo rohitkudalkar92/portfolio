@@ -21,6 +21,13 @@ export class TypeScriptComponent implements OnInit {
     {label: 'Late Error Detection', text: 'Bugs discovered only at runtime'}
   ];
 
+  classJsProblems = [
+    {label: 'No Access Modifiers', text: 'Everything is public, no private/protected'},
+    {label: 'No Type Checking', text: 'Can pass wrong types to constructor/methods'},
+    {label: 'No Abstract Classes', text: 'Cannot enforce method implementation in child classes'},
+    {label: 'No Interfaces', text: 'Cannot define contracts for class structure'}
+  ];
+
   basicsCode = `// TypeScript adds type annotations to JavaScript
 let message: string = "Hello TypeScript";
 let count: number = 42;
@@ -118,58 +125,176 @@ type MathOperation = (a: number, b: number) => number;
 
 const multiply: MathOperation = (a, b) => a * b;`;
 
-  classesCode = `// Class with access modifiers
-class Person {
-  public name: string; // accessible everywhere
-  private age: number; // only within class
-  protected email: string; // within class and subclasses
+  classesCode = `// WHAT IS A CLASS?
+// A class is a blueprint/template for creating objects
+// Think of it like a cookie cutter - the class is the cutter, objects are the cookies
 
-  constructor(name: string, age: number, email: string) {
-    this.name = name;
-    this.age = age;
-    this.email = email;
+// Example 1: Basic Class
+class Car {
+  // Properties - data that each car will have
+  brand: string;
+  model: string;
+  year: number;
+
+  // Constructor - special function that runs when you create a new car
+  // It sets up the initial values
+  constructor(brand: string, model: string, year: number) {
+    this.brand = brand;   // 'this' means "this specific car"
+    this.model = model;
+    this.year = year;
   }
 
-  getAge(): number {
-    return this.age;
+  // Method - a function that belongs to the class
+  getInfo(): string {
+    return this.brand + " " + this.model + " (" + this.year + ")";
+  }
+
+  startEngine(): void {
+    console.log(this.brand + " engine started!");
   }
 }
 
-// Shorthand constructor
+// Creating objects (instances) from the class
+const car1 = new Car("Toyota", "Camry", 2020);
+const car2 = new Car("Honda", "Civic", 2021);
+
+console.log(car1.getInfo());  // "Toyota Camry (2020)"
+car2.startEngine();           // "Honda engine started!"
+
+// Example 2: Access Modifiers (public, private, protected)
+// These control who can access the properties
+class BankAccount {
+  public accountNumber: string;    // Anyone can see and change this
+  private balance: number;         // Only code inside this class can access
+  protected owner: string;         // This class and child classes can access
+
+  constructor(accountNumber: string, owner: string, initialBalance: number) {
+    this.accountNumber = accountNumber;
+    this.owner = owner;
+    this.balance = initialBalance;
+  }
+
+  // Public method - anyone can call this
+  deposit(amount: number): void {
+    this.balance = this.balance + amount;  // We can access private balance here
+    console.log("Deposited " + amount + ". New balance: " + this.balance);
+  }
+
+  // Public method to safely get the private balance
+  getBalance(): number {
+    return this.balance;  // OK because we're inside the class
+  }
+}
+
+const account = new BankAccount("12345", "John", 1000);
+account.deposit(500);              // OK - public method
+console.log(account.accountNumber); // OK - public property
+console.log(account.getBalance()); // OK - using public method to get private data
+// account.balance = 999999;       // ERROR! Can't access private property
+
+// Example 3: Shorthand Constructor (less typing!)
+// Instead of declaring properties and then assigning them...
 class User {
+  // Just add public/private in constructor parameters
+  // TypeScript automatically creates the properties for you!
   constructor(
     public id: number,
-    public name: string,
+    public username: string,
     private password: string
-  ) {}
-}
-
-// Inheritance
-class Employee extends Person {
-  constructor(
-    name: string,
-    age: number,
-    email: string,
-    public department: string
   ) {
-    super(name, age, email);
+    // No need to write this.id = id, etc.
+    // TypeScript does it automatically!
+  }
+
+  login(inputPassword: string): boolean {
+    return this.password === inputPassword;
   }
 }
 
-// Abstract class
-abstract class Animal {
-  abstract makeSound(): void;
-  
-  move(): void {
-    console.log("Moving...");
+const user = new User(1, "john_doe", "secret123");
+console.log(user.username);  // "john_doe" - OK, it's public
+// console.log(user.password); // ERROR - it's private
+
+// Example 4: Inheritance (child class extends parent class)
+// Child class gets all properties and methods from parent
+class Animal {
+  constructor(public name: string) {}
+
+  move(distance: number): void {
+    console.log(this.name + " moved " + distance + " meters");
+  }
+
+  eat(): void {
+    console.log(this.name + " is eating");
   }
 }
 
+// Dog inherits everything from Animal
 class Dog extends Animal {
-  makeSound(): void {
-    console.log("Woof!");
+  constructor(name: string, public breed: string) {
+    super(name);  // MUST call parent constructor first!
   }
-}`;
+
+  // Add new method specific to Dog
+  bark(): void {
+    console.log(this.name + " says Woof!");
+  }
+
+  // Override (replace) parent method
+  move(distance: number): void {
+    console.log(this.name + " runs " + distance + " meters");
+  }
+}
+
+const dog = new Dog("Buddy", "Golden Retriever");
+dog.eat();     // "Buddy is eating" - inherited from Animal
+dog.bark();    // "Buddy says Woof!" - Dog's own method
+dog.move(10);  // "Buddy runs 10 meters" - Dog's version, not Animal's
+
+// Example 5: Abstract Class (template that can't be used directly)
+// You can't create an abstract class directly, only extend it
+abstract class Shape {
+  constructor(public color: string) {}
+
+  // Abstract method - child classes MUST implement this
+  abstract calculateArea(): number;
+
+  // Regular method - all children get this
+  describe(): string {
+    return "A " + this.color + " shape";
+  }
+}
+
+// const shape = new Shape("red"); // ERROR! Can't create abstract class
+
+class Circle extends Shape {
+  constructor(color: string, public radius: number) {
+    super(color);
+  }
+
+  // MUST implement the abstract method
+  calculateArea(): number {
+    return 3.14 * this.radius * this.radius;
+  }
+}
+
+class Rectangle extends Shape {
+  constructor(color: string, public width: number, public height: number) {
+    super(color);
+  }
+
+  // MUST implement the abstract method
+  calculateArea(): number {
+    return this.width * this.height;
+  }
+}
+
+const circle = new Circle("red", 5);
+const rectangle = new Rectangle("blue", 10, 20);
+
+console.log(circle.describe());        // "A red shape"
+console.log(circle.calculateArea());   // 78.5
+console.log(rectangle.calculateArea()); // 200`;
 
   genericsCode = `// Generic function
 function identity<T>(arg: T): T {
