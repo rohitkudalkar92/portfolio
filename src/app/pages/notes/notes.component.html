@@ -5,7 +5,10 @@
       *ngFor="let note of notes" 
       class="glass rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300"
     >
-      <h3 class="text-lg font-semibold text-primary mb-2">{{ note.title }}</h3>
+      <div class="flex items-center gap-3 mb-3">
+        <img *ngIf="note.iconUrl" [src]="note.iconUrl" [alt]="note.title" class="w-8 h-8">
+        <h3 class="text-lg font-semibold text-primary">{{ note.title }}</h3>
+      </div>
       <app-paragraph text="{{ note.content }}" margin="mb-4" size="sm"></app-paragraph>
       
       <!-- Show details button if routerLink exists -->
