@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
@@ -61,9 +61,10 @@ export class ButtonComponent {
   @Input() routerLink?: string | any[];
   @Input() href?: string;
   @Input() target?: string;
+  @Output() click = new EventEmitter<void>();
 
   onClick() {
-    // Handle button click if needed
+    this.click.emit();
   }
 
   getClasses(): string {
@@ -73,7 +74,7 @@ export class ButtonComponent {
       [ButtonVariant.ACCENT]: 'text-black btn-accent',
       [ButtonVariant.PRIMARY]: 'text-white bg-indigo-600 hover:bg-indigo-700',
       [ButtonVariant.SECONDARY]: 'text-gray-700 bg-gray-200 hover:bg-gray-300',
-      [ButtonVariant.DETAILS]: 'text-white bg-blue-500 hover:bg-blue-600 shadow-sm hover:shadow-md w-full'
+      [ButtonVariant.DETAILS]: 'text-white bg-blue-500 hover:bg-blue-600 shadow-sm hover:shadow-md'
     };
     
     const sizeClasses = {

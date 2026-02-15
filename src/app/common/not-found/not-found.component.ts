@@ -4,16 +4,17 @@ import { RouterModule } from '@angular/router';
 import { HeaderComponent } from '../header/header.component';
 import { GradientTextComponent } from '../gradient-text/gradient-text.component';
 import { DescriptionTextComponent } from '../../shared/components/description-text/description-text.component';
+import { ButtonComponent, ButtonVariant } from '../button/button.component';
 
 @Component({
   selector: 'app-not-found',
   standalone: true,
-  imports: [CommonModule, RouterModule, HeaderComponent, GradientTextComponent, DescriptionTextComponent],
+  imports: [CommonModule, RouterModule, HeaderComponent, GradientTextComponent, DescriptionTextComponent, ButtonComponent],
   template: `
-    <div class="max-w-6xl mx-auto px-6 py-8">
+    <div class="max-w-6xl 2xl:max-w-7xl mx-auto py-3">
       <app-header></app-header>
       
-      <div class="flex flex-col items-center justify-center min-h-[60vh] text-center">
+      <div class="flex flex-col items-center justify-center min-h-[60vh] text-center p-5">
         <div class="mb-8">
           <h1 class="text-9xl font-bold">
             <app-gradient-text text="404" gradientClass="from-indigo-300 to-pink-400"></app-gradient-text>
@@ -26,18 +27,16 @@ import { DescriptionTextComponent } from '../../shared/components/description-te
         </div>
         
         <div class="flex gap-4">
-          <a routerLink="/" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg text-black font-semibold btn-accent hover:opacity-90 transition-opacity">
-            Back to Home
-          </a>
-          <button (click)="goBack()" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg glass hover:opacity-90 transition-opacity">
-            Go to Previous Page
-          </button>
+          <app-button routerLink="/" [variant]="ButtonVariant.ACCENT" text="Back to Home"></app-button>
+          <app-button (click)="goBack()" [variant]="ButtonVariant.SECONDARY" text="Go to Previous Page"></app-button>
         </div>
       </div>
     </div>
   `
 })
 export class NotFoundComponent {
+  ButtonVariant = ButtonVariant;
+  
   constructor(private location: Location) {}
   
   goBack(): void {
