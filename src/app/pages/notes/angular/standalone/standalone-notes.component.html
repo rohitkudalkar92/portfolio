@@ -1,0 +1,106 @@
+<app-layout>
+  <app-back-nav backLink="/notes/angular" backText="Back to Angular"></app-back-nav>
+  
+  <app-page-header 
+    title="Standalone Components" 
+    subtitle="Modern Angular architecture without NgModules">
+  </app-page-header>
+
+  <div class="space-y-8">
+    <!-- When to Use -->
+    <section id="when-to-use" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">When to Use Standalone Components</h2>
+      <ul class="list-disc list-inside space-y-2 text-dark">
+        <li *ngFor="let item of whenToUse">{{ item }}</li>
+      </ul>
+    </section>
+
+    <!-- Why Use -->
+    <section id="why-use" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Why Use Standalone Components</h2>
+      <ul class="list-disc list-inside space-y-2 text-dark">
+        <li *ngFor="let item of whyUse">{{ item }}</li>
+      </ul>
+    </section>
+
+    <!-- Advantages -->
+    <section id="advantages" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Advantages</h2>
+      <ul class="list-disc list-inside space-y-2 text-dark">
+        <li *ngFor="let item of advantages">{{ item }}</li>
+      </ul>
+    </section>
+
+    <!-- Disadvantages -->
+    <section id="disadvantages" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Disadvantages</h2>
+      <ul class="list-disc list-inside space-y-2 text-dark">
+        <li *ngFor="let item of disadvantages">{{ item }}</li>
+      </ul>
+    </section>
+
+    <!-- Basic Standalone Component -->
+    <section id="basic" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Basic Standalone Component</h2>
+      <p class="text-dark mb-4">Create a component without NgModule using standalone: true.</p>
+      <app-code-block [code]="basicExample.code" [output]="basicExample.output"></app-code-block>
+    </section>
+
+    <!-- With Imports -->
+    <section id="imports" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Standalone Component with Imports</h2>
+      <p class="text-dark mb-4">Import dependencies directly in the component.</p>
+      <app-code-block [code]="withImportsExample.code" [output]="withImportsExample.output"></app-code-block>
+    </section>
+
+    <!-- Bootstrapping -->
+    <section id="bootstrapping" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Bootstrapping Standalone App</h2>
+      <p class="text-dark mb-4">Bootstrap Angular application without AppModule.</p>
+      <app-code-block [code]="bootstrappingExample.code" [output]="bootstrappingExample.output"></app-code-block>
+    </section>
+
+    <!-- Routing -->
+    <section id="routing" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Routing with Standalone Components</h2>
+      <p class="text-dark mb-4">Configure routes directly with standalone components.</p>
+      <app-code-block [code]="routingExample.code" [output]="routingExample.output"></app-code-block>
+    </section>
+
+    <!-- Lazy Loading -->
+    <section id="lazy-loading" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Lazy Loading</h2>
+      <p class="text-dark mb-4">Lazy load standalone components with loadComponent.</p>
+      <app-code-block [code]="lazyLoadingExample.code" [output]="lazyLoadingExample.output"></app-code-block>
+    </section>
+
+    <!-- Providers -->
+    <section id="providers" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Providers in Standalone Components</h2>
+      <p class="text-dark mb-4">Provide services at component level or use providedIn.</p>
+      <app-code-block [code]="providersExample.code" [output]="providersExample.output"></app-code-block>
+    </section>
+
+    <!-- Migration -->
+    <section id="migration" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Migrating from NgModule</h2>
+      <p class="text-dark mb-4">Convert existing NgModule components to standalone.</p>
+      <app-code-block [code]="migrationExample.code" [output]="migrationExample.output"></app-code-block>
+    </section>
+
+    <!-- Testing -->
+    <section id="testing" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Testing Standalone Components</h2>
+      <p class="text-dark mb-4">Simplified testing without NgModule configuration.</p>
+      <app-code-block [code]="testingExample.code" [output]="testingExample.output"></app-code-block>
+    </section>
+
+    <!-- Best Practices -->
+    <section id="best-practices" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Best Practices</h2>
+      <ul class="list-disc list-inside space-y-2 text-dark">
+        <li *ngFor="let practice of bestPractices">{{ practice }}</li>
+      </ul>
+    </section>
+  </div>
+</app-layout>
