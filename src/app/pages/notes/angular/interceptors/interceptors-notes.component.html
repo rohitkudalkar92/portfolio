@@ -1,0 +1,82 @@
+<app-layout>
+  <app-back-nav backLink="/notes/angular" backText="Back to Angular"></app-back-nav>
+  
+  <app-page-header 
+    title="HTTP Interceptors" 
+    subtitle="Request/response interception and modification">
+  </app-page-header>
+
+  <div class="space-y-8">
+    <!-- Use Cases -->
+    <section id="use-cases" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Common Use Cases</h2>
+      <ul class="list-disc list-inside space-y-2 text-dark">
+        <li *ngFor="let useCase of useCases">{{ useCase }}</li>
+      </ul>
+    </section>
+
+    <!-- Basic Interceptor -->
+    <section id="basic" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Basic HTTP Interceptor</h2>
+      <p class="text-dark mb-4">Intercept and modify HTTP requests and responses.</p>
+      <app-code-block [code]="basicExample.code" [output]="basicExample.output"></app-code-block>
+    </section>
+
+    <!-- Auth Token -->
+    <section id="auth-token" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Auth Token Interceptor</h2>
+      <p class="text-dark mb-4">Automatically add authentication tokens to requests.</p>
+      <app-code-block [code]="authTokenExample.code" [output]="authTokenExample.output"></app-code-block>
+    </section>
+
+    <!-- Error Handling -->
+    <section id="error-handling" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Error Handling Interceptor</h2>
+      <p class="text-dark mb-4">Centralized error handling for all HTTP requests.</p>
+      <app-code-block [code]="errorHandlingExample.code" [output]="errorHandlingExample.output"></app-code-block>
+    </section>
+
+    <!-- Loading Indicator -->
+    <section id="loading" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Loading Indicator Interceptor</h2>
+      <p class="text-dark mb-4">Show loading indicator during HTTP requests.</p>
+      <app-code-block [code]="loadingExample.code" [output]="loadingExample.output"></app-code-block>
+    </section>
+
+    <!-- Caching -->
+    <section id="caching" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Caching Interceptor</h2>
+      <p class="text-dark mb-4">Cache GET requests for improved performance.</p>
+      <app-code-block [code]="cachingExample.code" [output]="cachingExample.output"></app-code-block>
+    </section>
+
+    <!-- Retry -->
+    <section id="retry" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Retry Interceptor</h2>
+      <p class="text-dark mb-4">Automatically retry failed requests with exponential backoff.</p>
+      <app-code-block [code]="retryExample.code" [output]="retryExample.output"></app-code-block>
+    </section>
+
+    <!-- Logging -->
+    <section id="logging" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Logging Interceptor</h2>
+      <p class="text-dark mb-4">Log all HTTP requests for debugging and monitoring.</p>
+      <app-code-block [code]="loggingExample.code" [output]="loggingExample.output"></app-code-block>
+    </section>
+
+    <!-- Provider Setup -->
+    <section id="provider" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Register Interceptors</h2>
+      <p class="text-dark mb-4">Configure interceptors in your application.</p>
+      <app-code-block [code]="providerExample.code" [output]="providerExample.output"></app-code-block>
+    </section>
+
+    <!-- Best Practices -->
+    <section id="best-practices" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Best Practices</h2>
+      <ul class="list-disc list-inside space-y-2 text-dark">
+        <li *ngFor="let practice of bestPractices">{{ practice }}</li>
+      </ul>
+    </section>
+  </div>
+</app-layout>
