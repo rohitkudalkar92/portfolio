@@ -1,0 +1,90 @@
+<app-layout>
+  <app-back-nav backLink="/notes/angular" backText="Back to Angular"></app-back-nav>
+  
+  <app-page-header 
+    title="Testing" 
+    subtitle="Unit testing with Jasmine and Karma">
+  </app-page-header>
+
+  <div class="space-y-8">
+    <!-- Test Types -->
+    <section id="test-types" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Test Types</h2>
+      <ul class="list-disc list-inside space-y-2 text-dark">
+        <li *ngFor="let type of testTypes">{{ type }}</li>
+      </ul>
+    </section>
+
+    <!-- Testing Tools -->
+    <section id="testing-tools" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Testing Tools</h2>
+      <ul class="list-disc list-inside space-y-2 text-dark">
+        <li *ngFor="let tool of testingTools">{{ tool }}</li>
+      </ul>
+    </section>
+
+    <!-- Component Testing -->
+    <section id="component-test" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Component Testing</h2>
+      <p class="text-dark mb-4">Test components with TestBed and ComponentFixture.</p>
+      <app-code-block [code]="componentTestExample.code" [output]="componentTestExample.output"></app-code-block>
+    </section>
+
+    <!-- Service Testing -->
+    <section id="service-test" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Service Testing</h2>
+      <p class="text-dark mb-4">Test services in isolation without dependencies.</p>
+      <app-code-block [code]="serviceTestExample.code" [output]="serviceTestExample.output"></app-code-block>
+    </section>
+
+    <!-- HTTP Testing -->
+    <section id="http-test" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">HTTP Testing</h2>
+      <p class="text-dark mb-4">Mock HTTP requests with HttpClientTestingModule.</p>
+      <app-code-block [code]="httpTestExample.code" [output]="httpTestExample.output"></app-code-block>
+    </section>
+
+    <!-- Async Testing -->
+    <section id="async-test" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Async Testing</h2>
+      <p class="text-dark mb-4">Test async operations with fakeAsync and tick.</p>
+      <app-code-block [code]="asyncTestExample.code" [output]="asyncTestExample.output"></app-code-block>
+    </section>
+
+    <!-- Spies and Mocks -->
+    <section id="spy-test" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Spies and Mocks</h2>
+      <p class="text-dark mb-4">Mock dependencies with Jasmine spies.</p>
+      <app-code-block [code]="spyTestExample.code" [output]="spyTestExample.output"></app-code-block>
+    </section>
+
+    <!-- Router Testing -->
+    <section id="routing-test" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Router Testing</h2>
+      <p class="text-dark mb-4">Test navigation and routing logic.</p>
+      <app-code-block [code]="routingTestExample.code" [output]="routingTestExample.output"></app-code-block>
+    </section>
+
+    <!-- Form Testing -->
+    <section id="form-test" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Form Testing</h2>
+      <p class="text-dark mb-4">Test reactive forms and validation.</p>
+      <app-code-block [code]="formTestExample.code" [output]="formTestExample.output"></app-code-block>
+    </section>
+
+    <!-- Pipe Testing -->
+    <section id="pipe-test" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Pipe Testing</h2>
+      <p class="text-dark mb-4">Test pipes directly without TestBed.</p>
+      <app-code-block [code]="pipeTestExample.code" [output]="pipeTestExample.output"></app-code-block>
+    </section>
+
+    <!-- Best Practices -->
+    <section id="best-practices" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Best Practices</h2>
+      <ul class="list-disc list-inside space-y-2 text-dark">
+        <li *ngFor="let practice of bestPractices">{{ practice }}</li>
+      </ul>
+    </section>
+  </div>
+</app-layout>

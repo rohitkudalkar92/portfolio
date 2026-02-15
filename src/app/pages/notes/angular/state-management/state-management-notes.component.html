@@ -1,0 +1,90 @@
+<app-layout>
+  <app-back-nav backLink="/notes/angular" backText="Back to Angular"></app-back-nav>
+  
+  <app-page-header 
+    title="State Management" 
+    subtitle="NgRx and application state patterns">
+  </app-page-header>
+
+  <div class="space-y-8">
+    <!-- State Management Patterns -->
+    <section id="patterns" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">State Management Patterns</h2>
+      <ul class="list-disc list-inside space-y-2 text-dark">
+        <li *ngFor="let pattern of stateManagementPatterns">{{ pattern }}</li>
+      </ul>
+    </section>
+
+    <!-- When to Use NgRx -->
+    <section id="when-to-use" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">When to Use NgRx</h2>
+      <ul class="list-disc list-inside space-y-2 text-dark">
+        <li *ngFor="let item of whenToUseNgrx">{{ item }}</li>
+      </ul>
+    </section>
+
+    <!-- Actions -->
+    <section id="actions" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Actions</h2>
+      <p class="text-dark mb-4">Events that describe what happened in the application.</p>
+      <app-code-block [code]="actionsExample.code" [output]="actionsExample.output"></app-code-block>
+    </section>
+
+    <!-- Reducers -->
+    <section id="reducers" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Reducers</h2>
+      <p class="text-dark mb-4">Pure functions that handle state transitions.</p>
+      <app-code-block [code]="reducerExample.code" [output]="reducerExample.output"></app-code-block>
+    </section>
+
+    <!-- Selectors -->
+    <section id="selectors" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Selectors</h2>
+      <p class="text-dark mb-4">Memoized queries to select slices of state.</p>
+      <app-code-block [code]="selectorsExample.code" [output]="selectorsExample.output"></app-code-block>
+    </section>
+
+    <!-- Effects -->
+    <section id="effects" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Effects</h2>
+      <p class="text-dark mb-4">Handle side effects like HTTP requests.</p>
+      <app-code-block [code]="effectsExample.code" [output]="effectsExample.output"></app-code-block>
+    </section>
+
+    <!-- Store Setup -->
+    <section id="store-setup" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Store Setup</h2>
+      <p class="text-dark mb-4">Configure NgRx Store in your application.</p>
+      <app-code-block [code]="storeSetupExample.code" [output]="storeSetupExample.output"></app-code-block>
+    </section>
+
+    <!-- Component Usage -->
+    <section id="component-usage" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Component Usage</h2>
+      <p class="text-dark mb-4">Dispatch actions and select state in components.</p>
+      <app-code-block [code]="componentUsageExample.code" [output]="componentUsageExample.output"></app-code-block>
+    </section>
+
+    <!-- Entity Adapter -->
+    <section id="entity-adapter" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Entity Adapter</h2>
+      <p class="text-dark mb-4">Manage collections with built-in CRUD operations.</p>
+      <app-code-block [code]="entityAdapterExample.code" [output]="entityAdapterExample.output"></app-code-block>
+    </section>
+
+    <!-- Component Store -->
+    <section id="component-store" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Component Store</h2>
+      <p class="text-dark mb-4">Local state management for components.</p>
+      <app-code-block [code]="componentStoreExample.code" [output]="componentStoreExample.output"></app-code-block>
+    </section>
+
+    <!-- Best Practices -->
+    <section id="best-practices" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Best Practices</h2>
+      <ul class="list-disc list-inside space-y-2 text-dark">
+        <li *ngFor="let practice of bestPractices">{{ practice }}</li>
+      </ul>
+    </section>
+  </div>
+</app-layout>

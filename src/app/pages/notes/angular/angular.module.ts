@@ -12,6 +12,8 @@ import { LifecycleNotesComponent } from './lifecycle/lifecycle-notes.component';
 import { DataBindingNotesComponent } from './data-binding/data-binding-notes.component';
 import { ObservablesNotesComponent } from './observables/observables-notes.component';
 import { ModulesNotesComponent } from './modules/modules-notes.component';
+import { TestingNotesComponent } from './testing/testing-notes.component';
+import { StateManagementNotesComponent } from './state-management/state-management-notes.component';
 import { LayoutComponent } from '../../../common/layout/layout.component';
 import { BackNavComponent } from '../../../common/back-nav/back-nav.component';
 import { PageHeaderComponent } from '../../../common/page-header/page-header.component';
@@ -33,7 +35,9 @@ const routes = [
   { path: 'lifecycle', component: LifecycleNotesComponent },
   { path: 'data-binding', component: DataBindingNotesComponent },
   { path: 'observables', component: ObservablesNotesComponent },
-  { path: 'modules', component: ModulesNotesComponent }
+  { path: 'modules', component: ModulesNotesComponent },
+  { path: 'testing', component: TestingNotesComponent },
+  { path: 'state-management', component: StateManagementNotesComponent }
 ];
 
 @NgModule({
@@ -47,7 +51,9 @@ const routes = [
     LifecycleNotesComponent,
     DataBindingNotesComponent,
     ObservablesNotesComponent,
-    ModulesNotesComponent
+    ModulesNotesComponent,
+    TestingNotesComponent,
+    StateManagementNotesComponent
   ],
   imports: [
     CommonModule,
