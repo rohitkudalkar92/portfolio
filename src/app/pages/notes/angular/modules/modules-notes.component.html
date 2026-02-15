@@ -1,0 +1,98 @@
+<app-layout>
+  <app-back-nav backLink="/notes/angular" backText="Back to Angular"></app-back-nav>
+  
+  <app-page-header 
+    title="NgModules" 
+    subtitle="Feature modules and lazy loading">
+  </app-page-header>
+
+  <div class="space-y-8">
+    <!-- Module Types -->
+    <section id="module-types" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">NgModule Types</h2>
+      <ul class="list-disc list-inside space-y-2 text-dark">
+        <li *ngFor="let type of moduleTypes">{{ type }}</li>
+      </ul>
+    </section>
+
+    <!-- When to Use -->
+    <section id="when-to-use" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">When to Use Each Module Type</h2>
+      <ul class="list-disc list-inside space-y-2 text-dark">
+        <li *ngFor="let item of whenToUse">{{ item }}</li>
+      </ul>
+    </section>
+
+    <!-- NgModules vs Standalone -->
+    <section id="vs-standalone" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">NgModules vs Standalone Components</h2>
+      <ul class="list-disc list-inside space-y-2 text-dark">
+        <li *ngFor="let item of modulesVsStandalone">{{ item }}</li>
+      </ul>
+    </section>
+
+    <!-- AppModule -->
+    <section id="app-module" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Root AppModule</h2>
+      <p class="text-dark mb-4">The main entry point of your Angular application.</p>
+      <app-code-block [code]="appModuleExample.code" [output]="appModuleExample.output"></app-code-block>
+    </section>
+
+    <!-- Feature Module -->
+    <section id="feature-module" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Feature Module</h2>
+      <p class="text-dark mb-4">Organize related functionality into cohesive modules.</p>
+      <app-code-block [code]="featureModuleExample.code" [output]="featureModuleExample.output"></app-code-block>
+    </section>
+
+    <!-- Shared Module -->
+    <section id="shared-module" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Shared Module</h2>
+      <p class="text-dark mb-4">Reusable components, directives, and pipes across features.</p>
+      <app-code-block [code]="sharedModuleExample.code" [output]="sharedModuleExample.output"></app-code-block>
+    </section>
+
+    <!-- Core Module -->
+    <section id="core-module" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Core Module</h2>
+      <p class="text-dark mb-4">Singleton services imported once in AppModule.</p>
+      <app-code-block [code]="coreModuleExample.code" [output]="coreModuleExample.output"></app-code-block>
+    </section>
+
+    <!-- Lazy Loading -->
+    <section id="lazy-loading" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Lazy Loading</h2>
+      <p class="text-dark mb-4">Load modules on demand to reduce initial bundle size.</p>
+      <app-code-block [code]="lazyLoadingExample.code" [output]="lazyLoadingExample.output"></app-code-block>
+    </section>
+
+    <!-- Lazy Module -->
+    <section id="lazy-module" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Lazy Loaded Module</h2>
+      <p class="text-dark mb-4">Feature module configured for lazy loading.</p>
+      <app-code-block [code]="lazyModuleExample.code" [output]="lazyModuleExample.output"></app-code-block>
+    </section>
+
+    <!-- forRoot Pattern -->
+    <section id="forRoot" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">forRoot Pattern</h2>
+      <p class="text-dark mb-4">Configure modules with providers and options.</p>
+      <app-code-block [code]="forRootPatternExample.code" [output]="forRootPatternExample.output"></app-code-block>
+    </section>
+
+    <!-- Preloading -->
+    <section id="preloading" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Preloading Strategy</h2>
+      <p class="text-dark mb-4">Load lazy modules in background for better UX.</p>
+      <app-code-block [code]="preloadingExample.code" [output]="preloadingExample.output"></app-code-block>
+    </section>
+
+    <!-- Best Practices -->
+    <section id="best-practices" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Best Practices</h2>
+      <ul class="list-disc list-inside space-y-2 text-dark">
+        <li *ngFor="let practice of bestPractices">{{ practice }}</li>
+      </ul>
+    </section>
+  </div>
+</app-layout>
