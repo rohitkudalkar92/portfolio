@@ -1,0 +1,97 @@
+<app-layout>
+  <app-back-nav backLink="/notes/angular" backText="Back to Angular"></app-back-nav>
+  
+  <app-page-header 
+    title="Angular Pipes" 
+    subtitle="Transform and format data in templates">
+  </app-page-header>
+
+  <div class="space-y-8">
+    <!-- When to Use Pipes -->
+    <section id="when-to-use" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">When to Use Pipes</h2>
+      <ul class="list-disc list-inside space-y-2 text-dark">
+        <li *ngFor="let item of whenToUse">{{ item }}</li>
+      </ul>
+    </section>
+
+    <!-- Why Use Pipes -->
+    <section id="why-use" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Why Use Pipes</h2>
+      <ul class="list-disc list-inside space-y-2 text-dark">
+        <li *ngFor="let item of whyUse">{{ item }}</li>
+      </ul>
+    </section>
+
+    <!-- Built-in Pipes -->
+    <section id="built-in" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Built-in Pipes</h2>
+      <p class="text-dark mb-4">Angular provides several built-in pipes for common transformations.</p>
+      <app-code-block [code]="builtInExample.code" [output]="builtInExample.output"></app-code-block>
+    </section>
+
+    <!-- Custom Pipes -->
+    <section id="custom" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Custom Pipes</h2>
+      <p class="text-dark mb-4">Create custom pipes using &#64;Pipe decorator and PipeTransform interface.</p>
+      <app-code-block [code]="customExample.code" [output]="customExample.output"></app-code-block>
+    </section>
+
+    <!-- Pure Pipes -->
+    <section id="pure" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Pure Pipes</h2>
+      <p class="text-dark mb-4">Pure pipes only execute when input reference changes (default behavior).</p>
+      <app-code-block [code]="pureExample.code" [output]="pureExample.output"></app-code-block>
+    </section>
+
+    <!-- Impure Pipes -->
+    <section id="impure" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Impure Pipes</h2>
+      <p class="text-dark mb-4">Impure pipes execute on every change detection cycle.</p>
+      <app-code-block [code]="impureExample.code" [output]="impureExample.output"></app-code-block>
+    </section>
+
+    <!-- Async Pipe -->
+    <section id="async" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Async Pipe</h2>
+      <p class="text-dark mb-4">Automatically subscribe to observables and handle cleanup.</p>
+      <app-code-block [code]="asyncExample.code" [output]="asyncExample.output"></app-code-block>
+    </section>
+
+    <!-- Chaining Pipes -->
+    <section id="chaining" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Chaining Pipes</h2>
+      <p class="text-dark mb-4">Combine multiple pipes for complex transformations.</p>
+      <app-code-block [code]="chainingExample.code" [output]="chainingExample.output"></app-code-block>
+    </section>
+
+    <!-- Pipe Parameters -->
+    <section id="parameters" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Pipe Parameters</h2>
+      <p class="text-dark mb-4">Pass parameters to customize pipe behavior.</p>
+      <app-code-block [code]="parametersExample.code" [output]="parametersExample.output"></app-code-block>
+    </section>
+
+    <!-- Good Use Cases -->
+    <section id="good-cases" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Good Use Cases</h2>
+      <p class="text-dark mb-4">Examples of when pipes are the right choice.</p>
+      <app-code-block [code]="goodCaseExample.code" [output]="goodCaseExample.output"></app-code-block>
+    </section>
+
+    <!-- Bad Use Cases -->
+    <section id="bad-cases" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Bad Use Cases</h2>
+      <p class="text-dark mb-4">Avoid these anti-patterns when using pipes.</p>
+      <app-code-block [code]="badCaseExample.code" [output]="badCaseExample.output"></app-code-block>
+    </section>
+
+    <!-- Best Practices -->
+    <section id="best-practices" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Best Practices</h2>
+      <ul class="list-disc list-inside space-y-2 text-dark">
+        <li *ngFor="let practice of bestPractices">{{ practice }}</li>
+      </ul>
+    </section>
+  </div>
+</app-layout>

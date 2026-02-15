@@ -6,6 +6,7 @@ import { AngularDetailsComponent } from './angular-details.component';
 import { ServicesNotesComponent } from './services/services-notes.component';
 import { DirectivesNotesComponent } from './directives/directives-notes.component';
 import { RoutingNotesComponent } from './routing/routing-notes.component';
+import { PipesNotesComponent } from './pipes/pipes-notes.component';
 import { LayoutComponent } from '../../../common/layout/layout.component';
 import { BackNavComponent } from '../../../common/back-nav/back-nav.component';
 import { PageHeaderComponent } from '../../../common/page-header/page-header.component';
@@ -21,7 +22,8 @@ const routes = [
   { path: '', component: AngularDetailsComponent },
   { path: 'services', component: ServicesNotesComponent },
   { path: 'directives', component: DirectivesNotesComponent },
-  { path: 'routing', component: RoutingNotesComponent }
+  { path: 'routing', component: RoutingNotesComponent },
+  { path: 'pipes', component: PipesNotesComponent }
 ];
 
 @NgModule({
@@ -29,7 +31,8 @@ const routes = [
     AngularDetailsComponent,
     ServicesNotesComponent,
     DirectivesNotesComponent,
-    RoutingNotesComponent
+    RoutingNotesComponent,
+    PipesNotesComponent
   ],
   imports: [
     CommonModule,
