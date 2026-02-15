@@ -1,0 +1,114 @@
+<app-layout>
+  <app-back-nav backLink="/notes/angular" backText="Back to Angular"></app-back-nav>
+  
+  <app-page-header 
+    title="Data Binding" 
+    subtitle="Property, event, and two-way data binding">
+  </app-page-header>
+
+  <div class="space-y-8">
+    <!-- Binding Types -->
+    <section id="binding-types" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Data Binding Types</h2>
+      <ul class="list-disc list-inside space-y-2 text-dark">
+        <li *ngFor="let type of bindingTypes">{{ type }}</li>
+      </ul>
+    </section>
+
+    <!-- When to Use -->
+    <section id="when-to-use" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">When to Use Each Binding Type</h2>
+      <ul class="list-disc list-inside space-y-2 text-dark">
+        <li *ngFor="let item of whenToUse">{{ item }}</li>
+      </ul>
+    </section>
+
+    <!-- Where to Use -->
+    <section id="where-to-use" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Where to Use Each Binding Type</h2>
+      <ul class="list-disc list-inside space-y-2 text-dark">
+        <li *ngFor="let item of whereToUse">{{ item }}</li>
+      </ul>
+    </section>
+
+    <!-- Why Use -->
+    <section id="why-use" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Why Use Each Binding Type</h2>
+      <ul class="list-disc list-inside space-y-2 text-dark">
+        <li *ngFor="let item of whyUse">{{ item }}</li>
+      </ul>
+    </section>
+
+    <!-- How to Use -->
+    <section id="how-to-use" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">How to Use Each Binding Type</h2>
+      <ul class="list-disc list-inside space-y-2 text-dark">
+        <li *ngFor="let item of howToUse">{{ item }}</li>
+      </ul>
+    </section>
+
+    <!-- Interpolation -->
+    <section id="interpolation" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Interpolation</h2>
+      <p class="text-dark mb-4">Display component data in templates using double curly braces.</p>
+      <app-code-block [code]="interpolationExample.code" [output]="interpolationExample.output"></app-code-block>
+    </section>
+
+    <!-- Property Binding -->
+    <section id="property-binding" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Property Binding</h2>
+      <p class="text-dark mb-4">Bind component properties to element properties using square brackets.</p>
+      <app-code-block [code]="propertyBindingExample.code" [output]="propertyBindingExample.output"></app-code-block>
+    </section>
+
+    <!-- Event Binding -->
+    <section id="event-binding" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Event Binding</h2>
+      <p class="text-dark mb-4">Handle user events using parentheses to call component methods.</p>
+      <app-code-block [code]="eventBindingExample.code" [output]="eventBindingExample.output"></app-code-block>
+    </section>
+
+    <!-- Two-Way Binding -->
+    <section id="two-way-binding" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Two-Way Binding</h2>
+      <p class="text-dark mb-4">Synchronize data between component and view using [(ngModel)].</p>
+      <app-code-block [code]="twoWayBindingExample.code" [output]="twoWayBindingExample.output"></app-code-block>
+    </section>
+
+    <!-- Attribute Binding -->
+    <section id="attribute-binding" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Attribute Binding</h2>
+      <p class="text-dark mb-4">Bind to HTML attributes that don't have corresponding DOM properties.</p>
+      <app-code-block [code]="attributeBindingExample.code" [output]="attributeBindingExample.output"></app-code-block>
+    </section>
+
+    <!-- Class Binding -->
+    <section id="class-binding" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Class Binding</h2>
+      <p class="text-dark mb-4">Dynamically add or remove CSS classes based on component state.</p>
+      <app-code-block [code]="classBindingExample.code" [output]="classBindingExample.output"></app-code-block>
+    </section>
+
+    <!-- Style Binding -->
+    <section id="style-binding" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Style Binding</h2>
+      <p class="text-dark mb-4">Set inline styles dynamically with support for units.</p>
+      <app-code-block [code]="styleBindingExample.code" [output]="styleBindingExample.output"></app-code-block>
+    </section>
+
+    <!-- Custom Two-Way Binding -->
+    <section id="custom-two-way" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Custom Two-Way Binding</h2>
+      <p class="text-dark mb-4">Create custom components with two-way binding support.</p>
+      <app-code-block [code]="customTwoWayExample.code" [output]="customTwoWayExample.output"></app-code-block>
+    </section>
+
+    <!-- Best Practices -->
+    <section id="best-practices" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Best Practices</h2>
+      <ul class="list-disc list-inside space-y-2 text-dark">
+        <li *ngFor="let practice of bestPractices">{{ practice }}</li>
+      </ul>
+    </section>
+  </div>
+</app-layout>

@@ -9,6 +9,7 @@ import { RoutingNotesComponent } from './routing/routing-notes.component';
 import { PipesNotesComponent } from './pipes/pipes-notes.component';
 import { StandaloneNotesComponent } from './standalone/standalone-notes.component';
 import { LifecycleNotesComponent } from './lifecycle/lifecycle-notes.component';
+import { DataBindingNotesComponent } from './data-binding/data-binding-notes.component';
 import { LayoutComponent } from '../../../common/layout/layout.component';
 import { BackNavComponent } from '../../../common/back-nav/back-nav.component';
 import { PageHeaderComponent } from '../../../common/page-header/page-header.component';
@@ -27,7 +28,8 @@ const routes = [
   { path: 'routing', component: RoutingNotesComponent },
   { path: 'pipes', component: PipesNotesComponent },
   { path: 'standalone', component: StandaloneNotesComponent },
-  { path: 'lifecycle', component: LifecycleNotesComponent }
+  { path: 'lifecycle', component: LifecycleNotesComponent },
+  { path: 'data-binding', component: DataBindingNotesComponent }
 ];
 
 @NgModule({
@@ -38,7 +40,8 @@ const routes = [
     RoutingNotesComponent,
     PipesNotesComponent,
     StandaloneNotesComponent,
-    LifecycleNotesComponent
+    LifecycleNotesComponent,
+    DataBindingNotesComponent
   ],
   imports: [
     CommonModule,
