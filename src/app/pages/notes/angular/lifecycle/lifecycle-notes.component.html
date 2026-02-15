@@ -1,0 +1,97 @@
+<app-layout>
+  <app-back-nav backLink="/notes/angular" backText="Back to Angular"></app-back-nav>
+  
+  <app-page-header 
+    title="Component Lifecycle" 
+    subtitle="Lifecycle hooks and component initialization">
+  </app-page-header>
+
+  <div class="space-y-8">
+    <!-- Lifecycle Hooks Order -->
+    <section id="hooks-order" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Lifecycle Hooks Execution Order</h2>
+      <ol class="list-decimal list-inside space-y-2 text-dark">
+        <li *ngFor="let hook of hooksOrder">{{ hook }}</li>
+      </ol>
+    </section>
+
+    <!-- Common Use Cases -->
+    <section id="use-cases" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Common Use Cases</h2>
+      <ul class="list-disc list-inside space-y-2 text-dark">
+        <li *ngFor="let useCase of useCases">{{ useCase }}</li>
+      </ul>
+    </section>
+
+    <!-- ngOnChanges -->
+    <section id="ngOnChanges" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">ngOnChanges</h2>
+      <p class="text-dark mb-4">Called when input properties change, before ngOnInit.</p>
+      <app-code-block [code]="ngOnChangesExample.code" [output]="ngOnChangesExample.output"></app-code-block>
+    </section>
+
+    <!-- ngOnInit -->
+    <section id="ngOnInit" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">ngOnInit</h2>
+      <p class="text-dark mb-4">Called once after component initialization - best place for setup logic.</p>
+      <app-code-block [code]="ngOnInitExample.code" [output]="ngOnInitExample.output"></app-code-block>
+    </section>
+
+    <!-- ngDoCheck -->
+    <section id="ngDoCheck" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">ngDoCheck</h2>
+      <p class="text-dark mb-4">Called during every change detection cycle - use sparingly.</p>
+      <app-code-block [code]="ngDoCheckExample.code" [output]="ngDoCheckExample.output"></app-code-block>
+    </section>
+
+    <!-- ngAfterContentInit -->
+    <section id="ngAfterContentInit" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">ngAfterContentInit</h2>
+      <p class="text-dark mb-4">Called after content projection is initialized.</p>
+      <app-code-block [code]="ngAfterContentInitExample.code" [output]="ngAfterContentInitExample.output"></app-code-block>
+    </section>
+
+    <!-- ngAfterContentChecked -->
+    <section id="ngAfterContentChecked" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">ngAfterContentChecked</h2>
+      <p class="text-dark mb-4">Called after every check of projected content.</p>
+      <app-code-block [code]="ngAfterContentCheckedExample.code" [output]="ngAfterContentCheckedExample.output"></app-code-block>
+    </section>
+
+    <!-- ngAfterViewInit -->
+    <section id="ngAfterViewInit" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">ngAfterViewInit</h2>
+      <p class="text-dark mb-4">Called after component's view is fully initialized.</p>
+      <app-code-block [code]="ngAfterViewInitExample.code" [output]="ngAfterViewInitExample.output"></app-code-block>
+    </section>
+
+    <!-- ngAfterViewChecked -->
+    <section id="ngAfterViewChecked" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">ngAfterViewChecked</h2>
+      <p class="text-dark mb-4">Called after every check of component's view.</p>
+      <app-code-block [code]="ngAfterViewCheckedExample.code" [output]="ngAfterViewCheckedExample.output"></app-code-block>
+    </section>
+
+    <!-- ngOnDestroy -->
+    <section id="ngOnDestroy" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">ngOnDestroy</h2>
+      <p class="text-dark mb-4">Called just before component is destroyed - cleanup here.</p>
+      <app-code-block [code]="ngOnDestroyExample.code" [output]="ngOnDestroyExample.output"></app-code-block>
+    </section>
+
+    <!-- Complete Example -->
+    <section id="complete" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Complete Lifecycle Example</h2>
+      <p class="text-dark mb-4">All lifecycle hooks in one component with execution order.</p>
+      <app-code-block [code]="completeExample.code" [output]="completeExample.output"></app-code-block>
+    </section>
+
+    <!-- Best Practices -->
+    <section id="best-practices" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Best Practices</h2>
+      <ul class="list-disc list-inside space-y-2 text-dark">
+        <li *ngFor="let practice of bestPractices">{{ practice }}</li>
+      </ul>
+    </section>
+  </div>
+</app-layout>
