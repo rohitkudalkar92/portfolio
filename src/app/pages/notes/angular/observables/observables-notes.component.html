@@ -1,0 +1,142 @@
+<app-layout>
+  <app-back-nav backLink="/notes/angular" backText="Back to Angular"></app-back-nav>
+  
+  <app-page-header 
+    title="Observables &amp; RxJS" 
+    subtitle="Reactive programming with RxJS operators">
+  </app-page-header>
+
+  <div class="space-y-8">
+    <!-- What is Observables & RxJS -->
+    <section id="what-is" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">What is Observables &amp; RxJS?</h2>
+      <ul class="list-disc list-inside space-y-2 text-dark">
+        <li *ngFor="let item of whatIsObservables">{{ item }}</li>
+      </ul>
+    </section>
+
+    <!-- Observables vs Promises -->
+    <section id="vs-promises" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Observables vs Promises</h2>
+      <ul class="list-disc list-inside space-y-2 text-dark">
+        <li *ngFor="let item of observablesVsPromises">{{ item }}</li>
+      </ul>
+    </section>
+
+    <!-- Observables vs Redux -->
+    <section id="vs-redux" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">RxJS vs Redux - Different Tools, Different Purposes</h2>
+      <ul class="list-disc list-inside space-y-2 text-dark">
+        <li *ngFor="let item of observablesVsRedux">{{ item }}</li>
+      </ul>
+    </section>
+
+    <!-- Common Operators -->
+    <section id="common-operators" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Common RxJS Operators</h2>
+      <ul class="list-disc list-inside space-y-2 text-dark">
+        <li *ngFor="let operator of commonOperators">{{ operator }}</li>
+      </ul>
+    </section>
+
+    <!-- When to Use -->
+    <section id="when-to-use" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">When to Use RxJS</h2>
+      <ul class="list-disc list-inside space-y-2 text-dark">
+        <li *ngFor="let item of whenToUse">{{ item }}</li>
+      </ul>
+    </section>
+
+    <!-- Basic Observable -->
+    <section id="basic" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Basic Observable</h2>
+      <p class="text-dark mb-4">Create and subscribe to observables.</p>
+      <app-code-block [code]="basicExample.code" [output]="basicExample.output"></app-code-block>
+    </section>
+
+    <!-- map Operator -->
+    <section id="map" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">map Operator</h2>
+      <p class="text-dark mb-4">Transform each emitted value.</p>
+      <app-code-block [code]="mapExample.code" [output]="mapExample.output"></app-code-block>
+    </section>
+
+    <!-- filter Operator -->
+    <section id="filter" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">filter Operator</h2>
+      <p class="text-dark mb-4">Emit only values that pass a condition.</p>
+      <app-code-block [code]="filterExample.code" [output]="filterExample.output"></app-code-block>
+    </section>
+
+    <!-- switchMap Operator -->
+    <section id="switchMap" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">switchMap Operator</h2>
+      <p class="text-dark mb-4">Switch to new observable and cancel previous - perfect for search.</p>
+      <app-code-block [code]="switchMapExample.code" [output]="switchMapExample.output"></app-code-block>
+    </section>
+
+    <!-- mergeMap Operator -->
+    <section id="mergeMap" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">mergeMap Operator</h2>
+      <p class="text-dark mb-4">Merge multiple observables and execute in parallel.</p>
+      <app-code-block [code]="mergeMapExample.code" [output]="mergeMapExample.output"></app-code-block>
+    </section>
+
+    <!-- combineLatest -->
+    <section id="combineLatest" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">combineLatest</h2>
+      <p class="text-dark mb-4">Combine latest values from multiple observables.</p>
+      <app-code-block [code]="combineLatestExample.code" [output]="combineLatestExample.output"></app-code-block>
+    </section>
+
+    <!-- debounceTime -->
+    <section id="debounceTime" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">debounceTime</h2>
+      <p class="text-dark mb-4">Delay emissions to reduce API calls.</p>
+      <app-code-block [code]="debounceTimeExample.code" [output]="debounceTimeExample.output"></app-code-block>
+    </section>
+
+    <!-- takeUntil -->
+    <section id="takeUntil" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">takeUntil Pattern</h2>
+      <p class="text-dark mb-4">Automatic unsubscription to prevent memory leaks.</p>
+      <app-code-block [code]="takeUntilExample.code" [output]="takeUntilExample.output"></app-code-block>
+    </section>
+
+    <!-- catchError -->
+    <section id="catchError" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">catchError</h2>
+      <p class="text-dark mb-4">Handle errors gracefully without breaking the stream.</p>
+      <app-code-block [code]="catchErrorExample.code" [output]="catchErrorExample.output"></app-code-block>
+    </section>
+
+    <!-- forkJoin -->
+    <section id="forkJoin" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">forkJoin</h2>
+      <p class="text-dark mb-4">Wait for all observables to complete - like Promise.all().</p>
+      <app-code-block [code]="forkJoinExample.code" [output]="forkJoinExample.output"></app-code-block>
+    </section>
+
+    <!-- Subject -->
+    <section id="subject" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Subject</h2>
+      <p class="text-dark mb-4">Multicast observable - emit to multiple subscribers.</p>
+      <app-code-block [code]="subjectExample.code" [output]="subjectExample.output"></app-code-block>
+    </section>
+
+    <!-- BehaviorSubject -->
+    <section id="behaviorSubject" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">BehaviorSubject</h2>
+      <p class="text-dark mb-4">Subject with initial value - late subscribers get current value.</p>
+      <app-code-block [code]="behaviorSubjectExample.code" [output]="behaviorSubjectExample.output"></app-code-block>
+    </section>
+
+    <!-- Best Practices -->
+    <section id="best-practices" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Best Practices</h2>
+      <ul class="list-disc list-inside space-y-2 text-dark">
+        <li *ngFor="let practice of bestPractices">{{ practice }}</li>
+      </ul>
+    </section>
+  </div>
+</app-layout>
