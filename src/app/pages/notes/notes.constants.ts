@@ -72,5 +72,11 @@ export const NOTES_DATA: Note[] = [
     content: 'Modern CSS with SCSS preprocessing. Features: variables, mixins, nesting, partials, imports. SCSS syntax: $variables, @mixin/@include, &:hover, @media queries. Build responsive, maintainable stylesheets.',
     routerLink: '/notes/css-scss',
     iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg'
+  },
+  {
+    title: 'JavaScript Design Patterns',
+    content: 'Common design patterns for JavaScript: Singleton, Factory, Observer, Module, Prototype, Decorator, Strategy. Learn when and how to apply patterns for better code architecture.',
+    routerLink: '/notes/js-design-patterns',
+    iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg'
   }
 ];

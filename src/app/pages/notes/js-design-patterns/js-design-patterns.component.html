@@ -1,0 +1,95 @@
+<app-layout>
+  <app-back-nav backLink="/notes" backText="Back to Notes"></app-back-nav>
+  
+  <app-page-header 
+    title="JavaScript Design Patterns" 
+    subtitle="Common design patterns for better code architecture">
+  </app-page-header>
+
+  <div class="space-y-8">
+    <!-- Pattern Categories -->
+    <section id="categories" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Pattern Categories</h2>
+      <ul class="list-disc list-inside space-y-2 text-dark">
+        <li *ngFor="let category of patternCategories">{{ category }}</li>
+      </ul>
+    </section>
+
+    <!-- When to Use -->
+    <section id="when-to-use" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">When to Use Each Pattern</h2>
+      <ul class="list-disc list-inside space-y-2 text-dark">
+        <li *ngFor="let item of whenToUse">{{ item }}</li>
+      </ul>
+    </section>
+
+    <!-- Quick Reference -->
+    <app-content-section title="Quick Reference" description="Navigate to any topic quickly.">
+      <app-quick-reference [topics]="quickRefTopics" (topicClick)="scrollToSection($event)"></app-quick-reference>
+    </app-content-section>
+
+    <!-- Singleton Pattern -->
+    <section id="singleton" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Singleton Pattern</h2>
+      <p class="text-dark mb-4">Ensure a class has only one instance with global access.</p>
+      <app-code-block [code]="singletonExample.code" [output]="singletonExample.output"></app-code-block>
+    </section>
+
+    <!-- Factory Pattern -->
+    <section id="factory" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Factory Pattern</h2>
+      <p class="text-dark mb-4">Create objects without specifying exact class.</p>
+      <app-code-block [code]="factoryExample.code" [output]="factoryExample.output"></app-code-block>
+    </section>
+
+    <!-- Observer Pattern -->
+    <section id="observer" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Observer Pattern</h2>
+      <p class="text-dark mb-4">Define one-to-many dependency between objects.</p>
+      <app-code-block [code]="observerExample.code" [output]="observerExample.output"></app-code-block>
+    </section>
+
+    <!-- Module Pattern -->
+    <section id="module" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Module Pattern</h2>
+      <p class="text-dark mb-4">Encapsulate private data with public API.</p>
+      <app-code-block [code]="moduleExample.code" [output]="moduleExample.output"></app-code-block>
+    </section>
+
+    <!-- Prototype Pattern -->
+    <section id="prototype" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Prototype Pattern</h2>
+      <p class="text-dark mb-4">Create objects by cloning existing instances.</p>
+      <app-code-block [code]="prototypeExample.code" [output]="prototypeExample.output"></app-code-block>
+    </section>
+
+    <!-- Decorator Pattern -->
+    <section id="decorator" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Decorator Pattern</h2>
+      <p class="text-dark mb-4">Add new functionality to objects dynamically.</p>
+      <app-code-block [code]="decoratorExample.code" [output]="decoratorExample.output"></app-code-block>
+    </section>
+
+    <!-- Strategy Pattern -->
+    <section id="strategy" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Strategy Pattern</h2>
+      <p class="text-dark mb-4">Define family of algorithms and make them interchangeable.</p>
+      <app-code-block [code]="strategyExample.code" [output]="strategyExample.output"></app-code-block>
+    </section>
+
+    <!-- Promise Pattern -->
+    <section id="promise" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Promise Pattern</h2>
+      <p class="text-dark mb-4">Handle asynchronous operations elegantly.</p>
+      <app-code-block [code]="promiseExample.code" [output]="promiseExample.output"></app-code-block>
+    </section>
+
+    <!-- Best Practices -->
+    <section id="best-practices" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Best Practices</h2>
+      <ul class="list-disc list-inside space-y-2 text-dark">
+        <li *ngFor="let practice of bestPractices">{{ practice }}</li>
+      </ul>
+    </section>
+  </div>
+</app-layout>
