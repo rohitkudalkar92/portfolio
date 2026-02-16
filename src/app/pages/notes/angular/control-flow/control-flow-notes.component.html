@@ -1,0 +1,90 @@
+<app-layout>
+  <app-back-nav backLink="/notes/angular" backText="Back to Angular"></app-back-nav>
+  
+  <app-page-header 
+    title="Control Flow" 
+    subtitle="New template control flow syntax (@if, @for, @switch)">
+  </app-page-header>
+
+  <div class="space-y-8">
+    <!-- Features -->
+    <section id="features" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Control Flow Features (Angular 17+)</h2>
+      <ul class="list-disc list-inside space-y-2 text-dark">
+        <li *ngFor="let feature of features">{{ feature }}</li>
+      </ul>
+    </section>
+
+    <!-- &#64;if Syntax -->
+    <section id="if-syntax" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">&#64;if Syntax</h2>
+      <p class="text-dark mb-4">New conditional rendering with built-in else if support.</p>
+      <app-code-block [code]="ifSyntaxExample.code" [output]="ifSyntaxExample.output"></app-code-block>
+    </section>
+
+    <!-- &#64;for Syntax -->
+    <section id="for-syntax" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">&#64;for Syntax</h2>
+      <p class="text-dark mb-4">New loop syntax with required track and built-in &#64;empty.</p>
+      <app-code-block [code]="forSyntaxExample.code" [output]="forSyntaxExample.output"></app-code-block>
+    </section>
+
+    <!-- &#64;switch Syntax -->
+    <section id="switch-syntax" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">&#64;switch Syntax</h2>
+      <p class="text-dark mb-4">New switch statement with &#64;case and &#64;default blocks.</p>
+      <app-code-block [code]="switchSyntaxExample.code" [output]="switchSyntaxExample.output"></app-code-block>
+    </section>
+
+    <!-- &#64;for with Index -->
+    <section id="for-with-index" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">&#64;for with Index and Variables</h2>
+      <p class="text-dark mb-4">Access loop variables like $index, $first, $last, $even, $odd.</p>
+      <app-code-block [code]="forWithIndexExample.code" [output]="forWithIndexExample.output"></app-code-block>
+    </section>
+
+    <!-- Nested Control Flow -->
+    <section id="nested-control" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Nested Control Flow</h2>
+      <p class="text-dark mb-4">Combine &#64;if, &#64;for, and &#64;switch for complex templates.</p>
+      <app-code-block [code]="nestedControlExample.code" [output]="nestedControlExample.output"></app-code-block>
+    </section>
+
+    <!-- Track Expressions -->
+    <section id="track-by" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Track Expressions</h2>
+      <p class="text-dark mb-4">Track is required in &#64;for for optimal performance.</p>
+      <app-code-block [code]="trackByExample.code" [output]="trackByExample.output"></app-code-block>
+    </section>
+
+    <!-- Migration -->
+    <section id="migration" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Migration from Old Syntax</h2>
+      <p class="text-dark mb-4">Compare old structural directives with new &#64; syntax.</p>
+      <app-code-block [code]="migrationExample.code" [output]="migrationExample.output"></app-code-block>
+    </section>
+
+    <!-- Advantages -->
+    <section id="advantages" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Advantages of New Syntax</h2>
+      <p class="text-dark mb-4">Performance, type safety, and cleaner templates.</p>
+      <app-code-block [code]="advantagesExample.code" [output]="advantagesExample.output"></app-code-block>
+    </section>
+
+    <!-- Migration Guide -->
+    <section id="migration-guide" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Migration Guide</h2>
+      <ul class="list-disc list-inside space-y-2 text-dark">
+        <li *ngFor="let guide of migrationGuide">{{ guide }}</li>
+      </ul>
+    </section>
+
+    <!-- Best Practices -->
+    <section id="best-practices" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Best Practices</h2>
+      <ul class="list-disc list-inside space-y-2 text-dark">
+        <li *ngFor="let practice of bestPractices">{{ practice }}</li>
+      </ul>
+    </section>
+  </div>
+</app-layout>

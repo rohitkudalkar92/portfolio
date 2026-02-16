@@ -1,0 +1,90 @@
+<app-layout>
+  <app-back-nav backLink="/notes/angular" backText="Back to Angular"></app-back-nav>
+  
+  <app-page-header 
+    title="Route Guards" 
+    subtitle="Navigation protection and access control">
+  </app-page-header>
+
+  <div class="space-y-8">
+    <!-- Guard Types -->
+    <section id="guard-types" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Guard Types</h2>
+      <ul class="list-disc list-inside space-y-2 text-dark">
+        <li *ngFor="let type of guardTypes">{{ type }}</li>
+      </ul>
+    </section>
+
+    <!-- Use Cases -->
+    <section id="use-cases" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Common Use Cases</h2>
+      <ul class="list-disc list-inside space-y-2 text-dark">
+        <li *ngFor="let useCase of useCases">{{ useCase }}</li>
+      </ul>
+    </section>
+
+    <!-- CanActivate -->
+    <section id="can-activate" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">CanActivate Guard</h2>
+      <p class="text-dark mb-4">Protect route access based on conditions.</p>
+      <app-code-block [code]="canActivateExample.code" [output]="canActivateExample.output"></app-code-block>
+    </section>
+
+    <!-- CanActivateChild -->
+    <section id="can-activate-child" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">CanActivateChild Guard</h2>
+      <p class="text-dark mb-4">Protect all child routes with single guard.</p>
+      <app-code-block [code]="canActivateChildExample.code" [output]="canActivateChildExample.output"></app-code-block>
+    </section>
+
+    <!-- CanDeactivate -->
+    <section id="can-deactivate" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">CanDeactivate Guard</h2>
+      <p class="text-dark mb-4">Prevent navigation away from route with unsaved changes.</p>
+      <app-code-block [code]="canDeactivateExample.code" [output]="canDeactivateExample.output"></app-code-block>
+    </section>
+
+    <!-- CanLoad -->
+    <section id="can-load" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">CanLoad Guard</h2>
+      <p class="text-dark mb-4">Prevent lazy module from loading.</p>
+      <app-code-block [code]="canLoadExample.code" [output]="canLoadExample.output"></app-code-block>
+    </section>
+
+    <!-- CanMatch -->
+    <section id="can-match" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">CanMatch Guard</h2>
+      <p class="text-dark mb-4">Control route matching for feature flags and A/B testing.</p>
+      <app-code-block [code]="canMatchExample.code" [output]="canMatchExample.output"></app-code-block>
+    </section>
+
+    <!-- Functional Guard -->
+    <section id="functional-guard" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Functional Guards</h2>
+      <p class="text-dark mb-4">Modern approach using functions instead of classes.</p>
+      <app-code-block [code]="functionalGuardExample.code" [output]="functionalGuardExample.output"></app-code-block>
+    </section>
+
+    <!-- Async Guard -->
+    <section id="async-guard" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Async Guard</h2>
+      <p class="text-dark mb-4">Handle async operations like API calls in guards.</p>
+      <app-code-block [code]="asyncGuardExample.code" [output]="asyncGuardExample.output"></app-code-block>
+    </section>
+
+    <!-- Multiple Guards -->
+    <section id="multiple-guards" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Multiple Guards</h2>
+      <p class="text-dark mb-4">Combine multiple guards on a single route.</p>
+      <app-code-block [code]="multipleGuardsExample.code" [output]="multipleGuardsExample.output"></app-code-block>
+    </section>
+
+    <!-- Best Practices -->
+    <section id="best-practices" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Best Practices</h2>
+      <ul class="list-disc list-inside space-y-2 text-dark">
+        <li *ngFor="let practice of bestPractices">{{ practice }}</li>
+      </ul>
+    </section>
+  </div>
+</app-layout>

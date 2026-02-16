@@ -69,7 +69,7 @@ const routes: Routes = [
 ✓ Faster initial page load
 ✓ Better user experience`
   },
-  pureP pipes: {
+  purePipes: {
     code: `// Pure Pipes for Performance
 import { Pipe, PipeTransform } from '@angular/core';
 

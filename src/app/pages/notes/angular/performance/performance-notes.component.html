@@ -1,0 +1,89 @@
+<app-layout>
+  <app-back-nav backLink="/notes/angular" backText="Back to Angular"></app-back-nav>
+  
+  <app-page-header 
+    title="Performance Optimization" 
+    subtitle="OnPush, lazy loading, and optimization techniques">
+  </app-page-header>
+
+  <div class="space-y-8">
+    <!-- Optimization Techniques -->
+    <section id="techniques" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Optimization Techniques</h2>
+      <ul class="list-disc list-inside space-y-2 text-dark">
+        <li *ngFor="let technique of optimizationTechniques">{{ technique }}</li>
+      </ul>
+    </section>
+
+    <!-- OnPush -->
+    <section id="onpush" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">OnPush Change Detection</h2>
+      <p class="text-dark mb-4">Reduce change detection cycles for better performance.</p>
+      <app-code-block [code]="onPushExample.code" [output]="onPushExample.output"></app-code-block>
+    </section>
+
+    <!-- TrackBy -->
+    <section id="trackby" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">TrackBy for ngFor</h2>
+      <p class="text-dark mb-4">Optimize list rendering with trackBy function.</p>
+      <app-code-block [code]="trackByExample.code" [output]="trackByExample.output"></app-code-block>
+    </section>
+
+    <!-- Lazy Loading -->
+    <section id="lazy-loading" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Lazy Loading</h2>
+      <p class="text-dark mb-4">Load modules on demand to reduce initial bundle size.</p>
+      <app-code-block [code]="lazyLoadingExample.code" [output]="lazyLoadingExample.output"></app-code-block>
+    </section>
+
+    <!-- Pure Pipes -->
+    <section id="pure-pipes" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Pure Pipes</h2>
+      <p class="text-dark mb-4">Use pure pipes for better performance.</p>
+      <app-code-block [code]="purePipesExample.code" [output]="purePipesExample.output"></app-code-block>
+    </section>
+
+    <!-- Virtual Scrolling -->
+    <section id="virtual-scrolling" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Virtual Scrolling</h2>
+      <p class="text-dark mb-4">Render only visible items for large lists.</p>
+      <app-code-block [code]="virtualScrollingExample.code" [output]="virtualScrollingExample.output"></app-code-block>
+    </section>
+
+    <!-- Preloading -->
+    <section id="preloading" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Preloading Strategy</h2>
+      <p class="text-dark mb-4">Load modules in background for better UX.</p>
+      <app-code-block [code]="preloadingExample.code" [output]="preloadingExample.output"></app-code-block>
+    </section>
+
+    <!-- Memoization -->
+    <section id="memoization" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Memoization</h2>
+      <p class="text-dark mb-4">Cache expensive calculations.</p>
+      <app-code-block [code]="memoizationExample.code" [output]="memoizationExample.output"></app-code-block>
+    </section>
+
+    <!-- Detach Change Detection -->
+    <section id="detach" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Detach Change Detection</h2>
+      <p class="text-dark mb-4">Manual control for high-frequency updates.</p>
+      <app-code-block [code]="detachChangeDetectionExample.code" [output]="detachChangeDetectionExample.output"></app-code-block>
+    </section>
+
+    <!-- Web Workers -->
+    <section id="web-workers" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Web Workers</h2>
+      <p class="text-dark mb-4">Offload heavy computations to separate thread.</p>
+      <app-code-block [code]="webWorkersExample.code" [output]="webWorkersExample.output"></app-code-block>
+    </section>
+
+    <!-- Best Practices -->
+    <section id="best-practices" class="glass rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-4">Best Practices</h2>
+      <ul class="list-disc list-inside space-y-2 text-dark">
+        <li *ngFor="let practice of bestPractices">{{ practice }}</li>
+      </ul>
+    </section>
+  </div>
+</app-layout>

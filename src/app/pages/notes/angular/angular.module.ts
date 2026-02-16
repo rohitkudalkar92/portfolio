@@ -15,6 +15,9 @@ import { ModulesNotesComponent } from './modules/modules-notes.component';
 import { TestingNotesComponent } from './testing/testing-notes.component';
 import { StateManagementNotesComponent } from './state-management/state-management-notes.component';
 import { InterceptorsNotesComponent } from './interceptors/interceptors-notes.component';
+import { GuardsNotesComponent } from './guards/guards-notes.component';
+import { ControlFlowNotesComponent } from './control-flow/control-flow-notes.component';
+import { PerformanceNotesComponent } from './performance/performance-notes.component';
 import { LayoutComponent } from '../../../common/layout/layout.component';
 import { BackNavComponent } from '../../../common/back-nav/back-nav.component';
 import { PageHeaderComponent } from '../../../common/page-header/page-header.component';
@@ -39,7 +42,10 @@ const routes = [
   { path: 'modules', component: ModulesNotesComponent },
   { path: 'testing', component: TestingNotesComponent },
   { path: 'state-management', component: StateManagementNotesComponent },
-  { path: 'interceptors', component: InterceptorsNotesComponent }
+  { path: 'interceptors', component: InterceptorsNotesComponent },
+  { path: 'guards', component: GuardsNotesComponent },
+  { path: 'control-flow', component: ControlFlowNotesComponent },
+  { path: 'performance', component: PerformanceNotesComponent }
 ];
 
 @NgModule({
@@ -56,7 +62,10 @@ const routes = [
     ModulesNotesComponent,
     TestingNotesComponent,
     StateManagementNotesComponent,
-    InterceptorsNotesComponent
+    InterceptorsNotesComponent,
+    GuardsNotesComponent,
+    ControlFlowNotesComponent,
+    PerformanceNotesComponent
   ],
   imports: [
     CommonModule,
