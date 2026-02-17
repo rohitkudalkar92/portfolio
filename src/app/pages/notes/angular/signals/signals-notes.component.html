@@ -1,9 +1,19 @@
 <app-layout>
-  <app-back-nav />
+  <app-back-nav backLink="/notes/angular" backText="Back to Angular" />
   <app-topic-header 
     title="Angular Signals" 
     description="New reactive primitives for state management" 
   />
+
+  <app-info-box title="Video References" type="purple">
+    <ul class="space-y-2">
+      <li *ngFor="let ref of reference">
+        <a [href]="ref.url" target="_blank" class="text-blue-400 hover:text-blue-300 underline">
+          {{ ref.title }}
+        </a>
+      </li>
+    </ul>
+  </app-info-box>
 
   <app-content-section title="Basic Signal">
     <app-code-block [code]="basicExample.code" [output]="basicExample.output" />
@@ -17,6 +27,14 @@
     <app-code-block [code]="effectExample.code" [output]="effectExample.output" />
   </app-content-section>
 
+  <app-content-section title="Updating Signals - set() Method">
+    <app-code-block [code]="setMethodExample.code" [output]="setMethodExample.output" />
+  </app-content-section>
+
+  <app-content-section title="Updating Signals - update() Method">
+    <app-code-block [code]="updateMethodExample.code" [output]="updateMethodExample.output" />
+  </app-content-section>
+
   <app-content-section title="Signal Methods">
     <app-code-block [code]="updateExample.code" [output]="updateExample.output" />
   </app-content-section>
@@ -24,6 +42,30 @@
   <app-content-section title="Writable Signals">
     <app-code-block [code]="writableExample.code" [output]="writableExample.output" />
   </app-content-section>
+
+  <app-content-section title="Signal Data Types">
+    <app-code-block [code]="dataTypesExample.code" [output]="dataTypesExample.output" />
+  </app-content-section>
+
+  <app-content-section title="Signal Value Types">
+    <app-code-block [code]="valueTypesExample.code" [output]="valueTypesExample.output" />
+  </app-content-section>
+
+  <app-content-section title="set() vs update() - When to Use">
+    <app-code-block [code]="setVsUpdateExample.code" [output]="setVsUpdateExample.output" />
+  </app-content-section>
+
+  <app-info-box title="When to Use set()" type="purple">
+    <ul class="list-disc list-inside space-y-2">
+      <li *ngFor="let item of whenToUseSet">{{ item }}</li>
+    </ul>
+  </app-info-box>
+
+  <app-info-box title="When to Use update()" type="purple">
+    <ul class="list-disc list-inside space-y-2">
+      <li *ngFor="let item of whenToUseUpdate">{{ item }}</li>
+    </ul>
+  </app-info-box>
 
   <app-info-box title="Advantages" type="success">
     <ul class="list-disc list-inside space-y-2">
