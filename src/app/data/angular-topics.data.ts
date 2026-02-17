@@ -114,10 +114,10 @@ export const ANGULAR_TOPICS = [
     route: '/notes/angular/cli'
   },
   {
-    id: 'deployment',
-    title: 'Deployment',
-    description: 'Build and deployment strategies',
-    route: '/notes/angular/deployment'
+    id: 'ivy',
+    title: 'Ivy Compiler',
+    description: 'Next-generation compilation and rendering pipeline',
+    route: '/notes/angular/ivy'
   },
   {
     id: 'change-detection',
@@ -186,27 +186,9 @@ export const ANGULAR_TOPICS = [
     route: '/notes/angular/view-transitions'
   },
   {
-    id: 'material',
-    title: 'Angular Material',
-    description: 'Material Design components and CDK',
-    route: '/notes/angular/material'
-  },
-  {
-    id: 'flex-layout',
-    title: 'Angular Flex Layout',
-    description: 'Responsive layout with flexbox',
-    route: '/notes/angular/flex-layout'
-  },
-  {
     id: 'schematics',
     title: 'Angular Schematics',
     description: 'Code generation and project scaffolding',
     route: '/notes/angular/schematics'
-  },
-  {
-    id: 'workspace',
-    title: 'Angular Workspace',
-    description: 'Multi-project workspace configuration',
-    route: '/notes/angular/workspace'
   }
 ];

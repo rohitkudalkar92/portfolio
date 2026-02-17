@@ -18,6 +18,7 @@ import { InterceptorsNotesComponent } from './interceptors/interceptors-notes.co
 import { GuardsNotesComponent } from './guards/guards-notes.component';
 import { ControlFlowNotesComponent } from './control-flow/control-flow-notes.component';
 import { PerformanceNotesComponent } from './performance/performance-notes.component';
+import { SignalsNotesComponent } from './signals/signals-notes.component';
 import { LayoutComponent } from '../../../common/layout/layout.component';
 import { BackNavComponent } from '../../../common/back-nav/back-nav.component';
 import { PageHeaderComponent } from '../../../common/page-header/page-header.component';
@@ -45,7 +46,8 @@ const routes = [
   { path: 'interceptors', component: InterceptorsNotesComponent },
   { path: 'guards', component: GuardsNotesComponent },
   { path: 'control-flow', component: ControlFlowNotesComponent },
-  { path: 'performance', component: PerformanceNotesComponent }
+  { path: 'performance', component: PerformanceNotesComponent },
+  { path: 'signals', component: SignalsNotesComponent }
 ];
 
 @NgModule({
@@ -65,7 +67,8 @@ const routes = [
     InterceptorsNotesComponent,
     GuardsNotesComponent,
     ControlFlowNotesComponent,
-    PerformanceNotesComponent
+    PerformanceNotesComponent,
+    SignalsNotesComponent
   ],
   imports: [
     CommonModule,

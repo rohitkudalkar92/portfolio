@@ -1,0 +1,57 @@
+<app-layout>
+  <app-back-nav />
+  <app-topic-header 
+    title="Angular Signals" 
+    description="New reactive primitives for state management" 
+  />
+
+  <app-content-section title="Basic Signal">
+    <app-code-block [code]="basicExample.code" [output]="basicExample.output" />
+  </app-content-section>
+
+  <app-content-section title="Computed Signals">
+    <app-code-block [code]="computedExample.code" [output]="computedExample.output" />
+  </app-content-section>
+
+  <app-content-section title="Effects">
+    <app-code-block [code]="effectExample.code" [output]="effectExample.output" />
+  </app-content-section>
+
+  <app-content-section title="Signal Methods">
+    <app-code-block [code]="updateExample.code" [output]="updateExample.output" />
+  </app-content-section>
+
+  <app-content-section title="Writable Signals">
+    <app-code-block [code]="writableExample.code" [output]="writableExample.output" />
+  </app-content-section>
+
+  <app-info-box title="Advantages" type="success">
+    <ul class="list-disc list-inside space-y-2">
+      <li *ngFor="let item of advantages">{{ item }}</li>
+    </ul>
+  </app-info-box>
+
+  <app-info-box title="Disadvantages" type="warning">
+    <ul class="list-disc list-inside space-y-2">
+      <li *ngFor="let item of disadvantages">{{ item }}</li>
+    </ul>
+  </app-info-box>
+
+  <app-info-box title="When to Use Signals" type="success">
+    <ul class="list-disc list-inside space-y-2">
+      <li *ngFor="let item of whenToUse">{{ item }}</li>
+    </ul>
+  </app-info-box>
+
+  <app-info-box title="When NOT to Use Signals" type="error">
+    <ul class="list-disc list-inside space-y-2">
+      <li *ngFor="let item of whenNotToUse">{{ item }}</li>
+    </ul>
+  </app-info-box>
+
+  <app-info-box title="Best Practices" type="info">
+    <ul class="list-disc list-inside space-y-2">
+      <li *ngFor="let item of bestPractices">{{ item }}</li>
+    </ul>
+  </app-info-box>
+</app-layout>
