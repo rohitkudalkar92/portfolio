@@ -120,6 +120,12 @@ export const ANGULAR_TOPICS = [
     route: '/notes/angular/content-projection'
   },
   {
+    id: 'dom-manipulation',
+    title: 'DOM Manipulation',
+    description: 'ElementRef, Renderer2, and safe DOM access',
+    route: '/notes/angular/dom-manipulation'
+  },
+  {
     id: 'dynamic-components',
     title: 'Dynamic Components',
     description: 'Creating components at runtime',

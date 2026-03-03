@@ -22,6 +22,7 @@ import { SignalsNotesComponent } from './signals/signals-notes.component';
 import { ComponentsNotesComponent } from './components/components-notes.component';
 import { FormsNotesComponent } from './forms/forms-notes.component';
 import { ContentProjectionNotesComponent } from './content-projection/content-projection-notes.component';
+import { DomManipulationNotesComponent } from './dom-manipulation/dom-manipulation-notes.component';
 import { LayoutComponent } from '../../../common/layout/layout.component';
 import { BackNavComponent } from '../../../common/back-nav/back-nav.component';
 import { PageHeaderComponent } from '../../../common/page-header/page-header.component';
@@ -57,7 +58,8 @@ const routes = [
   { path: 'control-flow', component: ControlFlowNotesComponent },
   { path: 'performance', component: PerformanceNotesComponent },
   { path: 'signals', component: SignalsNotesComponent },
-  { path: 'content-projection', component: ContentProjectionNotesComponent }
+  { path: 'content-projection', component: ContentProjectionNotesComponent },
+  { path: 'dom-manipulation', component: DomManipulationNotesComponent }
 ];
 
 @NgModule({
@@ -81,7 +83,8 @@ const routes = [
     ControlFlowNotesComponent,
     PerformanceNotesComponent,
     SignalsNotesComponent,
-    ContentProjectionNotesComponent
+    ContentProjectionNotesComponent,
+    DomManipulationNotesComponent
   ],
   imports: [
     CommonModule,

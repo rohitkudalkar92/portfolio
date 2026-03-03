@@ -1,0 +1,145 @@
+<app-layout>
+  <app-back-nav backLink="/notes/angular" backText="Back to Angular" />
+  <app-topic-header 
+    title="DOM Manipulation" 
+    description="Safe and efficient DOM access and manipulation in Angular" 
+  />
+
+  <app-info-box title="What is DOM Manipulation in Angular?">
+    <p>Angular provides several ways to safely access and manipulate the DOM. While direct DOM manipulation should be avoided, Angular offers tools like ElementRef, Renderer2, ViewChild, and decorators for controlled DOM interactions.</p>
+  </app-info-box>
+
+  <app-content-section title="ElementRef">
+    <app-info-box title="Direct DOM Access">
+      <p>ElementRef provides direct access to the native DOM element. Use with caution as it bypasses Angular's security:</p>
+    </app-info-box>
+
+    <app-code-block 
+      language="typescript"
+      [code]="elementRefExample">
+    </app-code-block>
+
+    <app-info-box title="When to Use" type="warning">
+      <ul class="list-disc list-inside space-y-2">
+        <li>Only when Renderer2 cannot accomplish the task</li>
+        <li>Third-party library integration requiring direct DOM access</li>
+        <li>Be aware of XSS vulnerabilities</li>
+        <li>Not compatible with server-side rendering</li>
+      </ul>
+    </app-info-box>
+  </app-content-section>
+
+  <app-content-section title="Renderer2">
+    <app-info-box title="Safe DOM Manipulation">
+      <p>Renderer2 is the recommended way to manipulate the DOM. It provides a safe abstraction layer:</p>
+    </app-info-box>
+
+    <app-code-block 
+      language="typescript"
+      [code]="renderer2Example">
+    </app-code-block>
+
+    <app-info-box title="Renderer2 Methods">
+      <ul class="list-disc list-inside space-y-2">
+        <li><strong>setStyle/removeStyle:</strong> Manipulate element styles</li>
+        <li><strong>addClass/removeClass:</strong> Add or remove CSS classes</li>
+        <li><strong>setAttribute/removeAttribute:</strong> Manage element attributes</li>
+        <li><strong>createElement/createText:</strong> Create new elements</li>
+        <li><strong>appendChild/removeChild:</strong> Modify DOM tree</li>
+        <li><strong>listen:</strong> Attach event listeners</li>
+      </ul>
+    </app-info-box>
+  </app-content-section>
+
+  <app-content-section title="ViewChild & ViewChildren">
+    <app-info-box title="Template Reference Queries">
+      <p>Access child elements or components using template reference variables:</p>
+    </app-info-box>
+
+    <app-info-box title="ViewChild - Single Element">
+      <p>Query a single element from the template:</p>
+    </app-info-box>
+
+    <app-code-block 
+      language="typescript"
+      [code]="viewChildExample">
+    </app-code-block>
+
+    <app-info-box title="ViewChildren - Multiple Elements">
+      <p>Query multiple elements as a QueryList:</p>
+    </app-info-box>
+
+    <app-code-block 
+      language="typescript"
+      [code]="viewChildrenExample">
+    </app-code-block>
+
+    <app-info-box title="Key Points">
+      <ul class="list-disc list-inside space-y-2">
+        <li>Available after ngAfterViewInit lifecycle hook</li>
+        <li>ViewChild returns single element, ViewChildren returns QueryList</li>
+        <li>Can query by template reference, component type, or directive</li>
+        <li>Use &#123;static: true&#125; option for elements in *ngIf blocks</li>
+      </ul>
+    </app-info-box>
+  </app-content-section>
+
+  <app-content-section title="Host Element Interaction">
+    <app-info-box title="HostListener Decorator">
+      <p>Listen to events on the host element or global targets:</p>
+    </app-info-box>
+
+    <app-code-block 
+      language="typescript"
+      [code]="hostListenerExample">
+    </app-code-block>
+
+    <app-info-box title="HostBinding Decorator">
+      <p>Bind properties to the host element:</p>
+    </app-info-box>
+
+    <app-code-block 
+      language="typescript"
+      [code]="hostBindingExample">
+    </app-code-block>
+
+    <app-info-box title="Host Decorators Benefits">
+      <ul class="list-disc list-inside space-y-2">
+        <li><strong>HostListener:</strong> Declarative event handling</li>
+        <li><strong>HostBinding:</strong> Dynamic property binding</li>
+        <li><strong>Clean Syntax:</strong> No manual DOM queries needed</li>
+        <li><strong>Type Safety:</strong> TypeScript support</li>
+      </ul>
+    </app-info-box>
+  </app-content-section>
+
+  <app-content-section title="Common Use Cases">
+    <app-info-box title="Practical Applications">
+      <ul class="list-disc list-inside space-y-2">
+        <li><strong>Focus Management:</strong> Programmatically focus input elements</li>
+        <li><strong>Scroll Control:</strong> Scroll to specific elements</li>
+        <li><strong>Animation Triggers:</strong> Trigger animations based on DOM state</li>
+        <li><strong>Third-party Libraries:</strong> Integrate jQuery, D3.js, etc.</li>
+        <li><strong>Canvas Manipulation:</strong> Draw on HTML5 canvas</li>
+        <li><strong>Measurement:</strong> Get element dimensions and positions</li>
+      </ul>
+    </app-info-box>
+  </app-content-section>
+
+  <app-content-section title="Best Practices">
+    <app-info-box title="DOM Manipulation Guidelines" type="success">
+      <ul class="list-disc list-inside space-y-2">
+        <li *ngFor="let practice of bestPractices">&#123;&#123; practice &#125;&#125;</li>
+      </ul>
+    </app-info-box>
+
+    <app-info-box title="Security Considerations" type="warning">
+      <ul class="list-disc list-inside space-y-2">
+        <li>Never use innerHTML with user-generated content</li>
+        <li>Sanitize data before inserting into DOM</li>
+        <li>Use Angular's DomSanitizer for trusted content</li>
+        <li>Prefer Renderer2 over nativeElement for security</li>
+      </ul>
+    </app-info-box>
+  </app-content-section>
+</app-layout>
