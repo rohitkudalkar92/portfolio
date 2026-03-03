@@ -1,0 +1,121 @@
+<app-layout>
+  <app-back-nav backLink="/notes/angular" backText="Back to Angular" />
+  <app-topic-header 
+    title="Content Projection" 
+    description="ng-content and component composition patterns" 
+  />
+
+  <app-info-box title="What is Content Projection?">
+    <p>Content projection (also known as transclusion) allows you to insert content from a parent component into a child component's template using ng-content. It enables flexible and reusable component composition.</p>
+  </app-info-box>
+
+  <app-content-section title="Basic Content Projection">
+    <app-info-box title="Single Slot Projection">
+      <p>Use ng-content to project content into a component:</p>
+    </app-info-box>
+
+    <app-code-block 
+      language="typescript"
+      [code]="basicExample">
+    </app-code-block>
+
+    <app-info-box title="How It Works">
+      <ul class="list-disc list-inside space-y-2">
+        <li><strong>ng-content:</strong> Acts as a placeholder for projected content</li>
+        <li><strong>Single Slot:</strong> All content between component tags is projected</li>
+        <li><strong>No Selector:</strong> Without select attribute, accepts any content</li>
+        <li><strong>Composition:</strong> Enables flexible component reusability</li>
+      </ul>
+    </app-info-box>
+  </app-content-section>
+
+  <app-content-section title="Multi-Slot Projection">
+    <app-info-box title="Multiple ng-content Slots">
+      <p>Use the select attribute to project content into specific slots:</p>
+    </app-info-box>
+
+    <app-code-block 
+      language="typescript"
+      [code]="multiSlotExample">
+    </app-code-block>
+
+    <app-info-box title="Select Attribute Options">
+      <p>Different ways to select projected content:</p>
+    </app-info-box>
+
+    <app-code-block 
+      language="typescript"
+      [code]="ngContentSelectExample">
+    </app-code-block>
+  </app-content-section>
+
+  <app-content-section title="Conditional Projection">
+    <app-info-box title="Projecting Content Conditionally">
+      <p>Combine ng-content with Angular control flow:</p>
+    </app-info-box>
+
+    <app-code-block 
+      language="typescript"
+      [code]="conditionalExample">
+    </app-code-block>
+
+    <app-info-box title="Key Points">
+      <ul class="list-disc list-inside space-y-2">
+        <li>Projected content is always instantiated, even if not displayed</li>
+        <li>Use &#64;if to control visibility, not instantiation</li>
+        <li>Content lifecycle is managed by parent component</li>
+        <li>Projected components maintain their state when hidden/shown</li>
+      </ul>
+    </app-info-box>
+  </app-content-section>
+
+  <app-content-section title="Advanced Projection">
+    <app-info-box title="ng-template and ngTemplateOutlet">
+      <p>Use templates for more control over projected content:</p>
+    </app-info-box>
+
+    <app-code-block 
+      language="typescript"
+      [code]="ngTemplateOutletExample">
+    </app-code-block>
+
+    <app-info-box title="Content Queries">
+      <ul class="list-disc list-inside space-y-2">
+        <li><strong>&#64;ContentChild:</strong> Query single projected element or directive</li>
+        <li><strong>&#64;ContentChildren:</strong> Query multiple projected elements</li>
+        <li><strong>ngAfterContentInit:</strong> Lifecycle hook when content is initialized</li>
+        <li><strong>ngAfterContentChecked:</strong> Hook after content change detection</li>
+      </ul>
+    </app-info-box>
+  </app-content-section>
+
+  <app-content-section title="Use Cases">
+    <app-info-box title="Common Patterns">
+      <ul class="list-disc list-inside space-y-2">
+        <li><strong>Layout Components:</strong> Cards, panels, modals with flexible content</li>
+        <li><strong>Wrapper Components:</strong> Adding common functionality around content</li>
+        <li><strong>List Components:</strong> Custom rendering of list items</li>
+        <li><strong>Tab Components:</strong> Multiple content areas with navigation</li>
+        <li><strong>Dialog Components:</strong> Header, body, footer composition</li>
+        <li><strong>Form Components:</strong> Custom form controls with labels</li>
+      </ul>
+    </app-info-box>
+  </app-content-section>
+
+  <app-content-section title="Best Practices">
+    <app-info-box title="Content Projection Guidelines" type="success">
+      <ul class="list-disc list-inside space-y-2">
+        <li *ngFor="let practice of bestPractices">{{ practice }}</li>
+      </ul>
+    </app-info-box>
+
+    <app-info-box title="Common Pitfalls" type="warning">
+      <ul class="list-disc list-inside space-y-2">
+        <li>Projected content is always created, even if ng-content is in &#64;if block</li>
+        <li>Cannot bind to projected content directly from child component</li>
+        <li>Styling projected content requires ::ng-deep or global styles</li>
+        <li>Content queries are available only after ngAfterContentInit</li>
+      </ul>
+    </app-info-box>
+  </app-content-section>
+</app-layout>

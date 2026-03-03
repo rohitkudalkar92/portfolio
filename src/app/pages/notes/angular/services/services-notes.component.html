@@ -1,0 +1,110 @@
+<app-layout>
+  <app-back-nav backLink="/notes/angular" backText="Back to Angular" />
+  <app-topic-header 
+    title="Services & Dependency Injection" 
+    description="Shared functionality and DI patterns in Angular" 
+  />
+
+  <app-info-box title="What are Services?">
+    <p>Services are classes that provide shared functionality across components. They follow the singleton pattern and are used for data sharing, business logic, API communication, and utility functions.</p>
+  </app-info-box>
+
+  <app-content-section title="Creating Services">
+    <app-info-box title="Basic Service">
+      <p>Use the @Injectable decorator to create a service with providedIn: 'root' for singleton pattern:</p>
+    </app-info-box>
+
+    <app-code-block 
+      language="typescript"
+      [code]="serviceExample">
+    </app-code-block>
+
+    <app-info-box title="Key Concepts">
+      <ul class="list-disc list-inside space-y-2">
+        <li><strong>@Injectable():</strong> Marks a class as available for dependency injection</li>
+        <li><strong>providedIn: 'root':</strong> Creates a singleton service at application level</li>
+        <li><strong>Singleton Pattern:</strong> One instance shared across the entire application</li>
+        <li><strong>Encapsulation:</strong> Services encapsulate business logic and data</li>
+      </ul>
+    </app-info-box>
+  </app-content-section>
+
+  <app-content-section title="Dependency Injection">
+    <app-info-box title="Injecting Services">
+      <p>Angular's DI system automatically provides service instances to components and other services through constructor injection:</p>
+    </app-info-box>
+
+    <app-code-block 
+      language="typescript"
+      [code]="diExample">
+    </app-code-block>
+
+    <app-info-box title="DI Benefits">
+      <ul class="list-disc list-inside space-y-2">
+        <li><strong>Loose Coupling:</strong> Components don't create their dependencies</li>
+        <li><strong>Testability:</strong> Easy to mock services in unit tests</li>
+        <li><strong>Reusability:</strong> Services can be shared across multiple components</li>
+        <li><strong>Maintainability:</strong> Centralized logic is easier to update</li>
+      </ul>
+    </app-info-box>
+  </app-content-section>
+
+  <app-content-section title="Service Providers">
+    <app-info-box title="Provider Configuration">
+      <p>Configure how and where services are provided in your application:</p>
+    </app-info-box>
+
+    <app-code-block 
+      language="typescript"
+      [code]="providerExample">
+    </app-code-block>
+
+    <app-info-box title="Provider Types">
+      <ul class="list-disc list-inside space-y-2">
+        <li><strong>Class Provider:</strong> useClass - Provide a different implementation</li>
+        <li><strong>Value Provider:</strong> useValue - Provide a static value or configuration</li>
+        <li><strong>Factory Provider:</strong> useFactory - Create service with custom logic</li>
+        <li><strong>Existing Provider:</strong> useExisting - Alias for another provider</li>
+      </ul>
+    </app-info-box>
+
+    <app-info-box title="Provider Scope">
+      <ul class="list-disc list-inside space-y-2">
+        <li><strong>Root Level:</strong> Single instance for entire application</li>
+        <li><strong>Module Level:</strong> One instance per lazy-loaded module</li>
+        <li><strong>Component Level:</strong> New instance for each component instance</li>
+      </ul>
+    </app-info-box>
+  </app-content-section>
+
+  <app-content-section title="Common Use Cases">
+    <app-info-box title="Service Patterns">
+      <ul class="list-disc list-inside space-y-2">
+        <li><strong>Data Services:</strong> Manage application state and data operations</li>
+        <li><strong>HTTP Services:</strong> Handle API calls and backend communication</li>
+        <li><strong>Utility Services:</strong> Provide helper functions and common operations</li>
+        <li><strong>State Management:</strong> Share data between unrelated components</li>
+        <li><strong>Authentication:</strong> Handle user authentication and authorization</li>
+        <li><strong>Logging:</strong> Centralized logging and error tracking</li>
+      </ul>
+    </app-info-box>
+  </app-content-section>
+
+  <app-content-section title="Best Practices">
+    <app-info-box title="Service Development Guidelines" type="success">
+      <ul class="list-disc list-inside space-y-2">
+        <li *ngFor="let practice of bestPractices">{{ practice }}</li>
+      </ul>
+    </app-info-box>
+
+    <app-info-box title="Additional Tips">
+      <ul class="list-disc list-inside space-y-2">
+        <li>Unsubscribe from observables to prevent memory leaks</li>
+        <li>Use async pipe in templates when possible</li>
+        <li>Document service APIs with JSDoc comments</li>
+        <li>Consider using RxJS for reactive data streams</li>
+        <li>Implement proper TypeScript typing for type safety</li>
+      </ul>
+    </app-info-box>
+  </app-content-section>
+</app-layout>

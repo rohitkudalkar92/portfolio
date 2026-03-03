@@ -78,12 +78,6 @@ export const ANGULAR_TOPICS = [
     route: '/notes/angular/testing'
   },
   {
-    id: 'animations',
-    title: 'Animations',
-    description: 'Angular animations API and transitions',
-    route: '/notes/angular/animations'
-  },
-  {
     id: 'interceptors',
     title: 'HTTP Interceptors',
     description: 'Request/response interception and modification',
@@ -112,12 +106,6 @@ export const ANGULAR_TOPICS = [
     title: 'Angular CLI',
     description: 'Project scaffolding and build tools',
     route: '/notes/angular/cli'
-  },
-  {
-    id: 'ivy',
-    title: 'Ivy Compiler',
-    description: 'Next-generation compilation and rendering pipeline',
-    route: '/notes/angular/ivy'
   },
   {
     id: 'change-detection',
