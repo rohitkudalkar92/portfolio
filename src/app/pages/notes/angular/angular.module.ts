@@ -19,6 +19,8 @@ import { GuardsNotesComponent } from './guards/guards-notes.component';
 import { ControlFlowNotesComponent } from './control-flow/control-flow-notes.component';
 import { PerformanceNotesComponent } from './performance/performance-notes.component';
 import { SignalsNotesComponent } from './signals/signals-notes.component';
+import { ComponentsNotesComponent } from './components/components-notes.component';
+import { FormsNotesComponent } from './forms/forms-notes.component';
 import { LayoutComponent } from '../../../common/layout/layout.component';
 import { BackNavComponent } from '../../../common/back-nav/back-nav.component';
 import { PageHeaderComponent } from '../../../common/page-header/page-header.component';
@@ -29,9 +31,15 @@ import { ContentSectionComponent } from '../../../common/content-section/content
 import { CodeBlockComponent } from '../../../common/code-block/code-block.component';
 import { InfoBoxComponent } from '../../../common/info-box/info-box.component';
 import { PracticeExerciseComponent } from '../../../common/practice-exercise/practice-exercise.component';
+import { ParagraphComponent } from '../../../common/paragraph/paragraph.component';
+import { StyledListComponent } from '../../../common/styled-list/styled-list.component';
+import { QuickReferenceComponent } from '../../../common/quick-reference/quick-reference.component';
+import { BackToTopComponent } from '../../../common/back-to-top/back-to-top.component';
 
 const routes = [
   { path: '', component: AngularDetailsComponent },
+  { path: 'components', component: ComponentsNotesComponent },
+  { path: 'forms', component: FormsNotesComponent },
   { path: 'services', component: ServicesNotesComponent },
   { path: 'directives', component: DirectivesNotesComponent },
   { path: 'routing', component: RoutingNotesComponent },
@@ -53,6 +61,8 @@ const routes = [
 @NgModule({
   declarations: [
     AngularDetailsComponent,
+    ComponentsNotesComponent,
+    FormsNotesComponent,
     ServicesNotesComponent,
     DirectivesNotesComponent,
     RoutingNotesComponent,
@@ -82,7 +92,11 @@ const routes = [
     ContentSectionComponent,
     CodeBlockComponent,
     InfoBoxComponent,
-    PracticeExerciseComponent
+    PracticeExerciseComponent,
+    ParagraphComponent,
+    StyledListComponent,
+    QuickReferenceComponent,
+    BackToTopComponent
   ]
 })
 export class AngularModule { }

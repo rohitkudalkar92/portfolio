@@ -1,0 +1,146 @@
+<app-layout>
+  <app-back-nav backLink="/notes/angular" backText="Back to Angular" />
+  <app-topic-header 
+    title="Angular Forms" 
+    description="Template-driven and reactive forms for user input handling" 
+  />
+
+  <app-info-box title="What are Angular Forms?">
+    <p>Angular provides two approaches to handling user input through forms: template-driven and reactive forms. Both capture user input events, validate the input, create a form model, and provide a way to track changes.</p>
+  </app-info-box>
+
+  <app-content-section title="Template-Driven Forms">
+    <app-info-box title="Overview">
+      <ul class="list-disc list-inside space-y-2">
+        <li>Rely on directives in the template to create and manipulate the form model</li>
+        <li>Use two-way data binding with [(ngModel)]</li>
+        <li>Suitable for simple forms with basic validation</li>
+        <li>Require FormsModule to be imported</li>
+        <li>Less control over form logic</li>
+      </ul>
+    </app-info-box>
+
+    <app-info-box title="Advantages" type="success">
+      <ul class="list-disc list-inside space-y-2">
+        <li>Easy to use and quick to set up</li>
+        <li>Less code required in component class</li>
+        <li>Familiar for developers coming from AngularJS</li>
+        <li>Good for simple forms with minimal validation</li>
+        <li>Two-way data binding simplifies data flow</li>
+      </ul>
+    </app-info-box>
+
+    <app-info-box title="Disadvantages" type="warning">
+      <ul class="list-disc list-inside space-y-2">
+        <li>Difficult to unit test (logic in template)</li>
+        <li>Less control over validation logic</li>
+        <li>Not suitable for complex forms</li>
+        <li>Harder to implement dynamic form controls</li>
+        <li>Limited programmatic access to form state</li>
+      </ul>
+    </app-info-box>
+  </app-content-section>
+
+  <app-content-section title="Reactive Forms">
+    <app-info-box title="Overview">
+      <ul class="list-disc list-inside space-y-2">
+        <li>Provide a model-driven approach to handling form inputs</li>
+        <li>Use FormBuilder, FormGroup, and FormControl classes</li>
+        <li>Offer more control and better testability</li>
+        <li>Suitable for complex forms with dynamic validation</li>
+        <li>Require ReactiveFormsModule to be imported</li>
+        <li>Programmatic access to form values and validation state</li>
+      </ul>
+    </app-info-box>
+
+    <app-info-box title="Advantages" type="success">
+      <ul class="list-disc list-inside space-y-2">
+        <li>Easier to unit test (logic in component)</li>
+        <li>Better for complex forms with dynamic validation</li>
+        <li>Full programmatic control over form state</li>
+        <li>Easier to implement dynamic form controls</li>
+        <li>Better performance for large forms</li>
+        <li>Immutable data model approach</li>
+        <li>Powerful RxJS operators for form handling</li>
+      </ul>
+    </app-info-box>
+
+    <app-info-box title="Disadvantages" type="warning">
+      <ul class="list-disc list-inside space-y-2">
+        <li>Steeper learning curve</li>
+        <li>More boilerplate code required</li>
+        <li>Requires understanding of RxJS observables</li>
+        <li>More verbose for simple forms</li>
+      </ul>
+    </app-info-box>
+  </app-content-section>
+
+  <app-content-section title="Form Validation">
+    <app-info-box title="Built-in Validators">
+      <ul class="list-disc list-inside space-y-2">
+        <li *ngFor="let validator of validationTypes">
+          <strong>{{ validator.name }}:</strong> {{ validator.description }}
+        </li>
+      </ul>
+    </app-info-box>
+
+    <app-info-box title="Custom Validators">
+      <ul class="list-disc list-inside space-y-2">
+        <li>Create custom validation logic for specific business requirements</li>
+        <li>Implement ValidatorFn interface for synchronous validators</li>
+        <li>Implement AsyncValidatorFn for asynchronous validation (e.g., checking email uniqueness)</li>
+        <li>Return ValidationErrors object when validation fails, null when valid</li>
+      </ul>
+    </app-info-box>
+  </app-content-section>
+
+  <app-content-section title="Advanced Concepts">
+    <app-info-box title="Dynamic Forms with FormArray">
+      <ul class="list-disc list-inside space-y-2">
+        <li>Manage an array of form controls dynamically</li>
+        <li>Perfect for scenarios where users can add or remove form fields</li>
+        <li>Use push() to add new controls and removeAt() to remove controls</li>
+        <li>Access controls through the controls property</li>
+      </ul>
+    </app-info-box>
+
+    <app-info-box title="Form States">
+      <ul class="list-disc list-inside space-y-2">
+        <li *ngFor="let state of formStates">
+          <strong>{{ state.state }}:</strong> {{ state.description }} (Opposite: {{ state.opposite }})
+        </li>
+      </ul>
+    </app-info-box>
+  </app-content-section>
+
+  <app-content-section title="Best Practices & Reference">
+    <app-info-box title="Best Practices" type="success">
+      <ul class="list-disc list-inside space-y-2">
+        <li *ngFor="let practice of bestPractices">{{ practice }}</li>
+      </ul>
+    </app-info-box>
+
+    <app-info-box title="Quick Reference">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <h4 class="font-semibold mb-2">Template-Driven</h4>
+          <ul class="text-sm space-y-1">
+            <li>• Import FormsModule</li>
+            <li>• Use [(ngModel)]</li>
+            <li>• Template reference variables</li>
+            <li>• Good for simple forms</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-2">Reactive</h4>
+          <ul class="text-sm space-y-1">
+            <li>• Import ReactiveFormsModule</li>
+            <li>• Use FormBuilder/FormGroup</li>
+            <li>• Programmatic control</li>
+            <li>• Better for complex forms</li>
+          </ul>
+        </div>
+      </div>
+    </app-info-box>
+  </app-content-section>
+</app-layout>
