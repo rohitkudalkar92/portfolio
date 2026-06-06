@@ -1,5 +1,20 @@
 @import '../../shared/styles/mixins';
 
+// Brand Colors
+$color-primary: #10b981;
+$color-secondary: #06b6d4;
+$color-accent: #a5f3fc;
+
+// Gradient
+$gradient-shimmer: linear-gradient(
+  90deg,
+  $color-primary 0%,
+  $color-secondary 25%,
+  $color-accent 50%,
+  $color-secondary 75%,
+  $color-primary 100%
+);
+
 // Home component specific styles
 .hero-section {
   background: linear-gradient(135deg, var(--primary-900) 0%, var(--primary-800) 100%);
@@ -51,4 +66,19 @@
     font-size: 0.875rem;
     padding: 0.5rem 1rem;
   }
+}
+
+
+.text-gradient-shimmer {
+  background: $gradient-shimmer;
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 100% 0; }
+  100% { background-position: -100% 0; }
 }
