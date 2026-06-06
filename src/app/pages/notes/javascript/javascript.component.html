@@ -73,6 +73,9 @@
         <a (click)="scrollToSection('regex')" class="glass p-3 rounded-lg hover:opacity-80 transition-opacity cursor-pointer">
           <span class="text-accent font-semibold">21.</span> Regular Expressions
         </a>
+        <a (click)="scrollToSection('higher-order')" class="glass p-3 rounded-lg hover:opacity-80 transition-opacity cursor-pointer">
+          <span class="text-accent font-semibold">22.</span> Higher-Order Functions
+        </a>
       </div>
     </app-content-section>
 
@@ -242,6 +245,14 @@
         <p class="text-secondary text-sm">Regex enables powerful string validation, searching, and replacement. Essential for form validation, parsing, and text processing.</p>
       </app-info-box>
       <app-code-block [code]="regularExpressionsCode" language="javascript"></app-code-block>
+    </app-content-section>
+
+    <!-- Higher-Order Functions -->
+    <app-content-section id="higher-order" title="22. Higher-Order Functions" description="Functions that take or return other functions.">
+      <app-info-box type="success" title="✅ Why Important?">
+        <p class="text-secondary text-sm">Higher-order functions enable functional programming patterns like composition, currying, and creating reusable utilities like debounce and throttle.</p>
+      </app-info-box>
+      <app-code-block [code]="higherOrderFunctionsCode" language="javascript"></app-code-block>
     </app-content-section>
 
   </div>

@@ -164,6 +164,11 @@ export const CONSTANTS = {
         title: 'Problem Solving',
         description: 'Debugging and analytical thinking',
         icon: '🧩'
+      },
+      {
+        title: 'Soft Skills & Hobbies',
+        description: 'Communication and creative pursuits',
+        icon: '🎯'
       }
     ]
   },
